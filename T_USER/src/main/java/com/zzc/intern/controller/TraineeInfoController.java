@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ import java.util.List;
  * @since 2020-09-15
  */
 @Slf4j
-@Controller
+@RestController
 @Api(value = "", tags = "", description="")
 public class TraineeInfoController {
 
