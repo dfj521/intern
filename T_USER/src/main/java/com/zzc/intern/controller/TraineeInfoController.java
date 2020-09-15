@@ -1,12 +1,16 @@
 package com.zzc.intern.controller;
 
 
+import com.zzc.intern.entity.TraineeInfo;
 import org.springframework.stereotype.Controller;
 import com.zzc.intern.service.TraineeInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 /**
  * <p>
@@ -23,4 +27,9 @@ public class TraineeInfoController {
 
     @Autowired
     private TraineeInfoService traineeInfoService;
+
+    @GetMapping("/findAll")
+    public List<TraineeInfo> findAll() {
+        return traineeInfoService.list();
+    }
 }
