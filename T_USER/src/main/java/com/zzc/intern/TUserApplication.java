@@ -1,4 +1,4 @@
-package com.zzc.trainee;
+package com.zzc.intern;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
