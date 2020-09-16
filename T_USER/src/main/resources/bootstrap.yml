@@ -1,0 +1,29 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  application:
+    name: T_USER
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        #cluster-name: DEFAULT
+      config:
+        server-addr: 127.0.0.1:8848 # 配置中心地址
+
+#启用Swagger
+swagger:
+  enable: true
+
+mybatis-plus:
+  typeAliasesPackage: com.zzc.intern.entity
+  mapper-locations: mapper/intern/*.xml
