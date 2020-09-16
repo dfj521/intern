@@ -40,6 +40,13 @@ public class TraineeInfoController {
         return traineeInfoService.list();
     }
 
+    /**
+     * 添加实习生基本信息
+     *
+     * @param traineeInfo
+     * @return
+     */
+    @ApiOperation("添加实习生基本信息")
     @PostMapping("/save")
     public boolean save(TraineeInfo traineeInfo) {
         return traineeInfoService.save(traineeInfo);
