@@ -1,4 +1,4 @@
-package com.zzc.intern.entity;
+package com.zzc.intern.DTO;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -11,7 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @TableName("trainee_info")
-public class TraineeInfo implements Serializable {
+public class TraineeInfoDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -131,6 +131,8 @@ public class TraineeInfo implements Serializable {
      * 实习生修改时间
      */
     private LocalDateTime tUpdateTime;
+
+	
 
 
 }
