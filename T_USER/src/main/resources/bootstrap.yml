@@ -15,10 +15,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.2.173:8848
         #cluster-name: DEFAULT
       config:
-        server-addr: 127.0.0.1:8848 # 配置中心地址
+        server-addr: 192.168.2.173:8848 # 配置中心地址
 
 #启用Swagger
 swagger:
