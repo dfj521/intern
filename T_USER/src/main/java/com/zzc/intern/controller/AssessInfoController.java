@@ -21,15 +21,7 @@ public class AssessInfoController {
 
 	@Autowired
 	private AssessInfoService assessInfoService;
+	//asdsadd
 
-<<<<<<< HEAD
-	public  void main() {
-		System.out.println("董莎雕");
-	}
-=======
-    public static void main(String[] args) {
 
-    }
-
->>>>>>> branch 'master' of https://github.com/dfj521/intern
 }
