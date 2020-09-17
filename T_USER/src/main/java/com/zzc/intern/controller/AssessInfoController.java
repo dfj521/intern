@@ -22,5 +22,5 @@ public class AssessInfoController {
 
     @Autowired
     private AssessInfoService assessInfoService;
-  
+
 }
