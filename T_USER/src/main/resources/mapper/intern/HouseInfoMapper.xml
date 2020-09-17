@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.HouseInfoMapper">
-
+<insert id="add" parameterType="com.zzc.intern.entity.HouseInfo">
+insert into house_info values(null,#{hAddress},#{hNumber})
+</insert>
+<select id="findAll" resultType="com.zzc.intern.entity.HouseInfo">
+select * from house_info
+</select>
+<select id="update" parameterType="com.zzc.intern.entity.HouseInfo">
+update house_info set h_address=#{hAddress},h_number=#{hNumber} where h_id=#{hId}
+</select>
+<delete id="delete">
+delete from house_info where h_id=#{id}
+</delete>
+<select id="findHouseInfoByAddress"  resultType="com.zzc.intern.entity.HouseInfo">
+select * from house_info where  h_address like '%' #{hAddress} '%'
+</select>
+<select id="findById" resultType="com.zzc.intern.entity.HouseInfo">
+select * from house_info where h_id=#{id}
+</select>
 </mapper>

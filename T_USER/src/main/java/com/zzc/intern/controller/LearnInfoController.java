@@ -2,10 +2,17 @@ package com.zzc.intern.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.zzc.intern.entity.LearnInfo;
 import com.zzc.intern.service.LearnInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -21,6 +28,4 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Api(value = "", tags = "", description="")
 public class LearnInfoController {
 
-    @Autowired
-    private LearnInfoService learnInfoService;
 }

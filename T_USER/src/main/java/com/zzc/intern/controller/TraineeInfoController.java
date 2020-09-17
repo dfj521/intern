@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,6 +25,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @Api(value = "实习生基本信息", tags = "实习生基本信息", description="实习生基本信息")
+@RequestMapping("                                    /traineeInfo")
 public class TraineeInfoController {
 
     @Autowired
