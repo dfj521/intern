@@ -22,8 +22,5 @@ public class AssessInfoController {
 
     @Autowired
     private AssessInfoService assessInfoService;
-    public static void main(String[] args) {
-    	System.out.println("asd");
-		
-	}
+  
 }
