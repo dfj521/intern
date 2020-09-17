@@ -1,6 +1,5 @@
 package com.zzc.intern.controller;
 
-
 import org.springframework.stereotype.Controller;
 import com.zzc.intern.service.AssessInfoService;
 import io.swagger.annotations.Api;
@@ -17,10 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @Controller
-@Api(value = "", tags = "", description="")
+@Api(value = "", tags = "", description = "")
 public class AssessInfoController {
 
-    @Autowired
-    private AssessInfoService assessInfoService;
+	@Autowired
+	private AssessInfoService assessInfoService;
 
+	public  void main() {
+		System.out.println("董莎雕");
+	}
 }
