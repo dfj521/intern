@@ -2,9 +2,10 @@ package com.zzc.intern.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.io.Serializable;
 
 @Data
 @TableName("job_info")
@@ -22,11 +23,6 @@ public class JobInfo implements Serializable {
      * 岗位名称
      */
     private String jName;
-
-    /**
-     * 部门编号
-     */
-    private Integer dId;
 
 
 }

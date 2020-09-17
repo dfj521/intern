@@ -2,9 +2,10 @@ package com.zzc.intern.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.io.Serializable;
 
 @Data
 @TableName("learn_info")
@@ -24,7 +25,7 @@ public class LearnInfo implements Serializable {
     private String lElementary;
 
     /**
-     * 学习阶段 1.2.3
+     * 学习阶段(1.初级、2.中级、3.高级)
      */
     private Integer lStage;
 

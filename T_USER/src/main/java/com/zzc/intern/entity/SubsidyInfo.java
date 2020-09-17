@@ -2,9 +2,10 @@ package com.zzc.intern.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.io.Serializable;
 
 @Data
 @TableName("subsidy_info")
@@ -34,7 +35,7 @@ public class SubsidyInfo implements Serializable {
     private Integer sLssueNum;
 
     /**
-     * 岗位编号
+     * 岗位ID
      */
     private Integer jId;
 

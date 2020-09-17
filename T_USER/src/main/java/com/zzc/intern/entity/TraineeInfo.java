@@ -2,12 +2,11 @@ package com.zzc.intern.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
-
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableName;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @TableName("trainee_info")
@@ -39,7 +38,6 @@ public class TraineeInfo implements Serializable {
     /**
      * 实习生出生日期
      */
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime tBirthday;
 
     /**

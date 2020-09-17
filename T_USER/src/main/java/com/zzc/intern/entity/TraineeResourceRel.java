@@ -8,26 +8,26 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-@TableName("resource_info")
-public class ResourceInfo implements Serializable {
+@TableName("trainee_resource_rel")
+public class TraineeResourceRel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源ID
+     * 实习生&资源id
      */
-    @TableId(value = "r_id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ID_WORKER)
+    private Integer id;
+
+    /**
+     * 实习生id
+     */
+    private Integer tId;
+
+    /**
+     * 资源id
+     */
     private Integer rId;
-
-    /**
-     * 电脑型号
-     */
-    private String rComputer;
-
-    /**
-     * GitHub账号
-     */
-    private String rGithub;
 
 
 }

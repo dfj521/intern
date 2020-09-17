@@ -2,13 +2,10 @@ package com.zzc.intern.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-
-import org.springframework.format.annotation.DateTimeFormat;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import lombok.Data;
-import com.baomidou.mybatisplus.annotation.TableName;
 
 @Data
 @TableName("house_info")
@@ -26,18 +23,6 @@ public class HouseInfo implements Serializable {
      * 住宿地址
      */
     private String hAddress;
-
-    /**
-     * 入住时间
-     */
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime hInTime;
-
-    /**
-     * 离宿时间
-     */
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime hOutTime;
 
     /**
      * 宿舍人数
