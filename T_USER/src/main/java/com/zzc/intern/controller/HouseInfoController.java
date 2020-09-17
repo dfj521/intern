@@ -2,15 +2,19 @@ package com.zzc.intern.controller;
 
 
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.injector.methods.DeleteById;
 import com.zzc.intern.entity.HouseInfo;
 import com.zzc.intern.service.HouseInfoService;
+import com.zzc.intern.util.ResponseUtil;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * <p>
@@ -29,26 +34,41 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @RestController
-@Api(value = "", tags = "", description="")
+@Api(value = "宿舍内容", tags = "宿舍内容", description="宿舍内容")
 @RequestMapping("/houseInfo")
+@ResponseBody
 public class HouseInfoController {
 	@Autowired
     private HouseInfoService houseInfoService;
+	@ApiOperation("查询所有宿舍")
     @GetMapping("/findAll")
     public List<HouseInfo>  findAll(){
     	return houseInfoService.list();
     }
+	@ApiOperation("通过id查询宿舍")
     @GetMapping("/findById/{id}")
-    public HouseInfo findById(@PathVariable("id") int id) {
-    	return houseInfoService.getById(id);
+    public HouseInfo findById(@PathVariable("id") Integer id) {
+    	return houseInfoService.findById(id);
     }
-    @GetMapping("/deleteById/{id}")
-    public boolean DeleteById(@PathVariable("id") int id) {
-    	HouseInfo Id = houseInfoService.getById(id);
-    	return houseInfoService.removeById(Id);
+	@ApiOperation("删除宿舍")
+    @GetMapping("/delete/{id}")
+    public int delete(@PathVariable("id") Integer id) {
+    	return houseInfoService.delete(id);
+    	
     }
-    @PostMapping("/save")
-    public boolean save(HouseInfo houseInfo) {
-    	return houseInfoService.save(houseInfo);
+	@ApiOperation("添加宿舍")
+    @PostMapping("/add")
+    public int add(HouseInfo houseInfo) {
+    	return houseInfoService.add(houseInfo);
     }
+	@ApiOperation("模糊查询")
+	@GetMapping("/findByHouseInfoId/{hAddress}")
+	public List<HouseInfo> findHouseInfoByAddress(@PathVariable ("hAddress") @Validated  String hAddress) {
+		return houseInfoService.findHouseInfoByAddress(hAddress);
+	}
+	@ApiOperation("更新")
+	@PostMapping("/update")
+	public Integer update(HouseInfo houseInfo) {
+		return houseInfoService.update(houseInfo);
+	}
 }
