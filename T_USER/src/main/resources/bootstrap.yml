@@ -27,3 +27,6 @@ swagger:
 mybatis-plus:
   typeAliasesPackage: com.zzc.intern.entity
   mapper-locations: mapper/intern/*.xml
+
+logging:
+  config: classpath:log4j2.xml

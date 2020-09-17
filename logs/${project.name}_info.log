@@ -1,0 +1,36 @@
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:30,309 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:31,081 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:31,124 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,373 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,463 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,770 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,784 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,785 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,785 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,925 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,925 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1782 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:33,054 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:33,297 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:34,041 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:34,044 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,012 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,039 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,039 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,045 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,046 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,175 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,782 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,465 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,494 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,567 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,569 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,609 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,643 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,829 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,831 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,854 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,860 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,870 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,885 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,891 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: saveUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,914 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 7.889 seconds (JVM running for 10.333)
