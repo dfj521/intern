@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.ResourceInfoMapper">
+    <!-- 添加一条资源信息 -->
+    <insert id="add">
+        insert into resource_info (r_computer, r_github) values (#{rComputer}, #{rGithub})
+    </insert>
 
+    <!-- 更新一条资源信息 -->
+    <update id="update">
+        update resource_info
+        <trim prefix="set" suffixOverrides=",">
+            <if test="rComputer != null and rComputer != ''">
+                r_computer = #{rComputer},
+            </if>
+            <if test="rGithub != null and rGithub != ''">
+                r_github = #{rGithub},
+            </if>
+        </trim>
+        where r_id = #{rId}
+    </update>
+
+    <!-- 删除一条资源信息 -->
+    <delete id="deleteById">
+        delete from resource_info where r_id = #{id}
+    </delete>
+
+    <!-- 查询所有资源 -->
+    <select id="findAll" resultType="com.zzc.intern.entity.ResourceInfo">
+        select r_id, r_computer, r_github from resource_info
+    </select>
+    <!-- 根据id查询一条资源信息 -->
+    <select id="findById" resultType="com.zzc.intern.entity.ResourceInfo">
+        select r_id, r_computer, r_github from resource_info where r_id = #{id}
+    </select>
+    <!-- 根据电脑名称模糊查询资源信息 -->
+    <select id="findByComputer" resultType="com.zzc.intern.entity.ResourceInfo">
+        select r_id, r_computer, r_github from resource_info where r_computer like "%" #{computer} "%"
+    </select>
+    <!-- 根据GitHub账号模糊查询资源信息 -->
+    <select id="findByGitHub" resultType="com.zzc.intern.entity.ResourceInfo">
+        select r_id, r_computer, r_github from resource_info where r_github like "%" #{gitHub} "%"
+    </select>
 </mapper>
