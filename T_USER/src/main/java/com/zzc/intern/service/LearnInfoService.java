@@ -1,6 +1,10 @@
 package com.zzc.intern.service;
 
 import com.zzc.intern.entity.LearnInfo;
+import com.zzc.intern.util.ResponseUtil;
+
+import java.util.List;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,5 +16,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-09-15
  */
 public interface LearnInfoService extends IService<LearnInfo> {
+	
+	List<LearnInfo> findAllLearn();
+	
+	LearnInfo findById(int id);
+	
+	int updateLearn(LearnInfo learnInfo);
+	
+	int addLearn(LearnInfo learnInfo);
 
 }
