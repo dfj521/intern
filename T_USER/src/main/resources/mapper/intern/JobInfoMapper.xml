@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.JobInfoMapper">
-
+ <insert id="insert">
+   insert into job_info values(null,#{jName})
+   </insert>
+<select id="findAll" resultType="com.zzc.intern.entity.JobInfo">
+    select * from job_info
+</select>
+<select id="findById" resultType="com.zzc.intern.entity.JobInfo">
+    select * from job_info where j_id=#{jId}
+</select>
+  <select id="findByName" resultType="com.zzc.intern.entity.JobInfo">
+  select j_id, j_name from job_info where j_name like '%' #{jName} '%'
+  </select>
+  <update id="updateId" parameterType="com.zzc.intern.entity.JobInfo">
+  update job_info set j_name=#{jName} where j_id=#{jId}
+  </update>
+  <delete id="deleteId"  >
+  delete from job_info where j_id=#{jId}
+  </delete>
 </mapper>
