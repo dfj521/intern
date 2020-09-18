@@ -1,36 +1,716 @@
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:30,309 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:31,081 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:31,124 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,373 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,463 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,770 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,784 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,785 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,785 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,925 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:32,925 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1782 ms
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:33,054 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:33,297 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:34,041 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:34,044 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,012 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,039 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,039 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,045 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,046 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,175 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:35,782 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,465 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,494 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,567 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,569 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,609 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,643 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,829 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,831 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,854 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,860 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,870 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,885 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,891 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: saveUsingPOST_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-17 18:18:36,914 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 7.889 seconds (JVM running for 10.333)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:31,145 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$83d67fb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:31,729 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:31,764 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,661 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,732 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$83d67fb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,960 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,971 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,972 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:32,972 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,093 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,093 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1304 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,187 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,300 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,728 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,733 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,857 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:33,860 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,767 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,811 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,812 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,817 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,818 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:34,917 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:35,467 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,032 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,060 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,118 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,120 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,139 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,169 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,352 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,372 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,379 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,396 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,399 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,406 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,414 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,427 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,438 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:01:36,461 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 6.722 seconds (JVM running for 8.589)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:00,603 ERROR [main][SpringApplication.java:837] - Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88)
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319)
+	... 31 more
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:00,614 ERROR [main][SpringApplication.java:837] - Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88)
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319)
+	... 31 more
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:16,163 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:16,772 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:16,811 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:17,717 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:17,794 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,018 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,027 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,027 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,028 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,177 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,177 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1350 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,280 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,387 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,838 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,845 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,955 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:18,958 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,845 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,869 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,869 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,874 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,875 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:19,988 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:20,560 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,156 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,179 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,228 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,231 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,261 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,294 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,480 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,503 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,508 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,521 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,524 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,532 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,541 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,553 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,563 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:21,588 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 6.844 seconds (JVM running for 8.982)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:27,133 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:27,133 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:03:27,141 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 8 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:02,654 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:03,239 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:03,276 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,178 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,253 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,481 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,490 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,491 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,492 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,605 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,606 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1314 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,703 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:04,820 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:05,238 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:05,243 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:05,356 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:05,359 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,347 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,394 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,394 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,399 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,400 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:06,495 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,045 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,638 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,661 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,708 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,711 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,731 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,765 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,955 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,976 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,981 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,995 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:07,997 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:08,006 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:08,015 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:08,030 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:08,042 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:08,067 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 7.001 seconds (JVM running for 8.953)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:14,481 INFO [http-nio-8888-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:14,481 INFO [http-nio-8888-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:06:14,488 INFO [http-nio-8888-exec-1][FrameworkServlet.java:547] - Completed initialization in 7 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:13,794 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:14,380 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:14,411 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,325 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,398 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,619 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,629 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,630 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,630 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,771 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,771 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1336 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,867 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:15,982 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:16,407 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:16,415 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:16,529 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:16,532 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,493 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,541 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,541 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,545 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,546 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:17,646 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,154 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,720 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,743 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,792 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,794 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,815 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:18,849 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,022 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,038 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,042 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,056 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,059 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,065 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,075 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,088 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,097 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:19,122 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 6.715 seconds (JVM running for 8.598)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:23,048 INFO [http-nio-8888-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:23,048 INFO [http-nio-8888-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:08:23,057 INFO [http-nio-8888-exec-1][FrameworkServlet.java:547] - Completed initialization in 9 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:34,788 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:36,094 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:36,152 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,457 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,553 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,810 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,819 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,819 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,820 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,939 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:37,939 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1759 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,049 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,154 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,576 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,581 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,692 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:38,696 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,731 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,752 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,752 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,757 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,757 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:39,854 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:40,377 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:40,987 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,009 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,064 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,067 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,091 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,121 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,294 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,310 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,315 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,327 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,330 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,336 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,344 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,357 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,367 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:41,392 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 8.847 seconds (JVM running for 11.717)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:48,103 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:48,104 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:10:48,110 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 6 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:23,263 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:23,998 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:24,050 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,242 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,321 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a3746157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,548 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,556 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,557 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,558 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,673 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,673 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1606 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:25,822 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:26,030 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:26,545 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:26,551 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:26,664 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:26,668 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,703 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,734 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,735 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,741 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,742 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:27,857 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:28,443 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,004 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,028 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,076 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,078 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,099 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,131 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,300 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,316 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,320 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,332 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,335 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,342 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,351 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,362 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,372 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:29,398 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 7.606 seconds (JVM running for 9.762)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:36,760 INFO [http-nio-8888-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:36,760 INFO [http-nio-8888-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:11:36,768 INFO [http-nio-8888-exec-1][FrameworkServlet.java:547] - Completed initialization in 8 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:20,955 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:21,570 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:21,609 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,483 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,556 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,780 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,789 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,790 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,790 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,906 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:22,907 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1283 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,016 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,121 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,547 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,552 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,664 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:23,667 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,511 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,539 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,540 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,547 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,548 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:24,661 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,236 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,824 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,846 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,897 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,899 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,926 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:25,970 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,211 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,227 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,232 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,246 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,249 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,255 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,264 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,275 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,287 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:26,313 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 6.665 seconds (JVM running for 8.706)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:30,080 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:30,080 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:12:30,089 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 9 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:52,597 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:53,202 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:53,243 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,156 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,230 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,454 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,462 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,463 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,463 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,581 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,581 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1319 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,683 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:54,794 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:55,219 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:55,224 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:55,345 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:55,348 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,202 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,228 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,229 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,233 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,233 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,352 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:56,886 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,513 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,536 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,586 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,588 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,609 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,643 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,871 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,898 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,906 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,928 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,932 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,941 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,967 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,978 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:57,993 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:36:58,033 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 7.052 seconds (JVM running for 9.044)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:37:09,879 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:37:09,880 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:37:09,897 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 14 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:38:46,902 ERROR [http-nio-8888-exec-6][DruidAbstractDataSource.java:1481] - discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 71017
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:47:22,345 ERROR [http-nio-8888-exec-10][DruidAbstractDataSource.java:1481] - discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 515423
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:04,484 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:05,093 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:05,129 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,226 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,312 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,577 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,587 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,588 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,588 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,714 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,715 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1570 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,819 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:06,929 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:07,354 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:07,359 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:07,470 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:07,474 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,341 WARN [main][AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,344 INFO [main][DruidDataSource.java:2024] - {dataSource-1} closing ...
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,352 INFO [main][DruidDataSource.java:2096] - {dataSource-1} closed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,354 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,372 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:08,390 ERROR [main][SpringApplication.java:837] - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 20 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 37 more
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:603)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 51 more
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:58,866 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:59,493 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:49:59,530 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,450 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,533 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,758 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,767 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,767 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,768 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,882 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,883 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1337 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:00,981 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:01,092 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:01,503 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:01,509 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:01,621 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:01,624 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,431 WARN [main][AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,434 INFO [main][DruidDataSource.java:2024] - {dataSource-1} closing ...
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,440 INFO [main][DruidDataSource.java:2096] - {dataSource-1} closed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,443 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,455 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:50:02,466 ERROR [main][SpringApplication.java:837] - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/java/soft/apache-maven-3.6.3/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 20 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 37 more
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'resourceInfoController' method 
+com.zzc.intern.controller.ResourceInfoController#findByGitHubRAT(String)
+to {GET /resourceInfo/findByGitHub}: There is already 'resourceInfoController' bean method
+com.zzc.intern.controller.ResourceInfoController#findByGitHub(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:603)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 51 more
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:11,423 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:12,002 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:12,040 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:12,951 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,022 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f914a196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,247 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,256 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,257 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,257 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,376 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,377 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1317 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,486 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:13,611 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:14,035 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:14,040 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:14,161 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:14,165 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,072 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,120 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,120 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,125 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,125 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,228 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:15,751 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,304 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,328 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,381 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.2.173:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,382 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,400 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,435 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,614 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,632 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,637 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,651 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,654 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,660 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,675 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,682 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,693 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:16,722 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 6.918 seconds (JVM running for 8.657)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:24,959 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:24,960 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 11:51:24,968 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 8 ms

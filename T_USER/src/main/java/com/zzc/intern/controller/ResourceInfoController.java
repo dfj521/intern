@@ -1,12 +1,11 @@
 package com.zzc.intern.controller;
 
 
+import com.zzc.intern.DTO.ResourceInfoDTO;
 import com.zzc.intern.entity.ResourceInfo;
 import com.zzc.intern.service.ResourceInfoService;
 import com.zzc.intern.util.ResponseUtil;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +43,19 @@ public class ResourceInfoController {
     }
 
     /**
+     * 查询所有资源和实习生信息
+     *
+     * @return
+     */
+    @ApiOperation(value = "查询所有资源和实习生信息")
+    @GetMapping("/findResAndTra")
+    public ResponseUtil<List<ResourceInfoDTO>> findResAndTra() {
+
+        return resourceInfoService.findResAndTra();
+
+    }
+
+    /**
      * 根据id查询一条资源信息
      *
      * @param id
@@ -52,9 +64,24 @@ public class ResourceInfoController {
     @ApiOperation("根据id查询一条资源信息")
     @GetMapping("/findById/{id}")
     public ResponseUtil<ResourceInfo> findById(
-            @ApiParam(name = "id", value = "查询的id", required = true) @PathVariable("id") Integer id) {
+            @ApiParam(name = "id", value = "查询的id", example = "0", required = true) @PathVariable("id") Integer id) {
 
         return resourceInfoService.findById(id);
+
+    }
+
+    /**
+     * 根据id查询资源信息和实习生信息
+     *
+     * @param id
+     * @return
+     */
+    @ApiOperation("根据id查询一条资源信息和实习生信息")
+    @GetMapping("/findByIdRAT/{id}")
+    public ResponseUtil<List<ResourceInfoDTO>> findByIdRAT(
+            @ApiParam(name = "id", value = "查询的id", example = "0", required = true) @PathVariable("id") Integer id) {
+
+        return resourceInfoService.findByIdRAT(id);
 
     }
 
@@ -74,6 +101,21 @@ public class ResourceInfoController {
     }
 
     /**
+     * 根据电脑名称模糊查询资源和实习生信息
+     *
+     * @param computer
+     * @return
+     */
+    @ApiOperation("根据电脑名称模糊查询资源和实习生信息")
+    @GetMapping("/findByComputerRAT")
+    public ResponseUtil<List<ResourceInfoDTO>> findByComputerRAT(
+            @ApiParam(name = "computer", value = "电脑型号", required = true) String computer) {
+
+        return resourceInfoService.findByComputerRAT(computer);
+
+    }
+
+    /**
      * 根据GitHub账号模糊查询资源信息
      *
      * @param gitHub
@@ -89,6 +131,21 @@ public class ResourceInfoController {
     }
 
     /**
+     * 根据GitHub账号模糊查询资源和实习生信息
+     *
+     * @param gitHub
+     * @return
+     */
+    @ApiOperation("根据GitHub账号模糊查询资源和实习生信息")
+    @GetMapping("/findByGitHubRAT")
+    public ResponseUtil<List<ResourceInfoDTO>> findByGitHubRAT(
+            @ApiParam(name = "github", value = "GitHub账号", required = true) String gitHub) {
+
+        return resourceInfoService.findByGitHubRAT(gitHub);
+
+    }
+
+    /**
      * 添加一条资源信息
      *
      * @param resourceInfo
@@ -96,8 +153,7 @@ public class ResourceInfoController {
      */
     @ApiOperation("添加一条资源信息")
     @PostMapping("/add")
-    public ResponseUtil<Integer> add(
-            @ApiParam(name = "resourceInfo", value = "资源信息实体类", required = true) ResourceInfo resourceInfo) {
+    public ResponseUtil<Integer> add(ResourceInfo resourceInfo) {
 
         return resourceInfoService.add(resourceInfo);
 
@@ -111,8 +167,7 @@ public class ResourceInfoController {
      */
     @ApiOperation("更新一条资源信息")
     @PostMapping("/update")
-    public ResponseUtil<Integer> update(
-            @ApiParam(name = "resourceInfo", value = "资源信息实体类", required = true) ResourceInfo resourceInfo) {
+    public ResponseUtil<Integer> update(ResourceInfo resourceInfo) {
 
         return resourceInfoService.update(resourceInfo);
 
@@ -127,7 +182,7 @@ public class ResourceInfoController {
     @ApiOperation("删除一条资源信息")
     @GetMapping("/deleteById/{id}")
     public ResponseUtil<Integer> deleteById(
-            @ApiParam(name = "id", value = "删除资源的id", required = true) @PathVariable("id") Integer id) {
+            @ApiParam(name = "id", value = "删除资源的id", example = "0", required = true) @PathVariable("id") Integer id) {
 
         return resourceInfoService.deleteById(id);
 

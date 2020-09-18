@@ -23,7 +23,7 @@ public class SwaggerConfiguration {
                 .apiInfo(buildApiInfo())
                 .select()
                 //要扫描的API(Controller)基础包
-                .apis(RequestHandlerSelectors.basePackage("com.zzc.intern.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.zzc.intern"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -27,7 +27,32 @@
 
     <!-- 查询所有资源 -->
     <select id="findAll" resultType="com.zzc.intern.entity.ResourceInfo">
-        select r_id, r_computer, r_github from resource_info
+        select r.r_id, r.r_computer, r.r_github from resource_info
+    </select>
+    <!-- 查询所有资源和实习生信息 -->
+    <select id="findResAndTra" resultType="com.zzc.intern.DTO.ResourceInfoDTO">
+        select r.r_id, r.r_computer, r.r_github, t.t_name from resource_info r join trainee_info t join trainee_resource_rel tr
+        where r.r_id = tr.r_id and t.t_id = tr.t_id
+    </select>
+    <!-- 根据条件查询一条资源信息和实习生信息 -->
+    <select id="findByCondition" resultType="com.zzc.intern.DTO.ResourceInfoDTO">
+        select r.r_id, r.r_computer, r.r_github, t.t_name from resource_info r join trainee_info t join trainee_resource_rel tr
+        <where>
+            and r.r_id = tr.r_id
+            and t.t_id = tr.t_id
+            <if test="rId != null and rId != ''">
+                and r.r_id = #{rId}
+            </if>
+            <if test="rComputer != null and rComputer != ''">
+                and r.r_computer like "%" #{rComputer} "%"
+            </if>
+            <if test="rGithub != null and rGithub != ''">
+                and r.r_github like "%" #{rGithub} "%"
+            </if>
+            <if test="tName != null and tName != ''">
+                and t.t_name like "%" #{tName} "%"
+            </if>
+        </where>
     </select>
     <!-- 根据id查询一条资源信息 -->
     <select id="findById" resultType="com.zzc.intern.entity.ResourceInfo">
