@@ -2,7 +2,7 @@ package com.zzc.intern.controller;
 
 
 
-import org.springframework.web.bind.annotation.DeleteMapping;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.baomidou.mybatisplus.core.injector.methods.DeleteById;
+
 import com.zzc.intern.entity.HouseInfo;
 import com.zzc.intern.service.HouseInfoService;
 import com.zzc.intern.util.ResponseUtil;
@@ -47,28 +47,28 @@ public class HouseInfoController {
     }
 	@ApiOperation("通过id查询宿舍")
     @GetMapping("/findById/{id}")
-    public HouseInfo findById(@PathVariable("id") Integer id) {
+    public ResponseUtil<HouseInfo> findById(@PathVariable("id") Integer id) {
     	return houseInfoService.findById(id);
     }
 	@ApiOperation("删除宿舍")
     @GetMapping("/delete/{id}")
-    public int delete(@PathVariable("id") Integer id) {
+    public ResponseUtil<Integer> delete(@PathVariable("id") Integer id) {
     	return houseInfoService.delete(id);
     	
     }
 	@ApiOperation("添加宿舍")
     @PostMapping("/add")
-    public int add(HouseInfo houseInfo) {
+    public ResponseUtil<Integer> add(HouseInfo houseInfo) {
     	return houseInfoService.add(houseInfo);
     }
 	@ApiOperation("模糊查询")
 	@GetMapping("/findByHouseInfoId/{hAddress}")
-	public List<HouseInfo> findHouseInfoByAddress(@PathVariable ("hAddress") @Validated  String hAddress) {
+	public ResponseUtil<List<HouseInfo>> findHouseInfoByAddress(@PathVariable ("hAddress") @Validated  String hAddress) {
 		return houseInfoService.findHouseInfoByAddress(hAddress);
 	}
 	@ApiOperation("更新")
 	@PostMapping("/update")
-	public Integer update(HouseInfo houseInfo) {
+	public ResponseUtil<Integer> update(HouseInfo houseInfo) {
 		return houseInfoService.update(houseInfo);
 	}
 }
