@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.zzc.intern.DTO.JobInfoDTO;
 import com.zzc.intern.entity.JobInfo;
 import com.zzc.intern.entity.ResourceInfo;
 import com.zzc.intern.service.JobInfoService;
@@ -67,4 +68,24 @@ public class JobInfoController {
     public ResponseUtil<Integer> deleteId(Integer jid) {
     	return jobInfoService.deleteId(jid);
     }
+    @ApiOperation("根据岗位id查询学生姓名")
+    @GetMapping("/findId")
+    public ResponseUtil<List<JobInfoDTO>>findId(Integer jId) {
+    	return jobInfoService.findId(jId);
+    }
+    @ApiOperation("根据岗位id查询学习内容")
+    @PostMapping("/findGId")
+    public ResponseUtil<List<JobInfoDTO>>findGId(Integer jId) {
+    	return jobInfoService.findGId(jId);
+    }
+    @ApiOperation("根据岗位名称模糊查询岗位信息和实习生信息")
+    @GetMapping("/selectId")
+    public ResponseUtil<List<JobInfoDTO>> selectId(String jName) {
+    	return jobInfoService.selectId(jName);
+    }
+   @ApiOperation("根据岗位名称模糊查询岗位信息和学习内容")
+   @GetMapping("/selecGId")
+   public ResponseUtil<List<JobInfoDTO>> selectGId(String jName) {
+   return jobInfoService.selectGId(jName);
+   }
 }

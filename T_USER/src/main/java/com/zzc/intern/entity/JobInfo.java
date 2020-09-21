@@ -18,11 +18,11 @@ public class JobInfo implements Serializable {
      */
     @TableId(value = "j_id", type = IdType.AUTO)
     private Integer jId;
+    
 
     /**
      * 岗位名称
      */
     private String jName;
-
 
 }

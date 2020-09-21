@@ -19,4 +19,21 @@
   <delete id="deleteId"  >
   delete from job_info where j_id=#{jId}
   </delete>
+  <select id="findId" resultType="com.zzc.intern.DTO.JobInfoDTO">
+  SELECT t3.t_name	FROM trainee_job_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
+	INNER JOIN trainee_info t3 ON t1.t_id = t3.t_id where t1.j_id = #{tId}
+  </select>
+  <select id="findGId" resultType="com.zzc.intern.DTO.JobInfoDTO">
+  SELECT  t3.l_elementary 	FROM job_learn_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
+	INNER JOIN learn_info t3 ON t1.l_id = t3.l_id where t1.j_id =#{lId}
+  </select>
+    <select id="selectId" resultType="com.zzc.intern.DTO.JobInfoDTO">
+  SELECT t3.t_name,t2.j_name	FROM trainee_job_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
+	INNER JOIN trainee_info t3 ON t1.t_id = t3.t_id where j_name like  '%'  #{jName}  '%'
+  </select>
+  
+   <select id="selectGId" resultType="com.zzc.intern.DTO.JobInfoDTO">
+  SELECT  t3.l_elementary 	FROM job_learn_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
+	INNER JOIN learn_info t3 ON t1.l_id = t3.l_id where j_name  like '%'  #{jName}  ''
+  </select>
 </mapper>

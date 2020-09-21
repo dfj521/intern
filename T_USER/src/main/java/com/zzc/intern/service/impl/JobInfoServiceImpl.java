@@ -1,5 +1,6 @@
 package com.zzc.intern.service.impl;
 
+import com.zzc.intern.DTO.JobInfoDTO;
 import com.zzc.intern.entity.JobInfo;
 import com.zzc.intern.entity.ResourceInfo;
 import com.zzc.intern.mapper.JobInfoMapper;
@@ -174,4 +175,92 @@ public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfo> impl
 	        return result;
 	}
 
+	@Override
+	public ResponseUtil<List<JobInfoDTO>> findId(Integer jId) {
+		// TODO Auto-generated method stub
+		ResponseUtil<List<JobInfoDTO>> result = new ResponseUtil<>();
+		List<JobInfoDTO> jonInfos= new ArrayList<>();
+		  try {
+			 jonInfos = jobinfoMapper.findId(jId);
+	            if (jonInfos.size() == 0) {
+	                result.setCode(300);
+	                result.setMessage("没有查询到数据");
+	            } else {
+	                result.setCode(200);
+	                result.setMessage("查询成功");
+	            }
+	        } catch (Exception e) {
+	            result.setCode(500);
+	            result.setMessage("查询失败");
+	        }
+	        result.setData(jonInfos);
+	        return result;
+	}
+
+	@Override
+	public ResponseUtil<List<JobInfoDTO>> findGId(Integer jId) {
+		// TODO Auto-generated method stub
+		ResponseUtil<List<JobInfoDTO>> result = new ResponseUtil<>();
+		List<JobInfoDTO> jonInfos= new ArrayList<>();
+		  try {
+			 jonInfos = jobinfoMapper.findGId(jId);
+	            if (jonInfos.size() == 0) {
+	                result.setCode(300);
+	                result.setMessage("没有查询到数据");
+	            } else {
+	                result.setCode(200);
+	                result.setMessage("查询成功");
+	            }
+	        } catch (Exception e) {
+	            result.setCode(500);
+	            result.setMessage("查询失败");
+	        }
+	        result.setData(jonInfos);
+	        return result;
+	
+	}
+
+	@Override
+	public ResponseUtil<List<JobInfoDTO>> selectId(String jName) {
+		// TODO Auto-generated method stub
+		ResponseUtil<List<JobInfoDTO>> result = new ResponseUtil<>();
+		List<JobInfoDTO> jonInfos= new ArrayList<>();
+		 try {
+			 jonInfos = jobinfoMapper.selectId(jName);
+	            if (jonInfos.size() == 0) {
+	                result.setCode(300);
+	                result.setMessage("没有查询到数据");
+	            } else {
+	                result.setCode(200);
+	                result.setMessage("查询成功");
+	            }
+	        } catch (Exception e) {
+	            result.setCode(500);
+	            result.setMessage("查询失败");
+	        }
+	        result.setData(jonInfos);
+	        return result;
+	}
+
+	@Override
+	public ResponseUtil<List<JobInfoDTO>> selectGId(String jName) {
+		// TODO Auto-generated method stub
+		ResponseUtil<List<JobInfoDTO>> result = new ResponseUtil<>();
+		List<JobInfoDTO> jonInfos= new ArrayList<>();
+		 try {
+			 jonInfos = jobinfoMapper.selectGId(jName);
+	            if (jonInfos.size() == 0) {
+	                result.setCode(300);
+	                result.setMessage("没有查询到数据");
+	            } else {
+	                result.setCode(200);
+	                result.setMessage("查询成功");
+	            }
+	        } catch (Exception e) {
+	            result.setCode(500);
+	            result.setMessage("查询失败");
+	        }
+	        result.setData(jonInfos);
+	        return result;
+	}
 }

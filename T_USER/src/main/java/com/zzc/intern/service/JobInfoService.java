@@ -1,5 +1,6 @@
 package com.zzc.intern.service;
 
+import com.zzc.intern.DTO.JobInfoDTO;
 import com.zzc.intern.entity.JobInfo;
 import com.zzc.intern.entity.ResourceInfo;
 import com.zzc.intern.util.ResponseUtil;
@@ -29,4 +30,12 @@ public interface JobInfoService extends IService<JobInfo> {
 	ResponseUtil<Integer> updateId(JobInfo jobInfo);
 	//删除岗位信息
 	ResponseUtil<Integer> deleteId(Integer jid);
+	//根据岗位id查询学生姓名
+	ResponseUtil<List<JobInfoDTO>> findId(Integer jId);
+	//根据岗位id查询学习内容
+	ResponseUtil<List<JobInfoDTO>> findGId(Integer jId);
+	//根据岗位名称模糊查询岗位信息和学生信息
+	ResponseUtil<List<JobInfoDTO>> selectId(String jName);
+	//根据岗位名称模糊查询岗位信息和学习内容
+	ResponseUtil<List<JobInfoDTO>> selectGId(String jName);
 }
