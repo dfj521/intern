@@ -17,12 +17,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface LearnInfoService extends IService<LearnInfo> {
 	
-	List<LearnInfo> findAllLearn();
+	ResponseUtil<List<LearnInfo>> findAllLearn();
 	
-	LearnInfo findById(int id);
+	ResponseUtil<LearnInfo> findById(int id);
 	
-	int updateLearn(LearnInfo learnInfo);
+	ResponseUtil<Integer> updateLearn(LearnInfo learnInfo);
 	
-	int addLearn(LearnInfo learnInfo);
+	ResponseUtil<Integer> addLearn(LearnInfo learnInfo);
 
 }

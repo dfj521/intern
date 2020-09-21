@@ -2,6 +2,8 @@ package com.zzc.intern.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -28,32 +30,40 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @Controller
-@Api(value = "", tags = "", description="")
+@Api(value = "学习内容管理", tags = "学习内容管理", description="学习内容管理")
 @RequestMapping("learn")
 public class LearnInfoController {
 	
 	@Resource
 	private LearnInfoService learnInfoService;
 	
-	@RequestMapping("/findAllLearn")
-	@ResponseBody
-	public List<LearnInfo> findAllLearn() {
-		return learnInfoService.findAllLearn();
-	}
-	
-	@RequestMapping("/findById")
-	@ResponseBody
-	public LearnInfo findById(int id) {
-		return learnInfoService.findById(id);
-	}
-	@RequestMapping("/updateLearn")
-	@ResponseBody
-	public int updateLearn(LearnInfo learnInfo) {
-		return learnInfoService.updateLearn(learnInfo);
-	}
-	@RequestMapping("/addLearn")
-	@ResponseBody
-	public int addLearn(LearnInfo learnInfo) {
-		return learnInfoService.addLearn(learnInfo);
-	}
+	/*
+	 * @GetMapping("/findAllLearn")
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @ApiOperation("查询所有学习内容") public List<LearnInfo> findAllLearn() { return
+	 * learnInfoService.findAllLearn(); }
+	 * 
+	 * @GetMapping("/findById")
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @ApiOperation("根据学习id查询所有学习内容") public LearnInfo findById(int id) { return
+	 * learnInfoService.findById(id); }
+	 * 
+	 * @PostMapping("/updateLearn")
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @ApiOperation("修改学习内容") public int updateLearn(LearnInfo learnInfo) { return
+	 * learnInfoService.updateLearn(learnInfo); }
+	 * 
+	 * @PostMapping("/addLearn")
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @ApiOperation("添加学习内容") public int addLearn(LearnInfo learnInfo) { return
+	 * learnInfoService.addLearn(learnInfo); }
+	 */
 }

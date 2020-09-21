@@ -4,14 +4,14 @@
 	<insert id="addLearn"
 		parameterType="com.zzc.intern.entity.LearnInfo">
 		INSERT into learn_info
-		VALUES(#{lId},#{lElementary},#{lStage})
+		VALUES(#{lId},#{lElementary},#{lStage},1)
 	</insert>
 	<select id="findAllLearn"
 		resultType="com.zzc.intern.entity.LearnInfo">
 		SELECT
 		l_id,l_elementary,l_stage
 		from
-		learn_info
+		learn_info where l_status=1
 	</select>
 	<select id="findByid" parameterType="int"
 		resultType="com.zzc.intern.entity.LearnInfo">

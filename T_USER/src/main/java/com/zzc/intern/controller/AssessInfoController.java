@@ -44,10 +44,10 @@ public class AssessInfoController {
 	@GetMapping("/findByEerm")
 	@ResponseBody
 	public ResponseUtil<List<TraineeAssessLearnResultDTO>> findByEerm(
-			@ApiParam(name = "name", value = "实习生姓名", required = true) @RequestParam(value = "name", required = false) String name,
-			@ApiParam(name = "minaGrade", value = "考核成绩min", required = true) @RequestParam(value = "minaGrade", required = false) Double minaGrade,
-			@ApiParam(name = "maxaGrade", value = "考核成绩max", required = true) @RequestParam(value = "maxaGrade", required = false) Double maxaGrade,
-			@ApiParam(name = "lstage", value = "考核级别", required = true) @RequestParam(value = "lstage", required = false) Integer lstage) {
+			@ApiParam(name = "name", value = "实习生姓名", required = false) @RequestParam(value = "name", required = false) String name,
+			@ApiParam(name = "minaGrade", value = "考核成绩min", required = false) @RequestParam(value = "minaGrade", required = false) Double minaGrade,
+			@ApiParam(name = "maxaGrade", value = "考核成绩max", required = false) @RequestParam(value = "maxaGrade", required = false) Double maxaGrade,
+			@ApiParam(name = "lstage", value = "考核级别", required = false) @RequestParam(value = "lstage", required = false) Integer lstage) {
 		return assessInfoService.findByEerm(name, minaGrade, maxaGrade, lstage);
 	}
 

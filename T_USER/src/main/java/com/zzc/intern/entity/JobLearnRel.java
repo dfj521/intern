@@ -29,5 +29,8 @@ public class JobLearnRel implements Serializable {
      */
     private Integer lId;
 
-
+    /**
+	 *是否可用（1.可用，0.不可用）
+	 */
+	private String Status;
 }

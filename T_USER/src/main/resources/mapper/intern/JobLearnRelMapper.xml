@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.JobLearnRelMapper">
-
+	<select id="findLearnByJId" parameterType="Integer"
+		resultType="com.zzc.intern.entity.LearnInfo">
+		SELECT
+		l.l_elementary,l.l_stage
+		from
+		job_learn_rel jl join learn_info l
+		on jl.l_id=l.l_id
+		where jl.j_id=#{jId} and l.l_status=1
+	</select>
+	<insert id="addJobLearn" parameterType="com.zzc.intern.entity.JobLearnRel">
+		INSERT INTO job_learn_rel VALUES(#{id},#{jId},#{lId},1)
+	</insert>
+	<update id="delJobLearnById">
+		update job_learn_rel set status=0 where id=#{id}
+	</update>
 </mapper>
