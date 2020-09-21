@@ -1,6 +1,5 @@
 package com.zzc.intern.mapper;
 
-import com.zzc.intern.DTO.ResourceInfoDTO;
 import com.zzc.intern.entity.ResourceInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
@@ -24,13 +23,6 @@ public interface ResourceInfoMapper extends BaseMapper<ResourceInfo> {
      * @return
      */
     List<ResourceInfo> findAll();
-
-    /**
-     * 查询所有资源和实习生信息
-     *
-     * @return
-     */
-    List<ResourceInfoDTO> findResAndTra();
 
     /**
      * 根据id查询一条资源信息
@@ -79,12 +71,4 @@ public interface ResourceInfoMapper extends BaseMapper<ResourceInfo> {
      * @return
      */
     int deleteById(Integer id);
-
-    /**
-     * 根据条件查询一条资源信息和实习生信息
-     *
-     * @param resourceInfoDTO
-     * @return
-     */
-    List<ResourceInfoDTO> findByCondition(ResourceInfoDTO resourceInfoDTO);
 }

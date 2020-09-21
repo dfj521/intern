@@ -1,6 +1,5 @@
 package com.zzc.intern.service.impl;
 
-import com.zzc.intern.DTO.ResourceInfoDTO;
 import com.zzc.intern.entity.ResourceInfo;
 import com.zzc.intern.mapper.ResourceInfoMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -89,35 +88,6 @@ public class ResourceInfoServiceImpl extends ServiceImpl<ResourceInfoMapper, Res
     }
 
     /**
-     * 根据id查询资源信息和实习生信息
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public ResponseUtil<List<ResourceInfoDTO>> findByIdRAT(Integer id) {
-        ResponseUtil<List<ResourceInfoDTO>> result = new ResponseUtil<>();
-        if (id <= 0) {
-            result.setCode(400);
-            result.setMessage("格式不正确");
-            return result;
-        }
-        List<ResourceInfoDTO> resourceInfoDTOS = new ArrayList<>();
-        ResourceInfoDTO resourceInfoDTO = new ResourceInfoDTO();
-        resourceInfoDTO.setRId(id);
-        try {
-            resourceInfoDTOS = resourceInfoMapper.findByCondition(resourceInfoDTO);
-            result.setCode(200);
-            result.setMessage("查询成功");
-        } catch (Exception e) {
-            result.setCode(500);
-            result.setMessage("查询失败");
-        }
-        result.setData(resourceInfoDTOS);
-        return result;
-    }
-
-    /**
      * 根据电脑名称模糊查询资源信息
      *
      * @param computer
@@ -145,35 +115,6 @@ public class ResourceInfoServiceImpl extends ServiceImpl<ResourceInfoMapper, Res
     }
 
     /**
-     * 根据电脑名称模糊查询资源和实习生信息
-     *
-     * @param computer
-     * @return
-     */
-    @Override
-    public ResponseUtil<List<ResourceInfoDTO>> findByComputerRAT(String computer) {
-        ResponseUtil<List<ResourceInfoDTO>> result = new ResponseUtil<>();
-        if (computer == null || computer.equals("")) {
-            result.setCode(400);
-            result.setMessage("格式不正确");
-            return result;
-        }
-        List<ResourceInfoDTO> resourceInfoDTOS = new ArrayList<>();
-        ResourceInfoDTO resourceInfoDTO = new ResourceInfoDTO();
-        resourceInfoDTO.setRComputer(computer);
-        try {
-            resourceInfoDTOS = resourceInfoMapper.findByCondition(resourceInfoDTO);
-            result.setCode(200);
-            result.setMessage("查询成功");
-        } catch (Exception e) {
-            result.setCode(500);
-            result.setMessage("查询失败");
-        }
-        result.setData(resourceInfoDTOS);
-        return result;
-    }
-
-    /**
      * 根据GitHub账号模糊查询资源信息
      *
      * @param gitHub
@@ -197,35 +138,6 @@ public class ResourceInfoServiceImpl extends ServiceImpl<ResourceInfoMapper, Res
             result.setMessage("查询失败");
         }
         result.setData(resourceInfos);
-        return result;
-    }
-
-    /**
-     * 根据GitHub账号模糊查询资源和实习生信息
-     *
-     * @param gitHub
-     * @return
-     */
-    @Override
-    public ResponseUtil<List<ResourceInfoDTO>> findByGitHubRAT(String gitHub) {
-        ResponseUtil<List<ResourceInfoDTO>> result = new ResponseUtil<>();
-        if (gitHub == null || gitHub.equals("")) {
-            result.setCode(400);
-            result.setMessage("格式不正确");
-            return result;
-        }
-        List<ResourceInfoDTO> resourceInfoDTOS = new ArrayList<>();
-        ResourceInfoDTO resourceInfoDTO = new ResourceInfoDTO();
-        resourceInfoDTO.setRGithub(gitHub);
-        try {
-            resourceInfoDTOS = resourceInfoMapper.findByCondition(resourceInfoDTO);
-            result.setCode(200);
-            result.setMessage("查询成功");
-        } catch (Exception e) {
-            result.setCode(500);
-            result.setMessage("查询失败");
-        }
-        result.setData(resourceInfoDTOS);
         return result;
     }
 
@@ -311,32 +223,4 @@ public class ResourceInfoServiceImpl extends ServiceImpl<ResourceInfoMapper, Res
         result.setData(i);
         return result;
     }
-
-    /**
-     * 查询所有资源和实习生信息
-     *
-     * @return
-     */
-    @Override
-    public ResponseUtil<List<ResourceInfoDTO>> findResAndTra() {
-        ResponseUtil<List<ResourceInfoDTO>> result = new ResponseUtil<>();
-        List<ResourceInfoDTO> resourceInfos = new ArrayList<>();
-        try {
-            resourceInfos = resourceInfoMapper.findResAndTra();
-            if (resourceInfos.size() == 0) {
-                result.setCode(300);
-                result.setMessage("没有查询到数据");
-            } else {
-                result.setCode(200);
-                result.setMessage("查询成功");
-            }
-        } catch (Exception e) {
-            result.setCode(500);
-            result.setMessage("查询失败");
-        }
-        result.setData(resourceInfos);
-        return result;
-    }
-
-
 }

@@ -1,26 +1,9 @@
 package com.zzc.intern.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.zzc.intern.DTO.TraineeAssessLearnResultDTO;
-import com.zzc.intern.entity.AssessInfo;
 import com.zzc.intern.service.AssessInfoService;
-import com.zzc.intern.util.ResponseUtil;
-
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.List;
-
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -33,13 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @Controller
-@Api(value = "实习生考核管理", tags = "实习生考核管理", description = "实习生考核管理")
-@RequestMapping("assess")
+@Api(value = "", tags = "", description = "")
 public class AssessInfoController {
 
 	@Autowired
 	private AssessInfoService assessInfoService;
 
+<<<<<<< HEAD
 	@ApiOperation("查询所有考核并根据条件查询")
 	@GetMapping("/findByEerm")
 	@ResponseBody
@@ -79,4 +62,6 @@ public class AssessInfoController {
 		return assessInfoService.delAssess(id);
 	}
 
+=======
+>>>>>>> branch 'master' of https://github.com/dfj521/intern
 }

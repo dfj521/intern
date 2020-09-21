@@ -1,31 +1,70 @@
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:46,652 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$823fd703] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:50,491 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:50,527 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,533 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,610 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$823fd703] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,916 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,929 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,930 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:51,930 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,062 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,062 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1517 ms
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,165 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,290 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,804 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,810 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,926 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:52,929 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,775 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,797 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,797 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,802 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,803 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,922 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:54,264 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:54,672 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:54,698 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,753 WARN [main][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance?groupName=DEFAULT_GROUP&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=public&port=8888&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.2.163&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8 from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,754 ERROR [main][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:34,452 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6e510ef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:39,888 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='T_USER.properties'}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:39,954 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,335 INFO [main][GenericScope.java:295] - BeanFactory id=e6aa3ef4-2054-3e63-b3cf-ad57cf10772a
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,388 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6e510ef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,573 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,580 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,581 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,581 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,691 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,692 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1725 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,760 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:41,830 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:42,510 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:42,514 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:42,534 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.JobInfoMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:42,613 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:42,617 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,166 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,181 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,182 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,185 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,185 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:43,262 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:45,517 INFO [main][InetUtils.java:170] - Cannot determine local hostname
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:45,535 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:47,775 INFO [main][InetUtils.java:170] - Cannot determine local hostname
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:47,920 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:47,949 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,180 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,180 WARN [main][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance?groupName=DEFAULT_GROUP&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=public&port=8888&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.56.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8 from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,180 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,180 ERROR [main][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -82,7 +121,21 @@ java.net.ConnectException: Connection refused: connect
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,760 ERROR [main][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,183 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,183 ERROR [main][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -118,7 +171,20 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance. c
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,762 ERROR [main][NacosServiceRegistry.java:66] - nacos registry, T_USER register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='192.168.2.173:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='T_USER', weight=1.0, clusterName='DEFAULT', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.2.163', networkInterface='', port=8888, secure=false, accessKey='', secretKey=''}},
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,184 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,184 ERROR [main][NacosServiceRegistry.java:66] - nacos registry, T_USER register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='192.168.2.173:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='T_USER', weight=1.0, clusterName='DEFAULT', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.56.1', networkInterface='', port=8888, secure=false, accessKey='', secretKey=''}},
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -153,9 +219,25 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after a
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at com.zzc.intern.TUserApplication.main(TUserApplication.java:12)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,767 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,773 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,773 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,186 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,200 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,226 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,383 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,385 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,396 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,403 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: insertUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,410 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,412 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,416 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,421 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,423 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,430 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_4
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:50,447 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 18.596 seconds (JVM running for 20.297)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:52,715 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:54,738 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:56,752 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:57,209 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:57,209 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -190,7 +272,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,775 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:57,209 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -204,7 +286,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,776 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:57,209 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -217,23 +299,8 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,805 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,837 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,024 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,037 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,041 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,054 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,057 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,063 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,074 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,077 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,088 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:56,118 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 10.431 seconds (JVM running for 11.795)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:57,132 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:58,133 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:59,137 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,145 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,146 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:58,768 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:58,769 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -247,7 +314,7 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,147 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:36:58,770 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -261,8 +328,9 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:01,782 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:01,782 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:02,782 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:04,235 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:04,236 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -297,7 +365,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:01,784 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:04,237 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -311,7 +379,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:01,786 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:04,238 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -324,11 +392,10 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:03,162 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:04,176 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:05,179 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:06,203 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:06,204 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:04,793 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:06,814 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:08,840 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:08,841 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -342,7 +409,7 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:06,204 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:08,841 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -356,8 +423,8 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,792 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,792 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:11,264 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:11,265 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -392,7 +459,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,793 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:11,266 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -406,7 +473,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,794 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:11,267 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -419,40 +486,11 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:09,212 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:10,217 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:11,230 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:12,235 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:12,235 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
-java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
-	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
-	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
-	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
-	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
-	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:12,236 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
-java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
-	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
-	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
-	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
-	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
-	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:13,810 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:13,810 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:12,856 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:14,874 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:16,899 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,286 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,287 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -487,7 +525,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:13,811 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,289 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -501,7 +539,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:13,812 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,290 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -514,11 +552,8 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:15,242 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:16,254 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:17,262 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:18,274 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:18,274 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,922 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,923 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -532,7 +567,7 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:18,276 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:18,924 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -546,8 +581,10 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:19,837 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:19,837 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:23,001 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:25,048 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:25,344 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:25,345 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -582,7 +619,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:19,838 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:25,346 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -596,7 +633,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:19,839 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:25,347 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -609,11 +646,9 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:21,281 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:22,294 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:23,298 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:24,309 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:24,309 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:27,077 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:29,099 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:29,100 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -627,7 +662,7 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:24,310 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:29,101 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
 java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
 	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
 	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
@@ -641,8 +676,8 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:25,843 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.2.163%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:25,844 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:32,362 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:32,363 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
@@ -677,7 +712,7 @@ java.net.ConnectException: Connection refused: connect
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:25,845 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:32,364 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
 ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
@@ -691,7 +726,7 @@ ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/be
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:25,846 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.2.163","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:32,365 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
 java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
 	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
@@ -704,7 +739,527 @@ java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat af
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:853)
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:40:57,819 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:40:57,819 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:40:57,828 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 9 ms
-[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:40:57,883 ERROR [http-nio-8888-exec-2][DruidAbstractDataSource.java:1481] - discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 185354
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:33,127 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:35,151 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:37,165 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,187 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,188 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,189 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,378 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,378 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,380 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:39,382 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:43,204 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:45,217 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:46,400 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:46,400 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:46,401 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:46,402 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:47,237 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:49,254 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:49,254 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:49,255 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,288 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,423 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,423 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,424 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:53,425 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:55,302 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:57,328 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:59,339 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:59,340 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:37:59,341 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,451 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,452 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,453 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:00,454 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:03,358 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:05,380 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,404 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,468 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,469 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,470 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:07,471 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:09,465 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:09,465 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:389] - [fixed-192.168.2.173_8848] [check-update] get changed dataId exception
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:09,465 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ClientWorker.java:550] - longPolling error : 
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:162)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:377)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:352)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:512)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:13,485 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:14,501 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:14,501 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:14,501 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:14,503 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:15,509 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:17,536 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.2.173_8848][ServerHttpAgent.java:149] - [NACOS ConnectException httpPost] currentServerAddr: http://192.168.2.173:8848, err : Connection refused: connect
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:56,095 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:56,095 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:56,103 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 8 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:38:56,141 ERROR [http-nio-8888-exec-2][DruidAbstractDataSource.java:1481] - discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 133877
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:02,697 INFO [RMI TCP Connection(20)-127.0.0.1][SpringApplicationAdminMXBeanRegistrar.java:159] - Application shutdown requested.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:02,703 INFO [RMI TCP Connection(20)-127.0.0.1][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,433 INFO [RMI TCP Connection(20)-127.0.0.1][DirectJDKLog.java:173] - Stopping service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,437 INFO [RMI TCP Connection(20)-127.0.0.1][DirectJDKLog.java:173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,442 INFO [RMI TCP Connection(20)-127.0.0.1][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,447 INFO [RMI TCP Connection(20)-127.0.0.1][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,449 INFO [RMI TCP Connection(20)-127.0.0.1][NacosServiceRegistry.java:74] - De-registering from Nacos Server now...
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,463 INFO [RMI TCP Connection(20)-127.0.0.1][NacosServiceRegistry.java:93] - De-registration finished.
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,465 INFO [RMI TCP Connection(20)-127.0.0.1][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,469 INFO [RMI TCP Connection(20)-127.0.0.1][DruidDataSource.java:2024] - {dataSource-1} closing ...
+[${project.name}][${env:SERVER_PORT}] 2020-09-18 08:46:03,471 INFO [RMI TCP Connection(20)-127.0.0.1][DruidDataSource.java:2096] - {dataSource-1} closed

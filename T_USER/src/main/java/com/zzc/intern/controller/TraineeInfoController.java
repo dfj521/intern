@@ -24,8 +24,8 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@Api(value = "实习生基本信息", tags = "实习生基本信息", description = "实习生基本信息")
-@RequestMapping("/traineeInfo")
+@Api(value = "实习生基本信息", tags = "实习生基本信息", description="实习生基本信息")
+@RequestMapping("                                    /traineeInfo")
 public class TraineeInfoController {
 
     @Autowired
@@ -37,8 +37,8 @@ public class TraineeInfoController {
      * @return
      */
     @ApiOperation("查询所有实习生基本信息")
-    @GetMapping("/list")
-    public List<TraineeInfo> list() {
+    @GetMapping("/findAll")
+    public List<TraineeInfo> findAll() {
         return traineeInfoService.list();
     }
 
@@ -52,28 +52,5 @@ public class TraineeInfoController {
     @PostMapping("/save")
     public boolean save(TraineeInfo traineeInfo) {
         return traineeInfoService.save(traineeInfo);
-    }
-
-    /**
-     * 根据id选择更新实习生基本信息
-     *
-     * @param traineeInfo
-     * @return
-     */
-    @ApiOperation("根据id选择更新实习生基本信息")
-    @PostMapping("/updateById")
-    public boolean updateById(TraineeInfo traineeInfo) {
-        return traineeInfoService.updateById(traineeInfo);
-    }
-
-    /**
-     * 根据id删除实习生基本信息
-     *
-     * @return
-     */
-    @ApiOperation("根据id删除实习生基本信息")
-    @GetMapping("/removeById")
-    public boolean removeById(Integer id) {
-        return traineeInfoService.removeById(id);
     }
 }

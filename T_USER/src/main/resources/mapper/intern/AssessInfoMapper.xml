@@ -1,53 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.AssessInfoMapper">
-	<insert id="addAssess"
-		parameterType="com.zzc.intern.entity.AssessInfo">
-		INSERT into assess_info
-		VALUES(#{aId},#{aGrade},#{lId},#{tId})
-	</insert>
-	<select id="findByEerm"
-		parameterType="com.zzc.intern.DTO.TraineeAssessLearnParameterDTO"
-		resultType="com.zzc.intern.DTO.TraineeAssessLearnResultDTO">
-		SELECT
-		a.a_id,a.a_grade,l.l_stage,t.t_id,t.t_name
-		from
-		assess_info a join
-		learn_info l join trainee_info t
-		on a.l_id=l.l_id and a.t_id=t.t_id
-		<where>
-			<if test="minaGrade!='' and minaGrade!=null and minaGrade > 0">
-				a.a_grade &gt;= #{minaGrade}
-			</if>
-			<if test="maxaGrade!='' and maxaGrade!=null and maxaGrade > 0">
-				and a.a_grade &lt;= #{maxaGrade}
-			</if>
-			<if test="tName!='' and tName!=null">
-				and t.t_name like "%"#{tName}"%"
-			</if>
-			<if test="lStage!='' and lStage!=null">
-				and l.l_stage=#{lStage}
-			</if>
-		</where>
-	</select>
-	<select id="findById" parameterType="int"
-		resultType="com.zzc.intern.DTO.TraineeAssessLearnResultDTO">
-		SELECT
-		a.a_id,a.a_grade,l.l_stage,t.t_id,t.t_name
-		from
-		assess_info a join
-		learn_info l join trainee_info t
-		on a.l_id=l.l_id and
-		a.t_id=t.t_id
-		where a.a_id=#{a_id}
-	</select>
-	<update id="updateAssess"
-		parameterType="com.zzc.intern.entity.AssessInfo">
-		UPDATE assess_info set
-		a_grade=#{aGrade},l_id=#{lId},t_id=#{tId} where a_id=#{aId}
-	</update>
-	<delete id="delAssess" parameterType="int">
-		delete from assess_info
-		where a_id=#{aId}
-	</delete>
+
 </mapper>

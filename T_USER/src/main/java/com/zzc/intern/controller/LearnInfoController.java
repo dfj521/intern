@@ -8,15 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zzc.intern.entity.LearnInfo;
-import com.zzc.intern.mapper.LearnInfoMapper;
 import com.zzc.intern.service.LearnInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
-
-import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,9 +27,14 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @Controller
+<<<<<<< HEAD
 @Api(value = "学习内容管理", tags = "学习内容管理", description="学习内容管理")
 @RequestMapping("learn")
+=======
+@Api(value = "", tags = "", description="")
+>>>>>>> branch 'master' of https://github.com/dfj521/intern
 public class LearnInfoController {
+<<<<<<< HEAD
 	
 	@Resource
 	private LearnInfoService learnInfoService;
@@ -66,4 +68,7 @@ public class LearnInfoController {
 	 * @ApiOperation("添加学习内容") public int addLearn(LearnInfo learnInfo) { return
 	 * learnInfoService.addLearn(learnInfo); }
 	 */
+=======
+
+>>>>>>> branch 'master' of https://github.com/dfj521/intern
 }
