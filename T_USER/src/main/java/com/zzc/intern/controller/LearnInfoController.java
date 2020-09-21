@@ -15,10 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * <p>
  * 学习内容 前端控制器
  * </p>
  *
@@ -27,14 +28,9 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Slf4j
 @Controller
-<<<<<<< HEAD
 @Api(value = "学习内容管理", tags = "学习内容管理", description="学习内容管理")
 @RequestMapping("learn")
-=======
-@Api(value = "", tags = "", description="")
->>>>>>> branch 'master' of https://github.com/dfj521/intern
 public class LearnInfoController {
-<<<<<<< HEAD
 	
 	@Resource
 	private LearnInfoService learnInfoService;
@@ -68,7 +64,5 @@ public class LearnInfoController {
 	 * @ApiOperation("添加学习内容") public int addLearn(LearnInfo learnInfo) { return
 	 * learnInfoService.addLearn(learnInfo); }
 	 */
-=======
 
->>>>>>> branch 'master' of https://github.com/dfj521/intern
 }

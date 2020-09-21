@@ -1,6 +1,10 @@
 package com.zzc.intern.service;
 
 import com.zzc.intern.entity.LearnInfo;
+import com.zzc.intern.util.ResponseUtil;
+
+import java.util.List;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,7 +16,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-09-15
  */
 public interface LearnInfoService extends IService<LearnInfo> {
-<<<<<<< HEAD
+
 	
 	ResponseUtil<List<LearnInfo>> findAllLearn();
 	
@@ -21,7 +25,7 @@ public interface LearnInfoService extends IService<LearnInfo> {
 	ResponseUtil<Integer> updateLearn(LearnInfo learnInfo);
 	
 	ResponseUtil<Integer> addLearn(LearnInfo learnInfo);
-=======
->>>>>>> branch 'master' of https://github.com/dfj521/intern
+
+
 
 }

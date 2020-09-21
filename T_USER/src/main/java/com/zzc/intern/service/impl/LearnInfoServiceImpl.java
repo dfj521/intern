@@ -10,7 +10,6 @@ import com.zzc.intern.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-<<<<<<< HEAD
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +17,6 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.apache.naming.java.javaURLContextFactory;
-=======
->>>>>>> branch 'master' of https://github.com/dfj521/intern
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -34,7 +31,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 @Transactional
 public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo> implements LearnInfoService {
-<<<<<<< HEAD
 	
 	@Resource
 	private LearnInfoMapper learnInfoMapper;
@@ -101,7 +97,5 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 		
 		return responseUtil;
 	}
-=======
->>>>>>> branch 'master' of https://github.com/dfj521/intern
 
 }
