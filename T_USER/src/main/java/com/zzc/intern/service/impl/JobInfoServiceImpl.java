@@ -158,6 +158,7 @@ public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfo> impl
 		// TODO Auto-generated method stub
 		 ResponseUtil<Integer> result = new ResponseUtil<>();
 		//
+		 
 	        int i = 0;
 	        try {
 	            i = jobinfoMapper.deleteById(jid);
