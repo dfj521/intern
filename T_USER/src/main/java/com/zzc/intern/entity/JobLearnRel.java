@@ -33,4 +33,9 @@ public class JobLearnRel implements Serializable {
 	 *是否可用（1.可用，0.不可用）
 	 */
 	private String Status;
+
+    /**
+     * 学习阶段(1.初级、2.中级、3.高级)
+     */
+    private Integer lStage;
 }

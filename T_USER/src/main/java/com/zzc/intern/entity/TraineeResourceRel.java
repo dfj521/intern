@@ -16,7 +16,7 @@ public class TraineeResourceRel implements Serializable {
     /**
      * 实习生&资源id
      */
-    @TableId(value = "id", type = IdType.ID_WORKER)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**

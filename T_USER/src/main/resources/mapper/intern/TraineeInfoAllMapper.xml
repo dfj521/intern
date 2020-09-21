@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzc.intern.mapper.TraineeInfoAllMapper">
+
+    <select id="findByCondition" resultType="com.zzc.intern.DTO.TraineeInfoAllDTO" parameterType="com.zzc.intern.DTO.TraineeInfoAllDTO">
+        SELECT t.t_id, t.t_name, t.t_sex, t.t_age, t.t_birthday, t.t_id_card, t.t_phone1, t.t_phone2, t.t_bank_num1, t.t_bank_num2, t.t_address,
+		    t.t_wornning_num1, t.t_wornning_relation1, t.t_wornning_name1, t.t_wornning_num2, t.t_wornning_relation2, t.t_wornning_name2,
+            t.t_education, t.t_school, t.t_faculty, t.t_major, t.t_entry_time, t.t_update_time, d.d_id, d.d_name, j.j_id, j.j_name,
+		    l.l_id, l.l_elementary, max(l.l_stage), s.s_id, s.s_subsidies, s.s_issued_time, s.s_lssue_num, h.h_id, h.h_address, h.h_number,
+		    r.r_id, r.r_computer, r.r_github
+
+        FROM trainee_info t JOIN department_info d JOIN trainee_department_rel td JOIN job_info j JOIN trainee_job_rel tj JOIN
+            learn_info l JOIN trainee_learn_rel tl JOIN subsidy_info s JOIN trainee_subsidy_rel ts JOIN house_info h JOIN trainee_house_rel th JOIN
+		    resource_info r JOIN trainee_resource_rel tr
+
+        ON t.t_id = td.t_id AND d.d_id = td.d_id AND t.t_id = tj.t_id AND j.j_id = tj.j_id AND t.t_id = tl.t_id AND l.l_id = tl.l_id AND
+            s.s_id = ts.t_id AND s.s_id = ts.s_id AND t.t_id = th.t_id AND h.h_id = th.h_id AND t.t_id = tr.t_id AND r.r_id = tr.r_id
+
+        <where>
+            <if test="tId != null and tId != ''">
+                and t.t_id = #{tId}
+            </if>
+            <if test="tName != null and tName != ''">
+                and t.t_name = #{tName}
+            </if>
+            <if test="tSex != null and tSex != ''">
+                and t.t_sex = #{tSex}
+            </if>
+            <if test="tAge != null and tAge != ''">
+                and t.t_age = #{tAge}
+            </if>
+            <if test="maxTAge != null and maxTAge != ''">
+                and t.t_age &lt;= #{maxTAge}
+            </if>
+            <if test="minTAge != null and minTAge != ''">
+                and t.t_age &gt;= #{minTAge}
+            </if>
+            <if test="tBirthday != null">
+                and t.t_birthday = #{tBirthday}
+            </if>
+            <if test="tIdCard != null and tIdCard != ''">
+                and t.t_id_card = #{tIdCard}
+            </if>
+            <if test="tPhone1 != null and tPhone1 != ''">
+                and (t.t_phone1 = #{tPhone1} or t.t_phone2 = #{tPhone1})
+            </if>
+            <if test="tBankNum1 != null and tBankNum1 != ''">
+                and (t.t_bank_num1 = #{tBankNum1} or t.t_bank_num2 = #{tBankNum1})
+            </if>
+            <if test="tAddress != null and tAddress != ''">
+                and t.t_address like "%" #{tAddress} "%"
+            </if>
+            <if test="tWornningNum1 != null and tWornningNum1 != ''">
+                and (t.t_wornning_num1 = #{tWornningNum1}
+                 <if test="tWornningRelation1 != null and tWornningRelation1 != ''">
+                     and t.t_wornning_relation1 = #{tWornningRelation1}
+                 </if>
+                 <if test="tWornningName1 != null and tWornningName1 != ''">
+                     and t.t_wornning_name1 = #{tWornningName1}
+                 </if>
+                 or t.t_wornning_num2 = #{tWornningNum1}
+                <if test="tWornningRelation2 != null and tWornningRelation1 != ''">
+                    and t.t_wornning_relation2 = #{tWornningRelation1}
+                </if>
+                <if test="tWornningName2 != null and tWornningName1 != ''">
+                    and t.t_wornning_name2 = #{tWornningName1}
+                </if>)
+            </if>
+            <if test="tWornningRelation1 != null and tWornningRelation1 != ''">
+                and (t.t_wornning_relation1 = #{tWornningRelation1}
+                <if test="tWornningNum1 != null and tWornningNum1 != ''">
+                    and t.t_wornning_num1 = #{tWornningNum1}
+                </if>
+                <if test="tWornningName1 != null and tWornningName1 != ''">
+                    and t.t_wornning_name1 = #{tWornningName1}
+                </if>
+                 or t.t_wornning_relation2 = #{tWornningRelation1}
+                <if test="tWornningNum1 != null and tWornningNum1 != ''">
+                    and t.t_wornning_num2 = #{tWornningNum1}
+                </if>
+                <if test="tWornningName1 != null and tWornningName1 != ''">
+                    and t.t_wornning_name2 = #{tWornningName1}
+                </if>)
+            </if>
+            <if test="tWornningName1 != null and tWornningName1 != ''">
+                and (t.t_wornning_name1 = #{tWornningName1}
+                <if test="tWornningNum1 != null and tWornningNum1 != ''">
+                    and t.t_wornning_num1 = #{tWornningNum1}
+                </if>
+                <if test="tWornningRelation1 != null and tWornningRelation1 != ''">
+                    and t.t_wornning_relation1 = #{tWornningRelation1}
+                </if>
+                 or t.t_wornning_name2 = #{tWornningName1}
+                <if test="tWornningNum1 != null and tWornningNum1 != ''">
+                    and t.t_wornning_num2 = #{tWornningNum1}
+                </if>
+                <if test="tWornningRelation1 != null and tWornningRelation1 != ''">
+                    and t.t_wornning_relation2 = #{tWornningRelation1}
+                </if>)
+            </if>
+            <if test="tEducation != null and tEducation != ''">
+                and t.t_education = #{tEducation}
+            </if>
+            <if test="tSchool != null and tEducation != ''">
+                and t.t_school = #{tSchool}
+            </if>
+            <if test="tFaculty != null and tEducation != ''">
+                and t.t_faculty = #{tFaculty}
+            </if>
+            <if test="tMajor != null and tMajor != ''">
+                and t.t_major = #{tMajor}
+            </if>
+            <if test="tEntryTime != null">
+                and t.t_entry_time = #{tEntryTime}
+            </if>
+            <if test="maxTEntryTime != null">
+                and t.t_entry_time &lt;= #{maxTEntryTime}
+            </if>
+            <if test="minTEntryTime != null">
+                and t.t_entry_time &gt;= #{minTEntryTime}
+            </if>
+            <if test="dId != null and dId != ''">
+                and d.d_id = #{dId}
+            </if>
+            <if test="dName != null and dName != ''">
+                and d.d_name = #{dName}
+            </if>
+            <if test="jId != null and jId != ''">
+                and j.j_id = #{jId}
+            </if>
+            <if test="jName != null and jName != ''">
+                and j.j_name = #{jName}
+            </if>
+            <if test="lId != null and lId != ''">
+                and l.l_id = #{lId}
+            </if>
+            <if test="lElementary != null and lElementary != ''">
+                and l.l_elementary = #{lElementary}
+            </if>
+            <if test="lStage != null and lStage != ''">
+                and l.l_stage = #{lStage}
+            </if>
+            <if test="sId != null and sId != ''">
+                and s.s_id = #{sId}
+            </if>
+            <if test="sSubsidies != null and sSubsidies != ''">
+                and s.s_subsidies = #{sSubsidies}
+            </if>
+            <if test="sIssuedTime != null and sIssuedTime != ''">
+                and s.s_issued_time = #{sIssuedTime}
+            </if>
+            <if test="sLssueNum != null and sLssueNum != ''">
+                and s.s_lssue_num = #{sLssueNum}
+            </if>
+            <if test="hId != null and hId != ''">
+                and h.h_id = #{hId}
+            </if>
+            <if test="hAddress != null and hAddress != ''">
+                and h.h_address like "%" #{hAddress} "%"
+            </if>
+            <if test="hNumber != null and hNumber != ''">
+                and h.h_number = #{hNumber}
+            </if>
+            <if test="rId != null and rId != ''">
+                and r.r_id = #{rId}
+            </if>
+            <if test="rComputer != null and rComputer != ''">
+                and r.r_computer like "%" #{rComputer} "%"
+            </if>
+            <if test="rGithub != null and rGithub != ''">
+                and r.r_github = #{rGithub}
+            </if>
+        </where>
+
+        GROUP BY t.t_id
+
+    </select>
+
+</mapper>
