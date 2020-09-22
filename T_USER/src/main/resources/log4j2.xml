@@ -10,7 +10,7 @@
             <PatternLayout pattern="${PATTERN}"/>
         </Console>
 
-        <RollingFile name="ErrorAppender" fileName="${logdir}/${prjname}_error.log" filePattern="${logdir}/$${date:yyyy-MM-dd}/${prjname}_error.%d{yyyy-MM-dd- HH}.log" append="true">
+        <!--<RollingFile name="ErrorAppender" fileName="${logdir}/${prjname}_error.log" filePattern="${logdir}/$${date:yyyy-MM-dd}/${prjname}_error.%d{yyyy-MM-dd- HH}.log" append="true">
             <PatternLayout pattern="${PATTERN}"/>
             <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
             <Policies>
@@ -24,13 +24,13 @@
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />
             </Policies>
-        </RollingFile>
+        </RollingFile>-->
 
         <!--异步appender-->
-        <Async name="AsyncAppender" includeLocation="true">
+        <!--<Async name="AsyncAppender" includeLocation="true">
             <AppenderRef ref="ErrorAppender"/>
             <AppenderRef ref="DebugAppender"/>
-        </Async>
+        </Async>-->
     </Appenders>
 
     <Loggers>
@@ -55,7 +55,7 @@
         <!--TRACE 600-->
         <!--ALL Integer.MAX_VALUE-->
         <Root level="DEBUG" includeLocation="true">
-            <AppenderRef ref="AsyncAppender"/>
+            <!--<AppenderRef ref="AsyncAppender"/>-->
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>
