@@ -16,8 +16,8 @@ public class DepartmentJobRel implements Serializable {
     /**
      * 部门&岗位id
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "dj_id", type = IdType.AUTO)
+    private Integer djId;
 
     /**
      * 岗位id

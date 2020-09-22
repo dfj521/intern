@@ -16,8 +16,8 @@ public class JobLearnRel implements Serializable {
     /**
      * ID
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "jl_id", type = IdType.AUTO)
+    private Integer jlId;
 
     /**
      * 岗位编号

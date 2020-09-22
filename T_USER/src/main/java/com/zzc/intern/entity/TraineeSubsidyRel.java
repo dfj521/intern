@@ -16,8 +16,8 @@ public class TraineeSubsidyRel implements Serializable {
     /**
      * 实习生&补贴id
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "ts_id", type = IdType.AUTO)
+    private Integer tsId;
 
     /**
      * 实习生id
