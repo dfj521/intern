@@ -16,7 +16,7 @@ public class TraineeAssessRel implements Serializable {
     /**
      * 实习生&考核id
      */
-    @TableId(value = "id", type = IdType.ID_WORKER)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -28,6 +28,11 @@ public class TraineeAssessRel implements Serializable {
      * 考核id
      */
     private Integer aId;
+
+    /**
+     * 实习生&考核状态（0：不存在，1：存在）
+     */
+    private String taStatus;
 
 
 }

@@ -18,7 +18,7 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 实习生id
      */
-    @ApiModelProperty("实习生id")
+    @ApiModelProperty(value = "实习生id", example = "0")
     private Integer tId;
 
     /**
@@ -36,19 +36,19 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 实习生年龄
      */
-    @ApiModelProperty("实习生年龄")
+    @ApiModelProperty(value = "实习生年龄", example = "0")
     private Integer tAge;
 
     /**
      * 实习生最大年龄
      */
-    @ApiModelProperty("实习生最大年龄")
+    @ApiModelProperty(value = "实习生最大年龄", example = "0")
     private Integer maxTAge;
 
     /**
      * 实习生最小年龄
      */
-    @ApiModelProperty("实习生最小年龄")
+    @ApiModelProperty(value = "实习生最小年龄", example = "0")
     private Integer minTAge;
 
     /**
@@ -190,7 +190,7 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 部门编号
      */
-    @ApiModelProperty("部门编号")
+    @ApiModelProperty(value = "部门编号", example = "0")
     private Integer dId;
 
     /**
@@ -202,7 +202,7 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 岗位编号
      */
-    @ApiModelProperty("岗位编号")
+    @ApiModelProperty(value = "岗位编号", example = "0")
     private Integer jId;
 
     /**
@@ -214,7 +214,7 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 学习内容ID
      */
-    @ApiModelProperty("学习内容ID")
+    @ApiModelProperty(value = "学习内容ID", example = "0")
     private Integer lId;
 
     /**
@@ -226,13 +226,13 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 学习阶段(1.初级、2.中级、3.高级)
      */
-    @ApiModelProperty("学习阶段(1.初级、2.中级、3.高级)")
+    @ApiModelProperty(value = "学习阶段(1.初级、2.中级、3.高级)", example = "0")
     private Integer lStage;
 
     /**
      * 考核ID
      */
-    @ApiModelProperty("考核ID")
+    @ApiModelProperty(value = "考核ID", example = "0")
     private Integer aId;
 
     /**
@@ -244,7 +244,7 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 实习生补贴id
      */
-    @ApiModelProperty("实习生补贴id")
+    @ApiModelProperty(value = "实习生补贴id", example = "0")
     private Integer sId;
 
     /**
@@ -256,19 +256,19 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 发放时间
      */
-    @ApiModelProperty("发放时间")
+    @ApiModelProperty(value = "发放时间", example = "0")
     private Integer sIssuedTime;
 
     /**
      * 发放次数
      */
-    @ApiModelProperty("发放次数")
+    @ApiModelProperty(value = "发放次数", example = "0")
     private Integer sLssueNum;
 
     /**
      * 住宿id
      */
-    @ApiModelProperty("住宿id")
+    @ApiModelProperty(value = "住宿id", example = "0")
     private Integer hId;
 
     /**
@@ -280,13 +280,13 @@ public class TraineeInfoAllDTO implements Serializable {
     /**
      * 宿舍人数
      */
-    @ApiModelProperty("宿舍人数")
+    @ApiModelProperty(value = "宿舍人数", example = "0")
     private Integer hNumber;
 
     /**
      * 资源ID
      */
-    @ApiModelProperty("资源ID")
+    @ApiModelProperty(value = "资源ID", example = "0")
     private Integer rId;
 
     /**

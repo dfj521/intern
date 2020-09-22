@@ -29,5 +29,10 @@ public class TraineeDepartmentRel implements Serializable {
      */
     private Integer dId;
 
+    /**
+     * 实习生&部门状态（0：不存在，1：存在）
+     */
+    private String tdStatus;
+
 
 }

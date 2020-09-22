@@ -13,12 +13,26 @@ public class TraineeHouseRel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 实习生&宿舍id
+     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
+    /**
+     * 实习生id
+     */
     private Integer tId;
 
+    /**
+     * 宿舍id
+     */
     private Integer hId;
+
+    /**
+     * 实习生&宿舍状态（0：不存在，1：存在）
+     */
+    private String thStatus;
 
 
 }

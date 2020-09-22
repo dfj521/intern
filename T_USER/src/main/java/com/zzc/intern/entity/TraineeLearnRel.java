@@ -29,5 +29,15 @@ public class TraineeLearnRel implements Serializable {
      */
     private Integer lId;
 
+    /**
+     * 学习状态（0，进行中，1，已完成）
+     */
+    private Integer lState;
+
+    /**
+     * 实习生&学习内容状态（0：不存在，1：存在）
+     */
+    private String tlStatus;
+
 
 }

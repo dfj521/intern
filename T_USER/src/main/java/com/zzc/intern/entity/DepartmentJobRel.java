@@ -29,5 +29,10 @@ public class DepartmentJobRel implements Serializable {
      */
     private Integer dId;
 
+    /**
+     * 部门&岗位状态（0：不存在，1：存在）
+     */
+    private String djStatus;
+
 
 }

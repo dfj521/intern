@@ -130,5 +130,10 @@ public class TraineeInfo implements Serializable {
      */
     private LocalDateTime tUpdateTime;
 
+    /**
+     * 实习生状态（0：不存在，1：存在）
+     */
+    private String tStatus;
+
 
 }

@@ -39,5 +39,10 @@ public class SubsidyInfo implements Serializable {
      */
     private Integer jId;
 
+    /**
+     * 实习生补贴状态（0：不存在，1：存在）
+     */
+    private String sStatus;
+
 
 }

@@ -29,5 +29,15 @@ public class AssessInfo implements Serializable {
      */
     private Integer lId;
 
+    /**
+     * 实习生ID
+     */
+    private Integer tId;
+
+    /**
+     * 考核状态（0：不存在，1：存在）
+     */
+    private String aStatus;
+
 
 }

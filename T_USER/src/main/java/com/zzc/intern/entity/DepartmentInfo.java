@@ -24,5 +24,10 @@ public class DepartmentInfo implements Serializable {
      */
     private String dName;
 
+    /**
+     * 部门状态（0：不存在，1：存在）
+     */
+    private String dStatus;
+
 
 }

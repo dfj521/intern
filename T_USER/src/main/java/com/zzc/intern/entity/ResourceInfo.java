@@ -29,5 +29,10 @@ public class ResourceInfo implements Serializable {
      */
     private String rGithub;
 
+    /**
+     * 资源状态（0：不存在，1：存在）
+     */
+    private String rStatus;
+
 
 }

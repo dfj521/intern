@@ -13,6 +13,9 @@ public class TraineeSubsidyRel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 实习生&补贴id
+     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
@@ -22,9 +25,14 @@ public class TraineeSubsidyRel implements Serializable {
     private Integer tId;
 
     /**
-     * 补助id
+     * 补贴id
      */
     private Integer sId;
+
+    /**
+     * 实习生&补贴状态（0：不存在，1：存在）
+     */
+    private String tsStatus;
 
 
 }

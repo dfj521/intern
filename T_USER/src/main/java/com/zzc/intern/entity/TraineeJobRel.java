@@ -14,7 +14,7 @@ public class TraineeJobRel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * ID
+     * 实习生&岗位id
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
@@ -28,6 +28,11 @@ public class TraineeJobRel implements Serializable {
      * 岗位编号
      */
     private Integer jId;
+
+    /**
+     * 实习生&岗位状态（0：不存在，1：存在）
+     */
+    private String tjStatus;
 
 
 }

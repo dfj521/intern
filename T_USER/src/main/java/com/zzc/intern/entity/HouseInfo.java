@@ -29,5 +29,25 @@ public class HouseInfo implements Serializable {
      */
     private Integer hNumber;
 
+    /**
+     * 宿舍描述
+     */
+    private String hDescribe;
+
+    /**
+     * 宿舍图片
+     */
+    private String hUrl;
+
+    /**
+     * 宿舍管理员
+     */
+    private String hAdministrators;
+
+    /**
+     * 宿舍状态（0：不存在，1：存在）
+     */
+    private String hStatus;
+
 
 }
