@@ -121,12 +121,12 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         traineeResourceRelMapper.insert(traineeResourceRel);
 
 
-        JobLearnRel jobLearnRel = jobLearnRelMapper.selectOne(new LambdaQueryWrapper<JobLearnRel>()
+        /*JobLearnRel jobLearnRel = jobLearnRelMapper.selectOne(new LambdaQueryWrapper<JobLearnRel>()
                 .eq(JobLearnRel::getJId, traineeInfoAllDTO.getJId())
                 .eq(JobLearnRel::getLStage, 1));
         TraineeLearnRel traineeLearnRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeLearnRel(traineeInfoAllDTO);
         traineeLearnRel.setLId(jobLearnRel.getLId());
-        traineeLearnRelMapper.insert(traineeLearnRel);
+        traineeLearnRelMapper.insert(traineeLearnRel);*/
 
         TraineeHouseRel traineeHouseRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeHouseRel(traineeInfoAllDTO);
         i = traineeHouseRelMapper.insert(traineeHouseRel);
