@@ -44,6 +44,29 @@ public class TraineeInfoAllController {
             @ApiImplicitParam(name = "traineeInfoAllDTO", value = "实习生信息", required = true, dataType = "TraineeInfoAllDTO", paramType = "body")
     })
     public ResponseUtil<Integer> addTrainee(@RequestBody TraineeInfoAllDTO traineeInfoAllDTO) {
+
         return traineeInfoAllService.addTrainee(traineeInfoAllDTO);
+
+    }
+
+    @ApiOperation("更新实习生信息")
+    @PostMapping("/updateTrainee")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "traineeInfoAllDTO", value = "实习生信息", required = true, dataType = "TraineeInfoAllDTO", paramType = "body")
+    })
+    public ResponseUtil<Integer> updateTrainee(@RequestBody TraineeInfoAllDTO traineeInfoAllDTO) {
+
+        return traineeInfoAllService.updateTrainee(traineeInfoAllDTO);
+
+    }
+
+    @ApiOperation("删除实习生信息")
+    @GetMapping("/deleteTrainee/{tId}")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "tId", value = "实习生编号", required = true, dataType = "Int", paramType = "path")
+    })
+    public ResponseUtil<Integer> deleteTrainee(@PathVariable("tId") Integer tId) {
+
+        return traineeInfoAllService.deleteTrainee(tId);
     }
 }

@@ -1,5 +1,7 @@
 package com.zzc.intern.DTO;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -188,6 +190,21 @@ public class TraineeInfoAllDTO implements Serializable {
     private LocalDateTime tUpdateTime;
 
     /**
+     * 实习生状态（0：不存在，1：存在）
+     */
+    private String tStatus;
+
+    /**
+     * 实习生&部门id
+     */
+    private Integer tdId;
+
+    /**
+     * 实习生&部门状态（0：不存在，1：存在）
+     */
+    private String tdStatus;
+
+    /**
      * 部门编号
      */
     @ApiModelProperty(value = "部门编号", example = "0")
@@ -200,6 +217,31 @@ public class TraineeInfoAllDTO implements Serializable {
     private String dName;
 
     /**
+     * 部门状态（0：不存在，1：存在）
+     */
+    private String dStatus;
+
+    /**
+     * 实习生&岗位id
+     */
+    private Integer tjId;
+
+    /**
+     * 实习生&岗位状态（0：不存在，1：存在）
+     */
+    private String tjStatus;
+
+    /**
+     * 部门&岗位id
+     */
+    private Integer djId;
+
+    /**
+     * 部门&岗位状态（0：不存在，1：存在）
+     */
+    private String djStatus;
+
+    /**
      * 岗位编号
      */
     @ApiModelProperty(value = "岗位编号", example = "0")
@@ -210,6 +252,36 @@ public class TraineeInfoAllDTO implements Serializable {
      */
     @ApiModelProperty("岗位名称")
     private String jName;
+
+    /**
+     * 岗位状态（0：不存在，1：存在）
+     */
+    private String jStatus;
+
+    /**
+     * ID
+     */
+    private Integer tlId;
+
+    /**
+     * 学习状态（0，进行中，1，已完成）
+     */
+    private Integer lState;
+
+    /**
+     * 实习生&学习内容状态（0：不存在，1：存在）
+     */
+    private String tlStatus;
+
+    /**
+     * ID
+     */
+    private Integer jlId;
+
+    /**
+     * 岗位&学习内容状态（0：不存在，1：存在）
+     */
+    private String jlStatus;
 
     /**
      * 学习内容ID
@@ -230,6 +302,21 @@ public class TraineeInfoAllDTO implements Serializable {
     private Integer lStage;
 
     /**
+     * 学习内容状态（0：不存在，1：存在）
+     */
+    private String lStatus;
+
+    /**
+     * 实习生&考核id
+     */
+    private Integer taId;
+
+    /**
+     * 实习生&考核状态（0：不存在，1：存在）
+     */
+    private String taStatus;
+
+    /**
      * 考核ID
      */
     @ApiModelProperty(value = "考核ID", example = "0")
@@ -240,6 +327,21 @@ public class TraineeInfoAllDTO implements Serializable {
      */
     @ApiModelProperty("考核成绩")
     private Double aGrade;
+
+    /**
+     * 考核状态（0：不存在，1：存在）
+     */
+    private String aStatus;
+
+    /**
+     * 实习生&补贴id
+     */
+    private Integer tsId;
+
+    /**
+     * 实习生&补贴状态（0：不存在，1：存在）
+     */
+    private String tsStatus;
 
     /**
      * 实习生补贴id
@@ -260,10 +362,30 @@ public class TraineeInfoAllDTO implements Serializable {
     private Integer sIssuedTime;
 
     /**
-     * 发放次数
+     * 发放总次数
      */
-    @ApiModelProperty(value = "发放次数", example = "0")
+    @ApiModelProperty(value = "发放总次数", example = "0")
     private Integer sLssueNum;
+
+    /**
+     * 发放次数（发了几次）
+     */
+    private Integer sCount;
+
+    /**
+     * 实习生补贴状态（0：不存在，1：存在）
+     */
+    private String sStatus;
+
+    /**
+     * 实习生&宿舍id
+     */
+    private Integer thId;
+
+    /**
+     * 实习生&宿舍状态（0：不存在，1：存在）
+     */
+    private String thStatus;
 
     /**
      * 住宿id
@@ -284,6 +406,36 @@ public class TraineeInfoAllDTO implements Serializable {
     private Integer hNumber;
 
     /**
+     * 宿舍描述
+     */
+    private String hDescribe;
+
+    /**
+     * 宿舍图片
+     */
+    private String hUrl;
+
+    /**
+     * 宿舍管理员
+     */
+    private String hAdministrators;
+
+    /**
+     * 宿舍状态（0：不存在，1：存在）
+     */
+    private String hStatus;
+
+    /**
+     * 实习生&资源id
+     */
+    private Integer trId;
+
+    /**
+     * 实习生&资源状态（0：不存在，1：存在）
+     */
+    private String trStatus;
+
+    /**
      * 资源ID
      */
     @ApiModelProperty(value = "资源ID", example = "0")
@@ -300,4 +452,9 @@ public class TraineeInfoAllDTO implements Serializable {
      */
     @ApiModelProperty("GitHub账号")
     private String rGithub;
+
+    /**
+     * 资源状态（0：不存在，1：存在）
+     */
+    private String rStatus;
 }

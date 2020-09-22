@@ -30,7 +30,7 @@ public class SubsidyInfo implements Serializable {
     private Integer sIssuedTime;
 
     /**
-     * 发放次数
+     * 发放总次数
      */
     private Integer sLssueNum;
 

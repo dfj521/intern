@@ -34,5 +34,10 @@ public class TraineeSubsidyRel implements Serializable {
      */
     private String tsStatus;
 
+    /**
+     * 发放次数（发了几次）
+     */
+    private Integer sCount;
+
 
 }

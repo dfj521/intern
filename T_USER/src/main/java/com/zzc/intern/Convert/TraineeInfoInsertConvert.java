@@ -21,4 +21,6 @@ public interface TraineeInfoInsertConvert {
     TraineeLearnRel dto2traineeLearnRel(TraineeInfoAllDTO traineeInfoAllDTO);
 
     TraineeHouseRel dto2traineeHouseRel(TraineeInfoAllDTO traineeInfoAllDTO);
+
+    TraineeSubsidyRel dto2traineeSubsidyRel(TraineeInfoAllDTO traineeInfoAllDTO);
 }
