@@ -2,6 +2,7 @@ package com.zzc.intern.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -54,7 +55,8 @@ public class AssessInfoController {
 	@ApiOperation("查询考核根据id查询")
 	@GetMapping("/findById")
 	@ResponseBody
-	public ResponseUtil<TraineeAssessLearnResultDTO> findById(@ApiParam(name = "id", value = "实习生姓名", required = true)int id) {
+	public ResponseUtil<TraineeAssessLearnResultDTO> findById(
+			@ApiParam(name = "id", value = "实习生id", required = true) @RequestParam("id") int id) {
 		return assessInfoService.findById(id);
 	}
 
