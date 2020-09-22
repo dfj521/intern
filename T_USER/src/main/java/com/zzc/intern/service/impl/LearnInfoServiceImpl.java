@@ -1,5 +1,6 @@
 package com.zzc.intern.service.impl;
 
+import com.zzc.intern.entity.JobLearnRel;
 import com.zzc.intern.entity.LearnInfo;
 import com.zzc.intern.mapper.JobLearnRelMapper;
 import com.zzc.intern.mapper.LearnInfoMapper;
@@ -7,6 +8,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.service.LearnInfoService;
 import com.zzc.intern.util.ResponseUtil;
 
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,17 +33,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 @Transactional
 public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo> implements LearnInfoService {
-	
+
 	@Resource
 	private LearnInfoMapper learnInfoMapper;
-	
+
 	@Resource
 	private JobLearnRelMapper JobLearnRelMapper;
-	
+
 	@Override
 	public ResponseUtil<List<LearnInfo>> findAllLearn() {
 		ResponseUtil<List<LearnInfo>> responseUtil = new ResponseUtil<>();
-		List<LearnInfo> findAllLearn =new ArrayList<>();
+		List<LearnInfo> findAllLearn = new ArrayList<>();
 		try {
 			findAllLearn = learnInfoMapper.findAllLearn();
 		} catch (Exception e) {
@@ -57,7 +59,7 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	@Override
 	public ResponseUtil<LearnInfo> findById(int id) {
 		ResponseUtil<LearnInfo> responseUtil = new ResponseUtil<>();
-		LearnInfo findByid =new LearnInfo();
+		LearnInfo findByid = new LearnInfo();
 		try {
 			findByid = learnInfoMapper.findByid(id);
 		} catch (Exception e) {
@@ -71,9 +73,13 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	}
 
 	@Override
-	public ResponseUtil<Integer> updateLearn(LearnInfo learnInfo) {
-		ResponseUtil<Integer> responseUtil=new ResponseUtil<>();
+	public ResponseUtil<Integer> updateLearn(Integer id, String lElementary, Integer lStage) {
+		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
 		try {
+			LearnInfo learnInfo=new LearnInfo();
+			learnInfo.setLElementary(lElementary);
+			learnInfo.setLId(id);
+			learnInfo.setLStage(lStage);
 			learnInfoMapper.updateLearn(learnInfo);
 		} catch (Exception e) {
 			responseUtil.setCode(0);
@@ -85,16 +91,26 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	}
 
 	@Override
-	public ResponseUtil<Integer> addLearn(LearnInfo learnInfo) {
-		ResponseUtil<Integer> responseUtil=new ResponseUtil<>();
+	public ResponseUtil<Integer> addLearn(Integer id,String lElementary, Integer lStage) {
+		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
+		LearnInfo learnInfo=new LearnInfo();
+		learnInfo.setLElementary(lElementary);
+		learnInfo.setLStage(lStage);
+		
 		try {
-			learnInfoMapper.addLearn(learnInfo);
-			
+			int addLearn = learnInfoMapper.addLearn(learnInfo);
+			System.out.println(learnInfo.getLId());
+			JobLearnRel jobLearnRel = new JobLearnRel();
+			jobLearnRel.setLId(learnInfo.getLId());
+			jobLearnRel.setJId(id);
+			JobLearnRelMapper.addJobLearn(jobLearnRel);
+			responseUtil.setCode(1);
+			responseUtil.setMessage("添加成功");
 		} catch (Exception e) {
 			responseUtil.setCode(0);
 			responseUtil.setMessage("添加失败");
 		}
-		
+
 		return responseUtil;
 	}
 
