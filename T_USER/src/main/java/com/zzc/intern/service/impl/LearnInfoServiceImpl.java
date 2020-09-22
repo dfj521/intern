@@ -98,8 +98,7 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 		learnInfo.setLStage(lStage);
 		
 		try {
-			int addLearn = learnInfoMapper.addLearn(learnInfo);
-			System.out.println(learnInfo.getLId());
+			learnInfoMapper.addLearn(learnInfo);
 			JobLearnRel jobLearnRel = new JobLearnRel();
 			jobLearnRel.setLId(learnInfo.getLId());
 			jobLearnRel.setJId(id);
@@ -111,6 +110,14 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 			responseUtil.setMessage("添加失败");
 		}
 
+		return responseUtil;
+	}
+
+	@Override
+	public ResponseUtil<Integer> delLearn(Integer id) {
+		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
+		learnInfoMapper.delLearn(id);
+		JobLearnRelMapper.delJobLearnById(id);
 		return responseUtil;
 	}
 

@@ -28,5 +28,6 @@ public interface LearnInfoService extends IService<LearnInfo> {
 	ResponseUtil<Integer> updateLearn(Integer id, String lElementary, Integer lStage);
 
 	ResponseUtil<Integer> addLearn(Integer id,String lElementary, Integer lStage);
-
+	
+	ResponseUtil<Integer> delLearn(Integer id);
 }

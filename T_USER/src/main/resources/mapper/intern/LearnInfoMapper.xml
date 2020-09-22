@@ -26,4 +26,7 @@
 		UPDATE learn_info set
 		l_elementary=#{lElementary},l_stage=#{lStage} where l_id=#{lId}
 	</update>
+	<update id="delLearn">
+		update learn_info set l_status=0 where l_id=#{lId}
+	</update>
 </mapper>

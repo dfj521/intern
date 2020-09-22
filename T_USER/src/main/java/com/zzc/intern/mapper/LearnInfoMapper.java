@@ -40,4 +40,10 @@ public interface LearnInfoMapper extends BaseMapper<LearnInfo> {
 	 * @return
 	 */
 	int addLearn(LearnInfo learnInfo);
+	/**
+	 * 删除学习内容
+	 * @param lId 学习内容id
+	 * @return
+	 */
+	int delLearn(Integer lId);
 }

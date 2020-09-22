@@ -14,6 +14,6 @@
 		INSERT INTO job_learn_rel VALUES(#{id},#{jId},#{lId},1)
 	</insert>
 	<update id="delJobLearnById">
-		update job_learn_rel set status=0 where id=#{id}
+		update job_learn_rel set jl_status=0 where l_id=#{id}
 	</update>
 </mapper>

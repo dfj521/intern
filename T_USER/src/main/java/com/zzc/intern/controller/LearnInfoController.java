@@ -74,5 +74,12 @@ public class LearnInfoController {
 			@ApiParam(name = "id", value = "岗位id", required = true) @RequestParam("id") Integer id) {
 		return learnInfoService.addLearn(id,lElementary, lStage);
 	}
+	@PostMapping("/delLearn")
+	@ResponseBody
+	@ApiOperation("删除学习内容")
+	public ResponseUtil<Integer> delLearn(@ApiParam(name = "id", value = "学习内容id", required = true) @RequestParam("id") Integer id){
+		return learnInfoService.delLearn(id);
+		
+	}
 
 }

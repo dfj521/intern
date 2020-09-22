@@ -4,7 +4,7 @@
 	<insert id="addAssess"
 		parameterType="com.zzc.intern.entity.AssessInfo">
 		INSERT into assess_info
-		VALUES(#{aId},#{aGrade},#{lId},#{tId})
+		VALUES(#{aId},#{aGrade},#{lId},#{tId},1)
 	</insert>
 	<select id="findByEerm"
 		parameterType="com.zzc.intern.DTO.TraineeAssessLearnParameterDTO"
@@ -16,8 +16,9 @@
 		learn_info l join trainee_info t
 		on a.l_id=l.l_id and a.t_id=t.t_id
 		<where>
+			a_status=1
 			<if test="minaGrade!='' and minaGrade!=null and minaGrade > 0">
-				a.a_grade &gt;= #{minaGrade}
+				and a.a_grade &gt;= #{minaGrade}
 			</if>
 			<if test="maxaGrade!='' and maxaGrade!=null and maxaGrade > 0">
 				and a.a_grade &lt;= #{maxaGrade}
@@ -39,15 +40,15 @@
 		learn_info l join trainee_info t
 		on a.l_id=l.l_id and
 		a.t_id=t.t_id
-		where a.a_id=#{a_id}
+		where a.a_id=#{a_id} and a_status=1
 	</select>
 	<update id="updateAssess"
 		parameterType="com.zzc.intern.entity.AssessInfo">
 		UPDATE assess_info set
 		a_grade=#{aGrade},l_id=#{lId},t_id=#{tId} where a_id=#{aId}
 	</update>
-	<delete id="delAssess" parameterType="int">
-		delete from assess_info
+	<update id="delAssess" parameterType="int">
+		UPDATE assess_info set a_status=0
 		where a_id=#{aId}
-	</delete>
+	</update>
 </mapper>
