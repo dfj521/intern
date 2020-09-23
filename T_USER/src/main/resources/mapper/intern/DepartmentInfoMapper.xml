@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.DepartmentInfoMapper">
-
+<!-- 查询所有 -->
+	<select id="findAll"
+		resultType="com.zzc.intern.entity.DepartmentInfo">
+		select d_id,d_name from department_info
+	</select>
+	<!-- 通过id查询部门信息 -->
+	<select id="findByID"
+		resultType="com.zzc.intern.entity.DepartmentInfo">
+		select d_id,d_name
+		from department_info where d_id = #{dId}
+	</select>
+	<!-- 通过名字查询部门信息(模糊查询) -->
+	<select id="selectName"
+		resultType="com.zzc.intern.entity.DepartmentInfo">
+		select d_id,d_name from department_info where d_name like
+		"%" #{dName} "%"
+	</select>
+	<!-- 添加部门信息 -->
+	<insert id="add">
+		insert into department_info values(null,#{dName})
+	</insert>
+	<!-- 通过id删除信息 -->
+	<update id="deleteById">
+		update department_info set d_status = 0 where d_id = #{dId}
+	</update>
+	<!-- 修改部门信息 -->
+	<update id="update">
+		update department_info set d_name = #{dName} where
+		d_id = #{dId}
+	</update>
+	<!-- 通过部门id查询部门中的岗位信息 -->
+	<select id="selectById"
+		resultType="com.zzc.intern.DTO.DepartmentInfoDTO">
+		SELECT j.j_name FROM department_job_rel dj INNER JOIN
+		department_info d ON dj.d_id =d.d_id
+		INNER JOIN job_info j ON dj.j_id = j.j_id WHERE d.d_id = #{id}
+	</select>
+	<!-- 通过部门名称模糊查询部门信息和岗位信息 -->
+	<select id="selectByName" parameterType="string"
+		resultType="com.zzc.intern.DTO.DepartmentInfoDTO">
+		select d.d_name,j.j_name from department_job_rel dj  
+		inner join department_info d on dj.d_id = d.d_id 
+		inner join job_info j on dj.j_id = j.j_id  
+		where  d.d_name like "%" #{dName} "%"
+		
+		<!-- <where>
+			<if test="_parameter != '' and _parameter != null">
+				d.d_name like "%" #{dName} "%"
+			</if> -->
+			<!-- <if test="jName != '' and jName != null"> and j.jName like "%" #{jName} 
+				"%" </if> -->
+		<!-- </where> -->
+	</select>
+	<!-- 通过岗位名称模糊查询部门信息和岗位信息 -->
+	<select id="selectByJname"  parameterType="string"
+		resultType="com.zzc.intern.DTO.DepartmentInfoDTO">
+		select d.d_name,j.j_name from department_job_rel dj  
+		inner join department_info d on dj.d_id = d.d_id 
+		inner join job_info j on dj.j_id = j.j_id  
+		where  j.j_name like "%" #{jName} "%"
+	</select>
+	<!-- 查询某个部门的实习生考核信息 -->
+	<select id="selectByLearn" resultType="com.zzc.intern.entity.DepartmentInfo">
+		SELECT t.t_name ,tid.d_name,l.l_elementary,a.a_grade  FROM trainee_info t 
+	JOIN  assess_info a  JOIN  learn_info l  JOIN(
+	SELECT td.t_id ,d.d_name FROM department_info d JOIN trainee_department_rel  td
+	ON d.d_id = td.d_id 
+	WHERE d_name = #{dName}
+	) tid
+	ON  t.t_id = tid.t_id AND a.t_id = tid.t_id AND l.l_id = a.l_id WHERE t.t_id  = #{tId}
+	</select>
 </mapper> 
