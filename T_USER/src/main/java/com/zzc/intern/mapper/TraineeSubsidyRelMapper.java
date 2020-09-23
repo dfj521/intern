@@ -2,6 +2,9 @@ package com.zzc.intern.mapper;
 
 import com.zzc.intern.entity.TraineeSubsidyRel;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,4 +18,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TraineeSubsidyRelMapper extends BaseMapper<TraineeSubsidyRel> {
 
+	List<TraineeSubsidyRel> findTraineeSubsidyRels(Integer sId);
+	
 }

@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.SubsidyInfoMapper">
-
+	<select id="findSubsidy"
+		resultType="com.zzc.intern.DTO.JobSubsidyDTO">
+		SELECT
+		s_id,s_lssue_num,s_subsidies,s_issued_time,s.j_id,j.j_name
+		from
+		subsidy_info s join job_info j on s.j_id=j.j_id
+		WHERE s_status=1
+	</select>
+	<insert id="addSubsidy"
+		parameterType="com.zzc.intern.entity.SubsidyInfo">
+		insert into subsidy_info
+		values(null,#{sSubsidies},#{sIssuedTime},#{sLssueNum},#{jId},1);
+	</insert>
+	<update id="updateSubsidy"
+		parameterType="com.zzc.intern.entity.SubsidyInfo">
+		update subsidy_info set s_lssue_num=#{sLssueNum},
+		s_subsidies=#{sSubsidies},
+		s_issued_time=#{sIssuedTime}
+		where s_id=#{sId}
+	</update>
+	<update id="delSubsidy">
+		update subsidy_info set s_status=0
+		where s_id=#{sId}
+	</update>
+	<select id="findSubsidyByid"
+		resultType="com.zzc.intern.entity.SubsidyInfo">
+		SELECT
+		s_id,s_lssue_num,s_subsidies,s_issued_time
+		from
+		subsidy_info
+		WHERE s_id=#{sId}
+	</select>
+	<select id="findSubsidyByjId"
+		resultType="com.zzc.intern.entity.SubsidyInfo">
+		SELECT
+		s_id,s_lssue_num,s_subsidies,s_issued_time
+		from
+		subsidy_info
+		WHERE j_id=#{jId}
+	</select>
 </mapper>
