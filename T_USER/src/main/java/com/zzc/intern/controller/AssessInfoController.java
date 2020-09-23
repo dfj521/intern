@@ -45,10 +45,10 @@ public class AssessInfoController {
 	@GetMapping("/findByEerm")
 	@ResponseBody
 	public ResponseUtil<List<TraineeAssessLearnResultDTO>> findByEerm(
-			@ApiParam(name = "name", value = "实习生姓名", required = false) @RequestParam(value = "name", required = false) String name,
-			@ApiParam(name = "minaGrade", value = "考核成绩min", required = false) @RequestParam(value = "minaGrade", required = false) Double minaGrade,
-			@ApiParam(name = "maxaGrade", value = "考核成绩max", required = false) @RequestParam(value = "maxaGrade", required = false) Double maxaGrade,
-			@ApiParam(name = "lstage", value = "考核级别", required = false) @RequestParam(value = "lstage", required = false) Integer lstage) {
+			@ApiParam(name = "name", value = "实习生姓名") @RequestParam(value = "name", required = false) String name,
+			@ApiParam(name = "minaGrade", value = "考核成绩min") @RequestParam(value = "minaGrade", required = false) Double minaGrade,
+			@ApiParam(name = "maxaGrade", value = "考核成绩max") @RequestParam(value = "maxaGrade", required = false) Double maxaGrade,
+			@ApiParam(name = "lstage", value = "考核级别") @RequestParam(value = "lstage", required = false) Integer lstage) {
 		return assessInfoService.findByEerm(name, minaGrade, maxaGrade, lstage);
 	}
 
@@ -68,7 +68,7 @@ public class AssessInfoController {
 			@ApiParam(name = "lId", value = "学习内容id", required = true) @RequestParam("lId") Integer lId,
 			@ApiParam(name = "lStage", value = "学习内容阶段", required = true) @RequestParam("lStage") Integer lStage,
 			@ApiParam(name = "tId", value = "实习生id", required = true) @RequestParam("tId") Integer tId) {
-		return assessInfoService.addAssess(grade,lId,lStage,tId);
+		return assessInfoService.addAssess(grade, lId, lStage, tId);
 	}
 
 	@ApiOperation("修改考核")
