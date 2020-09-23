@@ -6,4 +6,27 @@
 		select t_id,s_id
 		from trainee_subsidy_rel where s_id=#{sId}
 	</select>
+	<insert id="addTraineeSubsidy"
+		parameterType="com.zzc.intern.entity.TraineeSubsidyRel">
+		insert into trainee_subsidy_rel
+		values(null,#{tId},#{sId},1,now())
+	</insert>
+	<select id="findTraineeSubsidy"
+		resultType="com.zzc.intern.DTO.TraineeSubsidyDTO">
+		SELECT
+		ts.ts_id,t.t_name,s.s_subsidies,ts.createtime
+		from
+		trainee_subsidy_rel ts join trainee_info t join subsidy_info s
+		on t.t_id=ts.t_id and ts.s_id=s.s_id
+		where ts.ts_status=1
+	</select>
+	<select id="findTraineeSubsidybyId"
+		resultType="com.zzc.intern.DTO.TraineeSubsidyDTO">
+		SELECT
+		ts.ts_id,t.t_name,s.s_subsidies,ts.createtime
+		from
+		trainee_subsidy_rel ts join trainee_info t join subsidy_info s
+		on t.t_id=ts.t_id and ts.s_id=s.s_id
+		where ts.ts_status=1 and t.t_id=#{tId}
+	</select>
 </mapper>
