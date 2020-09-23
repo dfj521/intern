@@ -1,0 +1,602 @@
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:21:01,000 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:21:01,000 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:21:01,001 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:21:01,002 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:33:40,899 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:33:40,899 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:33:40,900 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:33:40,901 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,046 INFO [RMI TCP Connection(233)-127.0.0.1][SpringApplicationAdminMXBeanRegistrar.java:159] - Application shutdown requested.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,050 INFO [RMI TCP Connection(233)-127.0.0.1][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,799 INFO [RMI TCP Connection(233)-127.0.0.1][DirectJDKLog.java:173] - Stopping service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,803 INFO [RMI TCP Connection(233)-127.0.0.1][DirectJDKLog.java:173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,808 INFO [RMI TCP Connection(233)-127.0.0.1][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,813 INFO [RMI TCP Connection(233)-127.0.0.1][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,814 INFO [RMI TCP Connection(233)-127.0.0.1][NacosServiceRegistry.java:74] - De-registering from Nacos Server now...
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,821 INFO [RMI TCP Connection(233)-127.0.0.1][NacosServiceRegistry.java:93] - De-registration finished.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,822 INFO [RMI TCP Connection(233)-127.0.0.1][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,826 INFO [RMI TCP Connection(233)-127.0.0.1][DruidDataSource.java:2024] - {dataSource-1} closing ...
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:40:05,827 INFO [RMI TCP Connection(233)-127.0.0.1][DruidDataSource.java:2096] - {dataSource-1} closed
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:38,849 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$23fdb582] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:42,214 INFO [main][PropertySourceBootstrapConfiguration.java:101] - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource@1288135425 {name='T_USER.properties', properties={}}]}
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:42,238 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:42,773 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:42,982 INFO [main][GenericScope.java:295] - BeanFactory id=1d46f546-d63f-3993-85f5-e70bfd14c6ec
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,037 INFO [main][PostProcessorRegistrationDelegate.java:335] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$23fdb582] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,220 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8888 (http)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,227 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,227 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,228 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,341 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,341 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1090 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,415 INFO [main][DruidDataSourceAutoConfigure.java:56] - Init DruidDataSource
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,489 INFO [main][DruidDataSource.java:983] - {dataSource-1} inited
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,720 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.addAssess
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,724 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.findByEerm
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,725 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.findById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,726 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.updateAssess
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,727 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.delAssess
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,754 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,758 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,760 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,762 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,763 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,766 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,768 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,769 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,770 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,772 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,775 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,777 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,779 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,781 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,783 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,785 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,787 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.AssessInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,787 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\AssessInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,798 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,800 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,801 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,802 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,804 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,806 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,808 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,809 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,810 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,811 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,813 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,815 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,816 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,818 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,819 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,821 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,823 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,823 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\DepartmentInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,829 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.inster
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,831 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,832 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,834 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,835 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,837 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,839 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,841 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,842 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,843 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,845 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,846 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,848 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,849 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,850 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,851 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,853 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,854 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.DepartmentJobRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,854 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\DepartmentJobRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,860 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.add
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,861 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.findAll
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,861 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,862 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,862 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.findHouseInfoByAddress
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,862 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.findById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,865 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,866 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,867 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,868 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,869 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,870 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.HouseInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,871 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,871 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,872 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,874 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,875 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,877 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,879 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,881 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,882 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,884 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,885 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.HouseInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,885 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\HouseInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,897 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,898 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.insertId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,898 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.findAll
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,899 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.findById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,899 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.findByName
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,900 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.updateId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,901 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.deleteId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,902 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.findId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,902 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.findGId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,903 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,903 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectGId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,904 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectJId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,906 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.JobInfoMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,908 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,909 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,910 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,911 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,912 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,913 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,913 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,915 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,916 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,917 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,918 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,919 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,920 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,921 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,922 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,923 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,923 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\JobInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,927 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.findLearnByJId
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,928 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.addJobLearn
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,929 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.delJobLearnById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,931 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,933 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,934 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,935 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,936 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,938 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,939 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,939 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,941 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,943 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,944 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,946 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,947 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,948 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,949 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,951 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,952 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.JobLearnRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,952 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\JobLearnRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,956 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.addLearn
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,957 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.findAllLearn
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,958 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.findByid
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,958 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.updateLearn
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,959 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.delLearn
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,960 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,961 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,962 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,963 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,964 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,965 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,966 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,966 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,967 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,968 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,969 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,970 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,972 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,973 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,974 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,975 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,977 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.LearnInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,977 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\LearnInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,980 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.add
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,981 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,981 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,982 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.findAll
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,982 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.findById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,983 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.findByComputer
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,983 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.findByGitHub
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,985 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,986 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,987 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,988 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,988 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,990 WARN [main][AbstractMethod.java:306] - [com.zzc.intern.mapper.ResourceInfoMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,991 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,992 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,993 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,995 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,997 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:43,998 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,001 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,001 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,003 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,005 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,007 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.ResourceInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,008 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\ResourceInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,012 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,014 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,014 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,015 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,016 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,017 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,018 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,018 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,019 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,020 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,021 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,023 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,024 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,025 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,027 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,028 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,029 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.SubsidyInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,029 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\SubsidyInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,033 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,034 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,035 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,036 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,037 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,038 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,039 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,040 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,041 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,042 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,043 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,044 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,045 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,046 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,047 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,051 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,052 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeAssessRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,052 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeAssessRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,057 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,058 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,059 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,060 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,061 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,063 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,064 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,064 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,065 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,066 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,068 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,069 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,070 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,071 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,073 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,075 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,076 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeDepartmentRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,076 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeDepartmentRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,082 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,083 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,084 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,085 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,086 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,087 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,088 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,088 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,090 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,091 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,092 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,094 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,095 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,096 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,097 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,098 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,099 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeHouseRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,099 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeHouseRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,104 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoAllMapper.findByCondition
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,104 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeInfoAllMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,111 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,113 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,113 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,114 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,115 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,117 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,118 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,118 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,119 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,119 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,121 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,122 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,124 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,125 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,127 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,128 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,130 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeInfoMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,130 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeInfoMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,135 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,136 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,137 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,138 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,138 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,140 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,141 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,141 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,142 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,143 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,143 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,144 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,145 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,146 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,147 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,148 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,149 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeJobRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,149 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeJobRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,153 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,154 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,155 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,156 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,157 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,158 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,158 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,159 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,160 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,160 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,161 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,162 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,163 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,164 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,165 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,166 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,168 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeLearnRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,168 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeLearnRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,172 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,174 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,175 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,176 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,177 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,178 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,179 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,180 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,181 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,181 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,182 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,183 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,184 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,188 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,189 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,191 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,192 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeResourceRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,192 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeResourceRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,195 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.insert
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,196 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.delete
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,197 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.deleteByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,198 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.deleteById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,198 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.deleteBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,199 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.update
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,200 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.updateById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,200 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectById
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,201 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectBatchIds
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,202 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectByMap
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,203 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectOne
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,204 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectCount
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,204 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectMaps
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,205 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectMapsPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,207 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectObjs
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,208 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectList
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,209 DEBUG [main][MybatisConfiguration.java:80] - addMappedStatement: com.zzc.intern.mapper.TraineeSubsidyRelMapper.selectPage
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,209 DEBUG [main][Logger.java:49] - Parsed mapper file: 'file [E:\springtool\intern\T_USER\target\classes\mapper\intern\TraineeSubsidyRelMapper.xml]'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,644 INFO [main][PropertySourcedRequestMappingHandlerMapping.java:69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,658 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,659 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,662 WARN [main][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,662 INFO [main][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:44,733 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:46,776 INFO [main][InetUtils.java:170] - Cannot determine local hostname
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:46,837 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:48,927 INFO [main][InetUtils.java:170] - Cannot determine local hostname
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,078 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,100 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8888 (http) with context path ''
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,162 INFO [main][NacosServiceRegistry.java:62] - nacos registry, T_USER 192.168.56.1:8888 register finished
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,163 INFO [main][DocumentationPluginsBootstrapper.java:160] - Context refreshed
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,180 INFO [main][DocumentationPluginsBootstrapper.java:163] - Found 1 custom documentation plugin(s)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,204 INFO [main][ApiListingReferenceScanner.java:41] - Scanning for api listing references
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,322 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,328 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: insertUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,336 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,338 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,348 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,361 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: insertUsingGET_2
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,375 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,381 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: addUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,382 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: deleteByIdUsingGET_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,385 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_3
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,390 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findByIdUsingGET_4
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,391 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: updateUsingPOST_1
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,426 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_4
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,434 INFO [main][CachingOperationNameGenerator.java:40] - Generating unique operation named: findAllUsingGET_5
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:51:49,452 INFO [main][StartupInfoLogger.java:61] - Started TUserApplication in 13.13 seconds (JVM running for 14.683)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:52:00,885 INFO [http-nio-8888-exec-2][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:52:00,885 INFO [http-nio-8888-exec-2][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:52:00,891 INFO [http-nio-8888-exec-2][FrameworkServlet.java:547] - Completed initialization in 6 ms
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:52:00,950 DEBUG [http-nio-8888-exec-2][BaseJdbcLogger.java:143] - ==>  Preparing: INSERT INTO department_job_rel VALUES (NULL,?,?,1) 
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:55:36,637 INFO [http-nio-8888-exec-5][DirectJDKLog.java:173] - Invalid chunk starting at byte [13] and ending at byte [14] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:55:36,657 ERROR [http-nio-8888-exec-5][DruidAbstractDataSource.java:1481] - discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://192.168.2.173:3306/intern?characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 215665
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:55:36,657 DEBUG [http-nio-8888-exec-5][DruidDataSource.java:1462] - skip not validate connection.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:55:36,686 DEBUG [http-nio-8888-exec-5][BaseJdbcLogger.java:143] - ==>  Preparing: INSERT INTO department_job_rel VALUES (NULL,?,?,1) 
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:28,744 WARN [com.alibaba.nacos.naming.beat.sender][HttpClient.java:95] - failed to request http://192.168.2.173:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.56.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22period%22%3A5000%2C%22port%22%3A8888%2C%22scheduled%22%3Afalse%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40T_USER%22%2C%22stopped%22%3Afalse%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40T_USER&encoding=UTF-8&namespaceId=public from 192.168.2.173
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:28,744 ERROR [com.alibaba.nacos.naming.beat.sender][HttpClient.java:103] - [NA] failed to request 
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:656)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1340)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1315)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:85)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:410)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:28,749 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:454] - request 192.168.2.173:8848 failed.
+ErrCode:500, ErrMsg:failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:424)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:451)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:28,749 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:316] - [CLIENT-BEAT] failed to send beat: {"cluster":"DEFAULT","ip":"192.168.56.1","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":8888,"scheduled":false,"serviceName":"DEFAULT_GROUP@@T_USER","stopped":false,"weight":1.0}
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance/beat after all servers([192.168.2.173:8848]) tried: failed to req API:192.168.2.173:8848/nacos/v1/ns/instance/beat. code:500 msg: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:464)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:386)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:309)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:92)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:853)
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:59,539 INFO [RMI TCP Connection(18)-127.0.0.1][SpringApplicationAdminMXBeanRegistrar.java:159] - Application shutdown requested.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 19:59:59,544 INFO [RMI TCP Connection(18)-127.0.0.1][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8888"]

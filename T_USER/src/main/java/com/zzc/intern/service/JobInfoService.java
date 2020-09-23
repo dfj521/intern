@@ -18,8 +18,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-09-15
  */
 public interface JobInfoService extends IService<JobInfo> {
-	//添加一条宿舍信息
-    ResponseUtil<Integer> insert(JobInfo jobInfo);
+	//添加一条岗位信息
+    ResponseUtil<Integer> insert(Integer Id,String jName);
 		//查询所有岗位信息
 	ResponseUtil<List<JobInfo>> findAll();
 		//根据id查询岗位信息
@@ -38,4 +38,6 @@ public interface JobInfoService extends IService<JobInfo> {
 	ResponseUtil<List<JobInfoDTO>> selectId(String jName);
 	//根据岗位名称模糊查询岗位信息和学习内容
 	ResponseUtil<List<JobInfoDTO>> selectGId(String jName);
+	//根据岗位id和考试阶段查询考试成绩,岗位信息,考试成绩,考试阶段
+	ResponseUtil<List<JobInfoDTO>> selectJId(Integer jId,String lStage);
 }

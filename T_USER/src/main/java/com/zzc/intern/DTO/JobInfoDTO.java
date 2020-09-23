@@ -18,5 +18,14 @@ public class JobInfoDTO implements  Serializable {
     private Integer lId;
     
     private String lelementary;
-
+    
+    private String lStage;
+    
+    private Integer aGrade;
+    
+    private String jName;
+    
+    private Integer dId;
+    
+    private String djStage;
 }

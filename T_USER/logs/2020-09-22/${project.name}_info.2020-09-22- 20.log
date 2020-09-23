@@ -1,0 +1,9 @@
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,252 INFO [RMI TCP Connection(18)-127.0.0.1][DirectJDKLog.java:173] - Stopping service [Tomcat]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,255 INFO [RMI TCP Connection(18)-127.0.0.1][DirectJDKLog.java:173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,260 INFO [RMI TCP Connection(18)-127.0.0.1][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,263 INFO [RMI TCP Connection(18)-127.0.0.1][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8888"]
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,265 INFO [RMI TCP Connection(18)-127.0.0.1][NacosServiceRegistry.java:74] - De-registering from Nacos Server now...
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,302 INFO [RMI TCP Connection(18)-127.0.0.1][NacosServiceRegistry.java:93] - De-registration finished.
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,307 INFO [RMI TCP Connection(18)-127.0.0.1][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,317 INFO [RMI TCP Connection(18)-127.0.0.1][DruidDataSource.java:2024] - {dataSource-1} closing ...
+[${project.name}][${env:SERVER_PORT}] 2020-09-22 20:00:00,325 INFO [RMI TCP Connection(18)-127.0.0.1][DruidDataSource.java:2096] - {dataSource-1} closed

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.JobInfoMapper">
- <insert id="insert">
-   insert into job_info values(null,#{jName})
+ <insert id="insert" keyProperty="jId" useGeneratedKeys="true">
+   insert into job_info values(#{jId},#{jName},1)
    </insert>
 <select id="findAll" resultType="com.zzc.intern.entity.JobInfo">
     select * from job_info
@@ -14,10 +14,10 @@
   select j_id, j_name from job_info where j_name like '%' #{jName} '%'
   </select>
   <update id="updateId" parameterType="com.zzc.intern.entity.JobInfo">
-  update job_info set j_name=#{jName} where j_id=#{jId}
+  update job_info set j_name=#{jName} ,j_stage=#{jStage} where j_id=#{jId}
   </update>
   <delete id="deleteId"  >
-  delete from job_info where j_id=#{jId}
+  update job_info set j_status = 0 WHERE j_id = #{jId}
   </delete>
   <select id="findId" resultType="com.zzc.intern.DTO.JobInfoDTO">
   SELECT t3.t_name	FROM trainee_job_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
@@ -35,5 +35,9 @@
    <select id="selectGId" resultType="com.zzc.intern.DTO.JobInfoDTO">
   SELECT  t3.l_elementary 	FROM job_learn_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
 	INNER JOIN learn_info t3 ON t1.l_id = t3.l_id where j_name  like '%'  #{jName}  ''
+  </select>
+  <select id="selectJId" resultType="com.zzc.intern.DTO.JobInfoDTO">
+	SELECT t2.j_name,t3.t_name,a_grade,l_stage	FROM trainee_job_rel t1 INNER JOIN job_info t2 ON  t1.j_id= t2.j_id 
+	INNER JOIN trainee_info t3 ON t1.t_id = t3.t_id INNER JOIN assess_info t4 ON  t3.t_id = t4.t_id INNER JOIN learn_info t5 ON t4.l_id = t5.l_id where t2.j_id = #{jId} AND t5.l_stage=#{lStage}
   </select>
 </mapper>

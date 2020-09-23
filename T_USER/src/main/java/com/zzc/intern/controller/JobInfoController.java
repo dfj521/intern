@@ -40,8 +40,8 @@ public class JobInfoController {
     private JobInfoService jobInfoService;
     @ApiOperation("添加一条岗位信息")
     @GetMapping("/insert")
-    public ResponseUtil<Integer> insert(JobInfo jobInfo) {
-    	return jobInfoService.insert(jobInfo);
+    public ResponseUtil<Integer> insert(Integer Id,String jName) {
+    	return jobInfoService.insert(Id,jName);
     }
     @ApiOperation("查询所有岗位")
     @GetMapping("/findAll")
@@ -87,5 +87,11 @@ public class JobInfoController {
    @GetMapping("/selecGId")
    public ResponseUtil<List<JobInfoDTO>> selectGId(String jName) {
    return jobInfoService.selectGId(jName);
+   }
+   @ApiOperation("根据岗位id和考试阶段查询考试成绩,岗位信息,考试成绩,考试阶段")
+   @GetMapping("/selectJId")
+   public ResponseUtil<List<JobInfoDTO>> selectJId(Integer jId,String lStage){
+	   return jobInfoService.selectJId(jId ,lStage);
+   
    }
 }

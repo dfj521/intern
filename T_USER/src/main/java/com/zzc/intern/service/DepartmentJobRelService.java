@@ -2,6 +2,7 @@ package com.zzc.intern.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zzc.intern.entity.DepartmentJobRel;
+import com.zzc.intern.util.ResponseUtil;
 
 /**
  * <p>
@@ -12,5 +13,4 @@ import com.zzc.intern.entity.DepartmentJobRel;
  * @since 2020-09-17
  */
 public interface DepartmentJobRelService extends IService<DepartmentJobRel> {
-
 }

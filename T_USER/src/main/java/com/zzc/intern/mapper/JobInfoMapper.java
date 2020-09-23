@@ -6,6 +6,7 @@ import com.zzc.intern.util.ResponseUtil;
 
 import io.swagger.annotations.ApiOperation;
 
+import com.alibaba.druid.sql.visitor.functions.Insert;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
@@ -25,6 +26,8 @@ public interface JobInfoMapper extends BaseMapper<JobInfo> {
 	//添加一条宿舍信息
 	 @ApiOperation("添加一条岗位信息")
     int insert(JobInfo jobInfo);
+	 @ApiOperation("添加一条部门信息")
+	 int InsertId(JobInfoDTO jobInfoDTO);
 		//查询所有岗位信息
 	 @ApiOperation("查询所有岗位")
 	List<JobInfo> findAll();
@@ -52,4 +55,6 @@ public interface JobInfoMapper extends BaseMapper<JobInfo> {
 	//根据岗位名称模糊查询岗位信息和学习内容
 	  @ApiOperation("根据岗位名称模糊查询岗位信息和学习内容")
 	List<JobInfoDTO> selectGId(String jName);
+	  @ApiOperation("根据岗位id和考试阶段查询考试成绩,岗位信息,考试成绩,考试阶段")
+	List<JobInfoDTO> selectJId(Integer jId,String lStage);
 }

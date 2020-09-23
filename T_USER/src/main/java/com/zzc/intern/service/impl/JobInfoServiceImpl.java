@@ -1,8 +1,12 @@
 package com.zzc.intern.service.impl;
 
 import com.zzc.intern.DTO.JobInfoDTO;
+import com.zzc.intern.entity.DepartmentJobRel;
 import com.zzc.intern.entity.JobInfo;
+import com.zzc.intern.entity.JobLearnRel;
+import com.zzc.intern.entity.LearnInfo;
 import com.zzc.intern.entity.ResourceInfo;
+import com.zzc.intern.mapper.DepartmentJobRelMapper;
 import com.zzc.intern.mapper.JobInfoMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.service.JobInfoService;
@@ -33,24 +37,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfo> implements JobInfoService {
 	@Resource
 	private JobInfoMapper jobinfoMapper;
+	@Resource
+	private DepartmentJobRelMapper  DepartmentJobRelMapper ;
 	@Override
-	public ResponseUtil<Integer> insert(JobInfo jobInfo) {
+	public ResponseUtil<Integer> insert(Integer Id,String jName) {
 		// TODO Auto-generated method stub
 		  ResponseUtil<Integer> result = new ResponseUtil<>();
-	        int i = 0;
-	        try {
-	            i = jobinfoMapper.insert(jobInfo);
-	            if (i == 1) {
-	                result.setCode(200);
-	                result.setMessage("添加成功");
-	            }
-	        } catch (Exception e) {
-	            result.setCode(500);
-	            result.setMessage("添加失败");
-	        }
-	        result.setData(i);
-	        return result;
-	}
+			JobInfo jobInfo = new JobInfo();
+			jobInfo.setJName(jName);
+			try {
+				jobinfoMapper.insert(jobInfo);
+				DepartmentJobRel departmentJobRel = new DepartmentJobRel();
+				departmentJobRel.setJId(jobInfo.getJId());
+				departmentJobRel.setDId(Id);
+				DepartmentJobRelMapper.insert(departmentJobRel);
+				result.setCode(1);
+				result.setMessage("添加成功");
+			} catch (Exception e) {
+				result.setCode(0);
+				result.setMessage("添加失败");
+			}
+
+			return result;
+		}
+
 
 	@Override
 	public ResponseUtil<List<JobInfo>> findAll() {
@@ -156,12 +166,12 @@ public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfo> impl
 
 	public ResponseUtil<Integer> deleteId(Integer jid) {
 		// TODO Auto-generated method stub
-		 ResponseUtil<Integer> result = new ResponseUtil<>();
+		 ResponseUtil<Integer> result = new ResponseUtil<>(); 
 		//
 		 
 	        int i = 0;
 	        try {
-	            i = jobinfoMapper.deleteById(jid);
+	            i = jobinfoMapper.deleteId(jid);
 	            if (i == 1) {
 	                result.setCode(200);
 	                result.setMessage("删除成功");
@@ -264,5 +274,28 @@ public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfo> impl
 	        }
 	        result.setData(jonInfos);
 	        return result;
+	}
+
+	@Override
+	public ResponseUtil<List<JobInfoDTO>> selectJId(Integer jId, String lStage) {
+		// TODO Auto-generated method stub
+		ResponseUtil<List<JobInfoDTO>> result = new ResponseUtil<>();
+		List<JobInfoDTO> jonInfos= new ArrayList<>();
+		 try {
+			 jonInfos = jobinfoMapper.selectJId(jId,lStage);
+	            if (jonInfos.size() == 0) {
+	                result.setCode(300);
+	                result.setMessage("没有查询到数据");
+	            } else {
+	                result.setCode(200);
+	                result.setMessage("查询成功");
+	            }
+	        } catch (Exception e) {
+	            result.setCode(500);
+	            result.setMessage("查询失败");
+	        }
+	        result.setData(jonInfos);
+	        return result;
+
 	}
 }

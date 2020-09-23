@@ -14,5 +14,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface DepartmentJobRelMapper extends BaseMapper<DepartmentJobRel> {
-
+	//添加部门信息
+	int inster(DepartmentJobRel departmentJobRel);
 }
