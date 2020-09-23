@@ -23,20 +23,24 @@ public interface AssessInfoService extends IService<AssessInfo> {
 	 * @param assessInfo 条件对象
 	 * @return
 	 */
-	ResponseUtil<List<TraineeAssessLearnResultDTO>> findByEerm(String name,Double minaGrade,Double maxaGrade,Integer lstage);
+	ResponseUtil<List<TraineeAssessLearnResultDTO>> findByEerm(String name, Double minaGrade, Double maxaGrade,
+			Integer lstage);
+
 	/**
 	 * 根据考核ID查询单个考核
+	 * 
 	 * @param id
 	 * @return
 	 */
 	ResponseUtil<TraineeAssessLearnResultDTO> findById(int id);
+
 	/**
 	 * 添加考核信息
 	 * 
 	 * @param assessInfo
 	 * @return
 	 */
-	ResponseUtil addAssess(AssessInfo assessInfo);
+	ResponseUtil addAssess(Double grade, Integer lId, Integer lStage, Integer tId);
 
 	/**
 	 * 修改考核信息

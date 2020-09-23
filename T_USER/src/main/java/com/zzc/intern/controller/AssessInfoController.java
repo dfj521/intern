@@ -63,8 +63,12 @@ public class AssessInfoController {
 	@ApiOperation("添加考核")
 	@PostMapping("/addAssess")
 	@ResponseBody
-	public ResponseUtil addAssess(AssessInfo assessInfo) {
-		return assessInfoService.addAssess(assessInfo);
+	public ResponseUtil addAssess(
+			@ApiParam(name = "grade", value = "考核成绩", required = true) @RequestParam("grade") Double grade,
+			@ApiParam(name = "lId", value = "学习内容id", required = true) @RequestParam("lId") Integer lId,
+			@ApiParam(name = "lStage", value = "学习内容阶段", required = true) @RequestParam("lStage") Integer lStage,
+			@ApiParam(name = "tId", value = "实习生id", required = true) @RequestParam("tId") Integer tId) {
+		return assessInfoService.addAssess(grade,lId,lStage,tId);
 	}
 
 	@ApiOperation("修改考核")

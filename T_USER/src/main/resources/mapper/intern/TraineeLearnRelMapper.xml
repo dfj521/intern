@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.TraineeLearnRelMapper">
-
+	<update id="updateState">
+		update trainee_learn_rel set l_state=1 where t_id=#{tId}
+	</update>
+	<insert id="addLearn" parameterType="com.zzc.intern.entity.TraineeLearnRel">
+		insert into trainee_learn_rel values(null,#{tId},#{lId},0,1)
+	</insert>
 </mapper>

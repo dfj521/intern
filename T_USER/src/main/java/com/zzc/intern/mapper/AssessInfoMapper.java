@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.scripting.xmltags.WhereSqlNode;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -49,4 +51,14 @@ public interface AssessInfoMapper extends BaseMapper<AssessInfo> {
 	 * @return
 	 */
 	int delAssess(int id);
+	/**
+	 * 根据实习生ID与学习内容阶段查询学习内容id
+	 * 
+	 * @param tId    实习生id
+	 * @param lStage 学习内容阶段
+	 * @return
+	 */
+	int findLId(@Param("tId") Integer tId, @Param("lStage") Integer lStage);
+	
+	int findMaxStage(Integer tId);
 }

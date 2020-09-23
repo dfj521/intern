@@ -3,7 +3,10 @@ package com.zzc.intern.service.impl;
 import com.zzc.intern.DTO.TraineeAssessLearnParameterDTO;
 import com.zzc.intern.DTO.TraineeAssessLearnResultDTO;
 import com.zzc.intern.entity.AssessInfo;
+import com.zzc.intern.entity.LearnInfo;
+import com.zzc.intern.entity.TraineeLearnRel;
 import com.zzc.intern.mapper.AssessInfoMapper;
+import com.zzc.intern.mapper.TraineeLearnRelMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.service.AssessInfoService;
 import com.zzc.intern.util.ResponseUtil;
@@ -35,6 +38,8 @@ public class AssessInfoServiceImpl extends ServiceImpl<AssessInfoMapper, AssessI
 
 	@Resource
 	private AssessInfoMapper assessInfoMapper;
+	@Resource
+	private TraineeLearnRelMapper traineeLearnRelMapper;
 
 	@Override
 	public ResponseUtil<List<TraineeAssessLearnResultDTO>> findByEerm(String name, Double minaGrade, Double maxaGrade,
@@ -64,17 +69,39 @@ public class AssessInfoServiceImpl extends ServiceImpl<AssessInfoMapper, AssessI
 	}
 
 	@Override
-	public ResponseUtil addAssess(AssessInfo assessInfo) {
+	public ResponseUtil addAssess(Double grade, Integer lId,Integer lStage, Integer tId) {
 		// TODO Auto-generated method stub
 		ResponseUtil responseUtil = new ResponseUtil();
-		int addAssess = assessInfoMapper.addAssess(assessInfo);
-		if (addAssess != 0) {
-			responseUtil.setCode(1);
-			responseUtil.setMessage("添加成功");
-		} else {
-			responseUtil.setCode(0);
-			responseUtil.setMessage("添加失败");
+		AssessInfo assessInfo = new AssessInfo();
+		assessInfo.setAGrade(grade);
+		assessInfo.setLId(lId);
+		assessInfo.setTId(tId);
+		if (assessInfoMapper.findMaxStage(tId)==lStage) {
+			if (grade >= 60) {
+				assessInfo.setAState("1");
+				assessInfoMapper.addAssess(assessInfo);
+				traineeLearnRelMapper.updateState(tId);
+			} else {
+				assessInfo.setAState("0");
+				assessInfoMapper.addAssess(assessInfo);
+			}
+		}else {
+			if (grade >= 60) {
+				assessInfo.setAState("1");
+				assessInfoMapper.addAssess(assessInfo);
+				traineeLearnRelMapper.updateState(tId);
+				TraineeLearnRel traineeLearnRel = new TraineeLearnRel();
+				int findLId = assessInfoMapper.findLId(tId, lStage);
+				traineeLearnRel.setLId(findLId);
+				traineeLearnRel.setTId(tId);
+				traineeLearnRelMapper.addLearn(traineeLearnRel);
+			} else {
+				assessInfo.setAState("0");
+				assessInfoMapper.addAssess(assessInfo);
+			}
 		}
+		responseUtil.setCode(1);
+		responseUtil.setMessage("添加成功");
 		return responseUtil;
 	}
 

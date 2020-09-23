@@ -11,7 +11,8 @@
 		SELECT
 		l_id,l_elementary,l_stage
 		from
-		learn_info where l_status=1
+		learn_info where
+		l_status=1
 	</select>
 	<select id="findByid" parameterType="int"
 		resultType="com.zzc.intern.entity.LearnInfo">
@@ -19,7 +20,8 @@
 		l_id,l_elementary,l_stage
 		from
 		learn_info
-		where l_id=#{lId}
+		where
+		l_id=#{lId}
 	</select>
 	<update id="updateLearn"
 		parameterType="com.zzc.intern.entity.LearnInfo">
@@ -29,4 +31,5 @@
 	<update id="delLearn">
 		update learn_info set l_status=0 where l_id=#{lId}
 	</update>
+	
 </mapper>

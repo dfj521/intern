@@ -4,7 +4,7 @@
 	<insert id="addAssess"
 		parameterType="com.zzc.intern.entity.AssessInfo">
 		INSERT into assess_info
-		VALUES(#{aId},#{aGrade},#{lId},#{tId},1)
+		VALUES(null,#{aGrade},#{lId},#{tId},#{aState},1)
 	</insert>
 	<select id="findByEerm"
 		parameterType="com.zzc.intern.DTO.TraineeAssessLearnParameterDTO"
@@ -48,7 +48,32 @@
 		a_grade=#{aGrade},l_id=#{lId},t_id=#{tId} where a_id=#{aId}
 	</update>
 	<update id="delAssess" parameterType="int">
-		UPDATE assess_info set a_status=0
+		UPDATE assess_info set
+		a_status=0
 		where a_id=#{aId}
 	</update>
+	<select id="findLId" resultType="Integer">
+		SELECT
+		l.l_id
+		from
+		trainee_job_rel
+		tj join job_learn_rel
+		jl join learn_info l
+		on tj.j_id=jl.j_id and
+		jl.l_id = l.l_id
+		where
+		tj.t_id=#{tId} and l.l_stage=#{lStage}+1
+	</select>
+	<select id="findMaxStage" resultType="Integer">
+		SELECT
+		MAX(l.l_stage)
+		from
+		trainee_job_rel
+		tj join job_learn_rel
+		jl join learn_info l
+		on tj.j_id=jl.j_id and
+		jl.l_id = l.l_id
+		where
+		tj.t_id=#{tId}
+	</select>
 </mapper>

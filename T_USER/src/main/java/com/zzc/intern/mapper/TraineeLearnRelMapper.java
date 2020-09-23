@@ -1,5 +1,6 @@
 package com.zzc.intern.mapper;
 
+import com.zzc.intern.entity.LearnInfo;
 import com.zzc.intern.entity.TraineeLearnRel;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
@@ -14,5 +15,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TraineeLearnRelMapper extends BaseMapper<TraineeLearnRel> {
+	
+	int updateState(Integer tId);
+	
+	int addLearn(TraineeLearnRel traineeLearnRel);
 
 }
