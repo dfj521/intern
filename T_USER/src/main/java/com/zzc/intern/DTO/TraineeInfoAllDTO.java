@@ -329,6 +329,11 @@ public class TraineeInfoAllDTO implements Serializable {
     private Double aGrade;
 
     /**
+     * 考核是否通过（1.通过，0.不通过）
+     */
+    private String aState;
+
+    /**
      * 考核状态（0：不存在，1：存在）
      */
     private String aStatus;

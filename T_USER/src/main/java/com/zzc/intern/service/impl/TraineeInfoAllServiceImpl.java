@@ -8,12 +8,15 @@ import com.zzc.intern.entity.*;
 import com.zzc.intern.mapper.*;
 import com.zzc.intern.service.TraineeInfoAllService;
 import com.zzc.intern.util.ResponseUtil;
+import com.zzc.intern.vo.AssessInfoVO;
+import com.zzc.intern.vo.LearnInfoVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
@@ -176,13 +179,13 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         traineeLearnRelMapper.insert(traineeLearnRel);
 
         //添加实习生的补贴信息
-        SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
+        /*SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
                 .eq(SubsidyInfo::getJId, traineeInfoAllDTO.getJId()));
         TraineeSubsidyRel traineeSubsidyRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeSubsidyRel(traineeInfoAllDTO);
         traineeSubsidyRel.setSId(subsidyInfo.getSId());
         traineeSubsidyRel.setTsStatus("1");
         traineeSubsidyRel.setSCount(0);
-        traineeSubsidyRelMapper.insert(traineeSubsidyRel);
+        traineeSubsidyRelMapper.insert(traineeSubsidyRel);*/
 
         //添加实习生的宿舍信息
         TraineeHouseRel traineeHouseRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeHouseRel(traineeInfoAllDTO);
@@ -268,13 +271,13 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
                         .eq(TraineeLearnRel::getTId, traineeLearnRel.getTId()));
 
         //更新实习生的补贴信息
-        SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
+        /*SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
                 .eq(SubsidyInfo::getJId, traineeInfoAllDTO.getJId()));
         TraineeSubsidyRel traineeSubsidyRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeSubsidyRel(traineeInfoAllDTO);
         traineeSubsidyRel.setSId(subsidyInfo.getSId());
         traineeSubsidyRelMapper.update(traineeSubsidyRel,
                 new LambdaUpdateWrapper<TraineeSubsidyRel>()
-                        .eq(TraineeSubsidyRel::getTId, traineeSubsidyRel.getTId()));
+                        .eq(TraineeSubsidyRel::getTId, traineeSubsidyRel.getTId()));*/
 
         //更新实习生的宿舍信息
         TraineeHouseRel traineeHouseRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeHouseRel(traineeInfoAllDTO);
@@ -405,6 +408,70 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         result.setCode(200);
         result.setMessage("删除成功");
         result.setData(i);
+        return result;
+    }
+
+    /**
+     * 根据实习生的id查询实习生的学习情况
+     *
+     * @param tId 实习生编号
+     * @return
+     */
+    @Override
+    public ResponseUtil<List<LearnInfoVO>> selectTraineeLearn(Integer tId) {
+        ResponseUtil<List<LearnInfoVO>> result = new ResponseUtil<>();
+        //查询到学习状态
+        List<TraineeLearnRel> traineeLearnRels = traineeLearnRelMapper.selectList(
+                new LambdaQueryWrapper<TraineeLearnRel>()
+                        .eq(TraineeLearnRel::getTId, tId));
+
+        ArrayList<Integer> list = new ArrayList<>();
+        for (TraineeLearnRel traineeLearnRel : traineeLearnRels) {
+            list.add(traineeLearnRel.getLId());
+        }
+        //查询到学习阶段和学习内容
+        List<LearnInfo> learnInfos = learnInfoMapper.selectList(
+                new LambdaQueryWrapper<LearnInfo>()
+                        .in(LearnInfo::getLId, list));
+
+        List<LearnInfoVO> learnInfoVOS = TraineeInfoInsertConvert.INSTANCE.listTLR2listLIVO(traineeLearnRels);
+
+        Iterator<LearnInfoVO> learnInfoVOIterator = learnInfoVOS.iterator();
+        Iterator<LearnInfo> learnInfoIterator = learnInfos.iterator();
+        while (learnInfoVOIterator.hasNext() && learnInfoIterator.hasNext()) {
+            LearnInfoVO learnInfoVO = learnInfoVOIterator.next();
+            LearnInfo learnInfo = learnInfoIterator.next();
+            learnInfoVO.setLElementary(learnInfo.getLElementary());
+            learnInfoVO.setLStage(learnInfo.getLStage());
+        }
+
+        result.setCode(200);
+        result.setMessage("查询成功");
+        result.setData(learnInfoVOS);
+        return result;
+    }
+
+    /**
+     * 根据实习生的id和学习内容id查询实习生的考核情况
+     *
+     * @param tId 实习生编号
+     * @param lId 学习内容编号
+     * @return
+     */
+    @Override
+    public ResponseUtil<List<AssessInfoVO>> selectTraineeAssess(Integer tId, Integer lId) {
+        ResponseUtil<List<AssessInfoVO>> result = new ResponseUtil<>();
+
+        List<AssessInfo> assessInfos = assessInfoMapper.selectList(
+                new LambdaQueryWrapper<AssessInfo>()
+                        .eq(AssessInfo::getTId, tId)
+                        .eq(AssessInfo::getLId, lId));
+
+        List<AssessInfoVO> assessInfoVOS = TraineeInfoInsertConvert.INSTANCE.listAI2listAIVO(assessInfos);
+
+        result.setCode(200);
+        result.setMessage("查询成功");
+        result.setData(assessInfoVOS);
         return result;
     }
 

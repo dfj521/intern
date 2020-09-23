@@ -3,6 +3,8 @@ package com.zzc.intern.controller;
 import com.zzc.intern.DTO.TraineeInfoAllDTO;
 import com.zzc.intern.service.TraineeInfoAllService;
 import com.zzc.intern.util.ResponseUtil;
+import com.zzc.intern.vo.AssessInfoVO;
+import com.zzc.intern.vo.LearnInfoVO;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,5 +70,29 @@ public class TraineeInfoAllController {
     public ResponseUtil<Integer> deleteTrainee(@PathVariable("tId") Integer tId) {
 
         return traineeInfoAllService.deleteTrainee(tId);
+    }
+
+    @ApiOperation("根据实习生的id查询实习生的学习情况")
+    @GetMapping("/selectTraineeLearn/{tId}")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "tId", value = "实习生编号", required = true, dataType = "Int", paramType = "path")
+    })
+    public ResponseUtil<List<LearnInfoVO>> selectTraineeLearn(@PathVariable("tId") Integer tId) {
+
+        return traineeInfoAllService.selectTraineeLearn(tId);
+
+    }
+
+    @ApiOperation("根据实习生的id和学习内容id查询实习生的考核情况")
+    @GetMapping("/selectTraineeAssess")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "tId", value = "实习生编号", required = true, dataType = "Int", paramType = "query"),
+            @ApiImplicitParam(name = "lId", value = "学习内容编号", required = true, dataType = "Int", paramType = "query")
+    })
+    public ResponseUtil<List<AssessInfoVO>> selectTraineeLearn(
+            @RequestParam("tId") Integer tId, @RequestParam("lId") Integer lId) {
+
+        return traineeInfoAllService.selectTraineeAssess(tId, lId);
+
     }
 }

@@ -2,8 +2,12 @@ package com.zzc.intern.Convert;
 
 import com.zzc.intern.DTO.TraineeInfoAllDTO;
 import com.zzc.intern.entity.*;
+import com.zzc.intern.vo.AssessInfoVO;
+import com.zzc.intern.vo.LearnInfoVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
+
+import java.util.List;
 
 @Mapper
 public interface TraineeInfoInsertConvert {
@@ -23,4 +27,17 @@ public interface TraineeInfoInsertConvert {
     TraineeHouseRel dto2traineeHouseRel(TraineeInfoAllDTO traineeInfoAllDTO);
 
     TraineeSubsidyRel dto2traineeSubsidyRel(TraineeInfoAllDTO traineeInfoAllDTO);
+
+    LearnInfoVO TLR2LIVO(TraineeLearnRel traineeLearnRel);
+
+    LearnInfoVO LIVO2LI(LearnInfo learnInfos);
+
+    AssessInfoVO AI2AIVO(AssessInfo assessInfo);
+
+    List<LearnInfoVO> listTLR2listLIVO(List<TraineeLearnRel> traineeLearnRels);
+
+    List<LearnInfoVO> listLI2listLIVO(List<LearnInfo> learnInfos);
+
+    List<AssessInfoVO> listAI2listAIVO(List<AssessInfo> assessInfos);
+
 }

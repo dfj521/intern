@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +22,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @Api(value = "实习生基本信息", tags = "实习生基本信息", description="实习生基本信息")
-@RequestMapping("                                    /traineeInfo")
+@RequestMapping("/traineeInfo")
 public class TraineeInfoController {
 
     @Autowired
@@ -42,6 +39,12 @@ public class TraineeInfoController {
         return traineeInfoService.list();
     }
 
+    @ApiOperation("根据id查询实习生信息")
+    @GetMapping("/findById/{tId}")
+    public TraineeInfo findById(@PathVariable("tId") Integer tId) {
+        return traineeInfoService.getById(tId);
+    }
+
     /**
      * 添加实习生基本信息
      *
@@ -52,5 +55,20 @@ public class TraineeInfoController {
     @PostMapping("/save")
     public boolean save(TraineeInfo traineeInfo) {
         return traineeInfoService.save(traineeInfo);
+    }
+
+    @ApiOperation("根据id更新实习生基本信息")
+    @PostMapping("/update")
+    public boolean update(TraineeInfo traineeInfo) {
+        return traineeInfoService.updateById(traineeInfo);
+    }
+
+    @ApiOperation("根据id删除实习生基本信息")
+    @GetMapping("/delete/{tId}")
+    public boolean delete(@PathVariable("tId") Integer tId) {
+        TraineeInfo traineeInfo = new TraineeInfo();
+        traineeInfo.setTId(tId);
+        traineeInfo.setTStatus("0");
+        return traineeInfoService.updateById(traineeInfo);
     }
 }

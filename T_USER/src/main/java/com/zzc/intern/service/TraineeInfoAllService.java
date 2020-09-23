@@ -2,6 +2,8 @@ package com.zzc.intern.service;
 
 import com.zzc.intern.DTO.TraineeInfoAllDTO;
 import com.zzc.intern.util.ResponseUtil;
+import com.zzc.intern.vo.AssessInfoVO;
+import com.zzc.intern.vo.LearnInfoVO;
 
 import java.util.List;
 
@@ -45,4 +47,21 @@ public interface TraineeInfoAllService {
      * @return
      */
     ResponseUtil<Integer> deleteTrainee(Integer tId);
+
+    /**
+     * 根据实习生的id查询实习生的学习情况
+     *
+     * @param tId 实习生编号
+     * @return
+     */
+    ResponseUtil<List<LearnInfoVO>> selectTraineeLearn(Integer tId);
+
+    /**
+     * 根据实习生的id和学习内容id查询实习生的考核情况
+     *
+     * @param tId 实习生编号
+     * @param lId 学习内容编号
+     * @return
+     */
+    ResponseUtil<List<AssessInfoVO>> selectTraineeAssess(Integer tId, Integer lId);
 }
