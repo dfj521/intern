@@ -1,6 +1,9 @@
 package com.zzc.intern.service;
 
+import com.zzc.intern.DTO.HouseInfoDTO;
 import com.zzc.intern.entity.HouseInfo;
+import com.zzc.intern.entity.ResourceInfo;
+import com.zzc.intern.util.ResponseUtil;
 
 import java.util.List;
 
@@ -16,15 +19,24 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface HouseInfoService extends IService<HouseInfo> {
 		//查询
-		public List<HouseInfo> findAll();
+		ResponseUtil<List<HouseInfo>>  findAll();
 		//添加
-		public Integer add(HouseInfo houseInfo);
+		 ResponseUtil<Integer> add(HouseInfo houseInfo);
 		//修改
-		public Integer update(HouseInfo houseInfo);
+		 ResponseUtil<Integer> update(HouseInfo houseInfo);
 		//删除
-		public Integer delete(Integer id);
+		 ResponseUtil<Integer> delete(Integer id);
 		//id查询
-		public HouseInfo findById(Integer id);
+		 ResponseUtil<HouseInfo> findById(Integer id);
 		//宿舍地址查询
-		public List<HouseInfo> findHouseInfoByAddress(String hAddress);
+		 ResponseUtil<List<HouseInfo>> findHouseInfoByAddress(String hAddress);
+		//根据id查询宿舍内容
+		 ResponseUtil<List<HouseInfoDTO>> findHousInfoById(Integer hId);
+		 
+		//根据宿舍查实习生信息和考核
+		 ResponseUtil< List<HouseInfoDTO>> findAssessByAddress(String hAddress);
+		 
+		//根据id查姓名
+		 ResponseUtil<HouseInfo>  findNameById(Integer hId);
+		
 }

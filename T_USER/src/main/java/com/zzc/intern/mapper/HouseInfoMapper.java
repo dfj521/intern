@@ -1,5 +1,6 @@
 package com.zzc.intern.mapper;
 
+import com.zzc.intern.DTO.HouseInfoDTO;
 import com.zzc.intern.entity.HouseInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -29,5 +30,10 @@ public interface HouseInfoMapper extends BaseMapper<HouseInfo> {
 	public HouseInfo findById(Integer id);
 	//宿舍地址查询
 	public List<HouseInfo> findHouseInfoByAddress(String hAddress);
-	
+	//根据id查询宿舍内容
+	public List<HouseInfoDTO> findHousInfoById(Integer hId);
+	//根据宿舍查实习生信息和考核
+	public List<HouseInfoDTO> findAssessByAddress(String hAddress);
+	//根据id查姓名
+	public HouseInfo findNameById(Integer hId);
 }

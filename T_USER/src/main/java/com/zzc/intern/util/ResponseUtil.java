@@ -1,5 +1,11 @@
 package com.zzc.intern.util;
 
+
+
+import java.util.List;
+
+import com.zzc.intern.entity.HouseInfo;
+
 import lombok.Data;
 
 @Data

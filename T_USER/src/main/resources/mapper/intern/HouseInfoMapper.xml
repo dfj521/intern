@@ -2,21 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzc.intern.mapper.HouseInfoMapper">
 <insert id="add" parameterType="com.zzc.intern.entity.HouseInfo">
-insert into house_info values(null,#{hAddress},#{hNumber})
+insert into house_info values(null,#{hAddress},#{hNumber},#{hDescribe},#{hUrl},#{hAdministrators},#{hStatus})
 </insert>
 <select id="findAll" resultType="com.zzc.intern.entity.HouseInfo">
 select * from house_info
 </select>
 <select id="update" parameterType="com.zzc.intern.entity.HouseInfo">
-update house_info set h_address=#{hAddress},h_number=#{hNumber} where h_id=#{hId}
+update house_info set h_address=#{hAddress},h_number=#{hNumber},h_describe=#{hDescribe},h_url=#{hUrl},h_administrators=#{hAdministrators},h_status=#{hStatus} where h_id=#{hId}
 </select>
-<delete id="delete">
-delete from house_info where h_id=#{id}
-</delete>
+<update id="delete">
+update house_info set house_info.h_status=0 where h_id=#{id}
+</update>
 <select id="findHouseInfoByAddress"  resultType="com.zzc.intern.entity.HouseInfo">
 select * from house_info where  h_address like '%' #{hAddress} '%'
 </select>
 <select id="findById" resultType="com.zzc.intern.entity.HouseInfo">
 select * from house_info where h_id=#{id}
+</select>
+<select id="findHousInfoById" resultType="com.zzc.intern.entity.HouseInfo">
+select DISTINCT house_info.h_id,t_name,t_sex,h_address,t_id_card from trainee_house_rel inner join house_info inner join trainee_info on house_info.h_id=trainee_house_rel.h_id 
+where house_info.h_id=#{hId}
+</select>
+<select id="findAssessByAddress" resultType="com.zzc.intern.entity.HouseInfo">
+select DISTINCT house_info.h_id,t_name,t_sex,h_address,t_id_card from trainee_house_rel inner join house_info inner join trainee_info on house_info.h_id=trainee_house_rel.h_id 
+where house_info.h_address like '%' #{hAddress} '%'
+</select>
+<select id="findNameById" parameterType="com.zzc.intern.entity.HouseInfo">
+select DISTINCT house_info.h_id,t_name from trainee_house_rel inner join house_info inner join trainee_info on house_info.h_id=trainee_house_rel.h_id and house_info.h_address=t_address
+where house_info.h_id = #{hId}
 </select>
 </mapper>
