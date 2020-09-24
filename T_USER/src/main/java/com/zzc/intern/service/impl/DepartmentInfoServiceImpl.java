@@ -65,7 +65,7 @@ public class DepartmentInfoServiceImpl extends ServiceImpl<DepartmentInfoMapper,
 		}
 		 DepartmentInfo departmentInfo = null;
 		 try {
-			departmentInfo = departmentInfoMapper.findById(id);
+			//departmentInfo = departmentInfoMapper.findById(id);
 			if (departmentInfo == null) {
 				result.setCode(300);
 				result.setMessage("没有查询到数据");
@@ -189,7 +189,7 @@ public class DepartmentInfoServiceImpl extends ServiceImpl<DepartmentInfoMapper,
 			result.setMessage("格式不正确");
 		}
 		 try {
-			 departmentInfoDTOs = departmentInfoMapper.selectById(id);
+			 //departmentInfoDTOs = departmentInfoMapper.selectById(id);
 			 if (departmentInfoDTOs == null) {
 				result.setCode(300);
 				result.setMessage("没有查询到数据");

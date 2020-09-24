@@ -32,12 +32,12 @@
 		d_id = #{dId}
 	</update>
 	<!-- 通过部门id查询部门中的岗位信息 -->
-	<select id="selectById"
+	<!--<select id="selectById"
 		resultType="com.zzc.intern.DTO.DepartmentInfoDTO">
 		SELECT j.j_name FROM department_job_rel dj INNER JOIN
 		department_info d ON dj.d_id =d.d_id
 		INNER JOIN job_info j ON dj.j_id = j.j_id WHERE d.d_id = #{id}
-	</select>
+	</select>-->
 	<!-- 通过部门名称模糊查询部门信息和岗位信息 -->
 	<select id="selectByName" parameterType="string"
 		resultType="com.zzc.intern.DTO.DepartmentInfoDTO">
