@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2020-09-15
  */
 @Slf4j
-@RestController
+//@RestController
 @Api(value = "实习生的岗位管理", tags = "实习生的岗位管理", description="实习生的岗位管理")
 @RequestMapping("/traineeJobRel")
 public class TraineeJobRelController {

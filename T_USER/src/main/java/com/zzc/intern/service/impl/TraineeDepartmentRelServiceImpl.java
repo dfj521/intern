@@ -62,8 +62,8 @@ public class TraineeDepartmentRelServiceImpl extends ServiceImpl<TraineeDepartme
         List<TraineeInfo> traineeInfos = traineeInfoMapper.selectList(
                 new LambdaQueryWrapper<TraineeInfo>()
                         .eq(tName != null && !"".equals(tName),
-                                TraineeInfo::getTName, tName)
-                        .eq(TraineeInfo::getTStatus, "1"));
+                                TraineeInfo::getTraineeName, tName)
+                        .eq(TraineeInfo::getTraineeStatus, "1"));
 
         if (traineeInfos.size() == 0) {
             traineeDepartmentRelVO.setCurrent(current);
@@ -87,7 +87,7 @@ public class TraineeDepartmentRelServiceImpl extends ServiceImpl<TraineeDepartme
 
         ArrayList<Integer> tIds = new ArrayList<>();
         for (TraineeInfo traineeInfo : traineeInfos) {
-            tIds.add(traineeInfo.getTId());
+            tIds.add(traineeInfo.getTraineeId());
         }
 
         ArrayList<Integer> dIds = new ArrayList<>();
@@ -112,7 +112,7 @@ public class TraineeDepartmentRelServiceImpl extends ServiceImpl<TraineeDepartme
         for (TraineeDepartmentRelDTO traineeDepartmentRelDTO : traineeDepartmentRelDTOS) {
             TraineeInfo traineeInfo = traineeInfoMapper.selectById(traineeDepartmentRelDTO.getTId());
             DepartmentInfo departmentInfo = departmentInfoMapper.selectById(traineeDepartmentRelDTO.getDId());
-            traineeDepartmentRelDTO.setTName(traineeInfo.getTName());
+            traineeDepartmentRelDTO.setTName(traineeInfo.getTraineeName());
             traineeDepartmentRelDTO.setDName(departmentInfo.getDName());
         }
 
@@ -134,7 +134,7 @@ public class TraineeDepartmentRelServiceImpl extends ServiceImpl<TraineeDepartme
         DepartmentInfo departmentInfo = departmentInfoMapper.selectById(traineeDepartmentRel.getDId());
         TraineeDepartmentRelDTO traineeDepartmentRelDTO = TraineeDepartmentRelConvert
                 .INSTANCE.TDREntity2TDRDto(traineeDepartmentRel);
-        traineeDepartmentRelDTO.setTName(traineeInfo.getTName());
+        traineeDepartmentRelDTO.setTName(traineeInfo.getTraineeName());
         traineeDepartmentRelDTO.setDName(departmentInfo.getDName());
         return traineeDepartmentRelDTO;
     }

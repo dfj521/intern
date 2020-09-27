@@ -29,7 +29,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @since 2020-09-15
  */
 @Slf4j
-@Controller
+//@Controller
 @Api(value = "实习发放生补助管理", tags = "实习发放生补助管理", description = "实习发放生补助管理")
 public class TraineeSubsidyRelController {
 

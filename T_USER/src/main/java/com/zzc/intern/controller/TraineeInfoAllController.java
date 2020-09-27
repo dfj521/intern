@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
-@RestController
+//@RestController
 @Api(value = "实习生所有信息管理", tags = "实习生所有信息管理", description = "实习生所有信息管理")
 @RequestMapping("/traineeInfoAll")
 public class TraineeInfoAllController {

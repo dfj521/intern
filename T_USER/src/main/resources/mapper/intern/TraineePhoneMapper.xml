@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzc.intern.mapper.TraineePhoneMapper">
+
+    <select id="findBytId" resultType="java.lang.String">
+        select trainee_phone_number from trainee_phone
+        where trainee_phone_status = "1" and trainee_id = #{tId}
+    </select>
+</mapper>

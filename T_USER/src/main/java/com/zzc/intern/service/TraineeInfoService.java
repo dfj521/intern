@@ -1,12 +1,12 @@
 package com.zzc.intern.service;
 
-import com.zzc.intern.DTO.TraineeInfoSaveDTO;
+import com.zzc.intern.DTO.TraineeInfoDTO;
 import com.zzc.intern.entity.TraineeInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zzc.intern.requestbody.ReqTraineeInfo;
 import com.zzc.intern.vo.TraineeInfoVO;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * <p>
@@ -21,35 +21,40 @@ public interface TraineeInfoService extends IService<TraineeInfo> {
     /**
      * 添加实习生信息
      *
-     * @param traineeInfoSaveDTO 实习生对象
+     * @param traineeInfoDTO 实习生对象
      * @return 是否添加成功
      */
-    boolean add(TraineeInfoSaveDTO traineeInfoSaveDTO);
-
-    /**
-     * 分页查询所有实习生基本信息
-     *
-     * @param current 当前页
-     * @param size    每页显示条数
-     * @return 实习生的基本信息
-     */
-    TraineeInfoVO queryList(Integer current, Integer size);
+    boolean add(TraineeInfoDTO traineeInfoDTO);
 
     /**
      * 根据条件查询实习生信息
      *
-     * @param tName     实习生姓名
-     * @param startTime 开始时间
-     * @param endTime   终止时间
+     * @param reqTraineeInfo 实习生的条件查询信息
      * @return 实习生的基本信息
      */
-    TraineeInfoVO queryByCondition(Integer current, Integer size, String tName, LocalDateTime startTime, LocalDateTime endTime);
+    TraineeInfoVO queryByCondition(ReqTraineeInfo reqTraineeInfo);
 
     /**
      * 根据id删除实习生基本信息
      *
-     * @param tId 实习生id
+     * @param tId 实习生工号
      * @return 是否成功删除
      */
     boolean deleteById(Integer tId);
+
+    /**
+     * 根据id查询实习生信息
+     *
+     * @param tId 实习生工号
+     * @return 实习生信息
+     */
+    TraineeInfoDTO queryById(Integer tId);
+
+    /**
+     * 根据id更新实习生基本信息
+     *
+     * @param traineeInfoDTO 实习生对象
+     * @return 是否保存成功
+     */
+    boolean saveById(TraineeInfoDTO traineeInfoDTO);
 }

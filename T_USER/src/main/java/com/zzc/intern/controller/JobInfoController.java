@@ -31,7 +31,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @since 2020-09-15
  */
 @Slf4j
-@RestController
+//@RestController
 @Api(value = "实习生岗位管理", tags = "实习生岗位管理", description="实习生岗位管理")
 @RequestMapping("/jobInfo")
 public class JobInfoController {

@@ -34,7 +34,7 @@ import org.springframework.validation.annotation.Validated;
  * @since 2020-09-15
  */
 @Slf4j
-@RestController
+//@RestController
 @Api(value = "宿舍内容", tags = "宿舍内容", description="宿舍内容")
 @RequestMapping("/houseInfo")
 @ResponseBody

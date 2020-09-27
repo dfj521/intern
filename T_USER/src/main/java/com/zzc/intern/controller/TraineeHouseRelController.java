@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-09-15
  */
 @Slf4j
-@RestController
+//@RestController
 @Api(value = "实习生的宿舍管理", tags = "实习生的宿舍管理", description="实习生的宿舍管理")
 @RequestMapping("/traineeHouseRel")
 public class TraineeHouseRelController {

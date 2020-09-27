@@ -32,7 +32,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @since 2020-09-15
  */
 @Slf4j
-@Controller
+//@Controller
 @Api(value = "补助管理", tags = "补助管理", description = "补助管理")
 public class SubsidyInfoController {
 

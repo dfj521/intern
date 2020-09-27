@@ -32,7 +32,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @since 2020-09-15
  */
 @Slf4j
-@Controller
+//@Controller
 @Api(value = "学习内容管理", tags = "学习内容管理", description = "学习内容管理")
 @RequestMapping("learn")
 public class LearnInfoController {

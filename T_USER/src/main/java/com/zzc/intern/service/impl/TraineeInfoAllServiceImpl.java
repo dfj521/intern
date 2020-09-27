@@ -143,11 +143,11 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
 
         //添加实习生基本信息
         TraineeInfo traineeInfo = TraineeInfoInsertConvert.INSTANCE.dto2traineeInfo(traineeInfoAllDTO);
-        traineeInfo.setTStatus("1");
+        traineeInfo.setTraineeStatus("1");
         traineeInfoMapper.insert(traineeInfo);
 
         //添加实习生的部门信息
-        traineeInfoAllDTO.setTId(traineeInfo.getTId());
+        traineeInfoAllDTO.setTId(traineeInfo.getTraineeId());
         TraineeDepartmentRel traineeDepartmentRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeDepartmentRel(traineeInfoAllDTO);
         traineeDepartmentRel.setTdStatus("1");
         traineeDepartmentRelMapper.insert(traineeDepartmentRel);
@@ -312,13 +312,13 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         //删除实习生基本信息
         Integer tiCount = traineeInfoMapper.selectCount(
                 new LambdaQueryWrapper<TraineeInfo>()
-                        .eq(TraineeInfo::getTId, tId));
+                        .eq(TraineeInfo::getTraineeId, tId));
         if (tiCount > 0) {
             TraineeInfo traineeInfo = new TraineeInfo();
-            traineeInfo.setTStatus("0");
+            traineeInfo.setTraineeStatus("0");
             traineeInfoMapper.update(traineeInfo,
                     new LambdaUpdateWrapper<TraineeInfo>()
-                            .eq(TraineeInfo::getTId, tId));
+                            .eq(TraineeInfo::getTraineeId, tId));
         }
 
         //删除实习生的部门信息

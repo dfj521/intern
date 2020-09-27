@@ -1,6 +1,6 @@
 package com.zzc.intern.vo;
 
-import com.zzc.intern.entity.TraineeInfo;
+import com.zzc.intern.DTO.TraineeInfoDTO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -21,5 +21,5 @@ public class TraineeInfoVO {
     private Long total;
 
     @ApiModelProperty(value = "实习生的基本信息", name = "traineeInfoList")
-    private List<TraineeInfo> traineeInfoList;
+    private List<TraineeInfoDTO> traineeInfoDTOList;
 }

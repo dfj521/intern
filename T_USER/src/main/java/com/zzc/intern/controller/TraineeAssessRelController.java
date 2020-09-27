@@ -16,7 +16,7 @@ import org.springframework.stereotype.Controller;
  * @since 2020-09-17
  */
 @Slf4j
-@Controller
+//@Controller
 @Api(value = "", tags = "", description="")
 public class TraineeAssessRelController {
 

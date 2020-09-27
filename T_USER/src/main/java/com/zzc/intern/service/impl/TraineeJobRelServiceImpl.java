@@ -60,8 +60,8 @@ public class TraineeJobRelServiceImpl extends ServiceImpl<TraineeJobRelMapper, T
         List<TraineeInfo> traineeInfos = traineeInfoMapper.selectList(
                 new LambdaQueryWrapper<TraineeInfo>()
                         .eq(tName != null && !"".equals(tName),
-                                TraineeInfo::getTName, tName)
-                        .eq(TraineeInfo::getTStatus, "1"));
+                                TraineeInfo::getTraineeName, tName)
+                        .eq(TraineeInfo::getTraineeStatus, "1"));
 
         if (traineeInfos.size() == 0) {
             traineeJobRelVO.setCurrent(current);
@@ -86,7 +86,7 @@ public class TraineeJobRelServiceImpl extends ServiceImpl<TraineeJobRelMapper, T
 
         ArrayList<Integer> tIds = new ArrayList<>();
         for (TraineeInfo traineeInfo : traineeInfos) {
-            tIds.add(traineeInfo.getTId());
+            tIds.add(traineeInfo.getTraineeId());
         }
 
         ArrayList<Integer> jIds = new ArrayList<>();
@@ -110,7 +110,7 @@ public class TraineeJobRelServiceImpl extends ServiceImpl<TraineeJobRelMapper, T
         for (TraineeJobRelDTO traineeJobRelDTO : traineeJobRelDTOS) {
             TraineeInfo traineeInfo = traineeInfoMapper.selectById(traineeJobRelDTO.getTId());
             JobInfo jobInfo = jobInfoMapper.selectById(traineeJobRelDTO.getJId());
-            traineeJobRelDTO.setTName(traineeInfo.getTName());
+            traineeJobRelDTO.setTName(traineeInfo.getTraineeName());
             traineeJobRelDTO.setJName(jobInfo.getJName());
         }
 
@@ -138,7 +138,7 @@ public class TraineeJobRelServiceImpl extends ServiceImpl<TraineeJobRelMapper, T
         JobInfo jobInfo = jobInfoMapper.selectById(traineeJobRel.getJId());
         TraineeJobRelDTO traineeJobRelDTO = TraineeJobRelConvert
                 .INSTANCE.TJREntity2TJRDto(traineeJobRel);
-        traineeJobRelDTO.setTName(traineeInfo.getTName());
+        traineeJobRelDTO.setTName(traineeInfo.getTraineeName());
         traineeJobRelDTO.setJName(jobInfo.getJName());
         return traineeJobRelDTO;
     }
