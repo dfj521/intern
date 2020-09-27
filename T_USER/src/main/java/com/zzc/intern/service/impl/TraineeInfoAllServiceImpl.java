@@ -169,14 +169,14 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         for (JobLearnRel jobLearnRel : jobLearnRels) {
             lIds.add(jobLearnRel.getLId());
         }
-        LearnInfo learnInfo = learnInfoMapper.selectOne(new LambdaQueryWrapper<LearnInfo>()
+        /*LearnInfo learnInfo = learnInfoMapper.selectOne(new LambdaQueryWrapper<LearnInfo>()
                 .in(LearnInfo::getLId, lIds)
                 .eq(LearnInfo::getLStage, 1));
         TraineeLearnRel traineeLearnRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeLearnRel(traineeInfoAllDTO);
         traineeLearnRel.setLId(learnInfo.getLId());
         traineeLearnRel.setLState(0);
         traineeLearnRel.setTlStatus("1");
-        traineeLearnRelMapper.insert(traineeLearnRel);
+        traineeLearnRelMapper.insert(traineeLearnRel);*/
 
         //添加实习生的补贴信息
         /*SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
@@ -261,14 +261,14 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         for (JobLearnRel jobLearnRel : jobLearnRels) {
             lIds.add(jobLearnRel.getLId());
         }
-        LearnInfo learnInfo = learnInfoMapper.selectOne(new LambdaQueryWrapper<LearnInfo>()
+        /*LearnInfo learnInfo = learnInfoMapper.selectOne(new LambdaQueryWrapper<LearnInfo>()
                 .in(LearnInfo::getLId, lIds)
                 .eq(LearnInfo::getLStage, 1));
         TraineeLearnRel traineeLearnRel = TraineeInfoInsertConvert.INSTANCE.dto2traineeLearnRel(traineeInfoAllDTO);
         traineeLearnRel.setLId(learnInfo.getLId());
         traineeLearnRelMapper.update(traineeLearnRel,
                 new LambdaUpdateWrapper<TraineeLearnRel>()
-                        .eq(TraineeLearnRel::getTId, traineeLearnRel.getTId()));
+                        .eq(TraineeLearnRel::getTId, traineeLearnRel.getTId()));*/
 
         //更新实习生的补贴信息
         /*SubsidyInfo subsidyInfo = subsidyInfoMapper.selectOne(new LambdaQueryWrapper<SubsidyInfo>()
@@ -430,20 +430,20 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
             list.add(traineeLearnRel.getLId());
         }
         //查询到学习阶段和学习内容
-        List<LearnInfo> learnInfos = learnInfoMapper.selectList(
+        /*List<LearnInfo> learnInfos = learnInfoMapper.selectList(
                 new LambdaQueryWrapper<LearnInfo>()
-                        .in(LearnInfo::getLId, list));
+                        .in(LearnInfo::getLId, list));*/
 
         List<LearnInfoVO> learnInfoVOS = TraineeInfoInsertConvert.INSTANCE.listTLR2listLIVO(traineeLearnRels);
 
-        Iterator<LearnInfoVO> learnInfoVOIterator = learnInfoVOS.iterator();
+        /*Iterator<LearnInfoVO> learnInfoVOIterator = learnInfoVOS.iterator();
         Iterator<LearnInfo> learnInfoIterator = learnInfos.iterator();
         while (learnInfoVOIterator.hasNext() && learnInfoIterator.hasNext()) {
             LearnInfoVO learnInfoVO = learnInfoVOIterator.next();
             LearnInfo learnInfo = learnInfoIterator.next();
             learnInfoVO.setLElementary(learnInfo.getLElementary());
             learnInfoVO.setLStage(learnInfo.getLStage());
-        }
+        }*/
 
         result.setCode(200);
         result.setMessage("查询成功");

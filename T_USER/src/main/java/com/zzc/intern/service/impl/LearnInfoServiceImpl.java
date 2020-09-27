@@ -75,7 +75,7 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	@Override
 	public ResponseUtil<Integer> updateLearn(Integer id, String lElementary, Integer lStage) {
 		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
-		try {
+		/*try {
 			LearnInfo learnInfo=new LearnInfo();
 			learnInfo.setLElementary(lElementary);
 			learnInfo.setLId(id);
@@ -84,7 +84,7 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 		} catch (Exception e) {
 			responseUtil.setCode(0);
 			responseUtil.setMessage("修改失败");
-		}
+		}*/
 		responseUtil.setCode(1);
 		responseUtil.setMessage("修改成功");
 		return responseUtil;
@@ -94,10 +94,10 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	public ResponseUtil<Integer> addLearn(Integer id,String lElementary, Integer lStage) {
 		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
 		LearnInfo learnInfo=new LearnInfo();
-		learnInfo.setLElementary(lElementary);
-		learnInfo.setLStage(lStage);
+		/*learnInfo.setLElementary(lElementary);
+		learnInfo.setLStage(lStage);*/
 		
-		try {
+		/*try {
 			learnInfoMapper.addLearn(learnInfo);
 			JobLearnRel jobLearnRel = new JobLearnRel();
 			jobLearnRel.setLId(learnInfo.getLId());
@@ -108,7 +108,7 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 		} catch (Exception e) {
 			responseUtil.setCode(0);
 			responseUtil.setMessage("添加失败");
-		}
+		}*/
 
 		return responseUtil;
 	}
