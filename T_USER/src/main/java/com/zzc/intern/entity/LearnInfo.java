@@ -16,23 +16,28 @@ public class LearnInfo implements Serializable {
     /**
      * 学习内容ID
      */
-    @TableId(value = "l_id", type = IdType.AUTO)
-    private Integer lId;
+    @TableId(value = "learn_id", type = IdType.AUTO)
+    private Integer learnId;
 
     /**
      * 学习内容
      */
-    private String lElementary;
+    private String learnElementary;
 
     /**
      * 学习阶段(1.初级、2.中级、3.高级)
      */
-    private Integer lStage;
+    private Integer learnStage;
 
     /**
      * 学习内容状态（0：不存在，1：存在）
      */
-    private String lStatus;
+    private String learnStatus;
+
+    /**
+     * 课程id
+     */
+    private Integer courseId;
 
 
 }
