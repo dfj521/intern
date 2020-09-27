@@ -1,25 +1,15 @@
 package com.zzc.intern.service.impl;
 
-import com.zzc.intern.entity.JobLearnRel;
 import com.zzc.intern.entity.LearnInfo;
-import com.zzc.intern.mapper.JobLearnRelMapper;
 import com.zzc.intern.mapper.LearnInfoMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.service.LearnInfoService;
-import com.zzc.intern.util.ResponseUtil;
-
-import io.swagger.annotations.ApiParam;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
-
-import org.apache.naming.java.javaURLContextFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * <p>
@@ -29,7 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author administrator
  * @since 2020-09-15
  */
-@Slf4j
 @Service
 @Transactional
 public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo> implements LearnInfoService {
@@ -37,88 +26,47 @@ public class LearnInfoServiceImpl extends ServiceImpl<LearnInfoMapper, LearnInfo
 	@Resource
 	private LearnInfoMapper learnInfoMapper;
 
-	@Resource
-	private JobLearnRelMapper JobLearnRelMapper;
-
 	@Override
-	public ResponseUtil<List<LearnInfo>> findAllLearn() {
-		ResponseUtil<List<LearnInfo>> responseUtil = new ResponseUtil<>();
-		List<LearnInfo> findAllLearn = new ArrayList<>();
-		try {
-			findAllLearn = learnInfoMapper.findAllLearn();
-		} catch (Exception e) {
-			responseUtil.setCode(0);
-			responseUtil.setMessage("查询失败");
-		}
-		responseUtil.setCode(1);
-		responseUtil.setMessage("查询成功");
-		responseUtil.setData(findAllLearn);
-		return responseUtil;
+	public List<LearnInfo> findAllLearn(Integer page, Integer size) {
+		page=(page-1)*size;
+		return learnInfoMapper.findAllLearn(page, size);
 	}
 
 	@Override
-	public ResponseUtil<LearnInfo> findById(int id) {
-		ResponseUtil<LearnInfo> responseUtil = new ResponseUtil<>();
-		LearnInfo findByid = new LearnInfo();
-		try {
-			findByid = learnInfoMapper.findByid(id);
-		} catch (Exception e) {
-			responseUtil.setCode(0);
-			responseUtil.setMessage("查询失败");
-		}
-		responseUtil.setCode(1);
-		responseUtil.setMessage("查询成功");
-		responseUtil.setData(findByid);
-		return responseUtil;
+	public LearnInfo findByid(Integer learnId) {
+		return learnInfoMapper.findByid(learnId);
 	}
 
 	@Override
-	public ResponseUtil<Integer> updateLearn(Integer id, String lElementary, Integer lStage) {
-		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
-		/*try {
-			LearnInfo learnInfo=new LearnInfo();
-			learnInfo.setLElementary(lElementary);
-			learnInfo.setLId(id);
-			learnInfo.setLStage(lStage);
-			learnInfoMapper.updateLearn(learnInfo);
-		} catch (Exception e) {
-			responseUtil.setCode(0);
-			responseUtil.setMessage("修改失败");
-		}*/
-		responseUtil.setCode(1);
-		responseUtil.setMessage("修改成功");
-		return responseUtil;
+	public List<LearnInfo> findByCourseId(Integer courseId) {
+		// TODO Auto-generated method stub
+		return learnInfoMapper.findByCourseId(courseId);
 	}
 
 	@Override
-	public ResponseUtil<Integer> addLearn(Integer id,String lElementary, Integer lStage) {
-		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
-		LearnInfo learnInfo=new LearnInfo();
-		/*learnInfo.setLElementary(lElementary);
-		learnInfo.setLStage(lStage);*/
-		
-		/*try {
-			learnInfoMapper.addLearn(learnInfo);
-			JobLearnRel jobLearnRel = new JobLearnRel();
-			jobLearnRel.setLId(learnInfo.getLId());
-			jobLearnRel.setJId(id);
-			JobLearnRelMapper.addJobLearn(jobLearnRel);
-			responseUtil.setCode(1);
-			responseUtil.setMessage("添加成功");
-		} catch (Exception e) {
-			responseUtil.setCode(0);
-			responseUtil.setMessage("添加失败");
-		}*/
-
-		return responseUtil;
+	public int updateLearn(Integer learnId, String learnElementary, Integer learnStage, Integer courseId) {
+		// TODO Auto-generated method stub
+		LearnInfo learnInfo = new LearnInfo();
+		learnInfo.setCourseId(courseId);
+		learnInfo.setLearnElementary(learnElementary);
+		learnInfo.setLearnId(learnId);
+		learnInfo.setLearnStage(learnStage);
+		return learnInfoMapper.updateLearn(learnInfo);
 	}
 
 	@Override
-	public ResponseUtil<Integer> delLearn(Integer id) {
-		ResponseUtil<Integer> responseUtil = new ResponseUtil<>();
-		learnInfoMapper.delLearn(id);
-		JobLearnRelMapper.delJobLearnById(id);
-		return responseUtil;
+	public int addLearn(String learnElementary, Integer learnStage, Integer courseId) {
+		LearnInfo learnInfo = new LearnInfo();
+		learnInfo.setCourseId(courseId);
+		learnInfo.setLearnElementary(learnElementary);
+		learnInfo.setLearnStage(learnStage);
+		return learnInfoMapper.addLearn(learnInfo);
+	}
+
+	@Override
+	public int delLearn(Integer learnId) {
+		// TODO Auto-generated method stub
+		return learnInfoMapper.delLearn(learnId);
 	}
 
 }

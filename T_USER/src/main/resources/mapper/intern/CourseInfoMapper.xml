@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzc.intern.mapper.CourseInfoMapper">
+	<insert id="addCourse"
+		parameterType="com.zzc.intern.entity.CourseInfo">
+		INSERT into course_info
+		VALUES(null,#{courseName},1)
+	</insert>
+	<select id="findCourse"
+		resultType="com.zzc.intern.entity.CourseInfo">
+		SELECT
+		course_id,course_name
+		from
+		course_info
+		where course_status=1 limit #{page},#{size}
+	</select>
+	<select id="findCourseById"
+		resultType="com.zzc.intern.entity.CourseInfo">
+		SELECT
+		course_id,course_name
+		from
+		course_info
+		where course_status=1 and course_id=#{courseId}
+	</select>
+	<update id="updateCourse"
+		parameterType="com.zzc.intern.entity.CourseInfo">
+		UPDATE course_info set
+		course_name=#{courseName} where course_id=#{courseId}
+	</update>
+	<update id="delCourse">
+		UPDATE course_info set
+		course_status=0
+		where course_id=#{courseId}
+	</update>
+</mapper>

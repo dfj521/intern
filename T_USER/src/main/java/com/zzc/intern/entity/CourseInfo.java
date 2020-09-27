@@ -14,18 +14,18 @@ public class CourseInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 岗位编号
+     * 课程编号
      */
     @TableId(value = "course_id", type = IdType.AUTO)
     private Integer courseId;
 
     /**
-     * 岗位名称
+     * 课程名称
      */
     private String courseName;
 
     /**
-     * 岗位状态（0：不存在，1：存在）
+     * 课程状态（0：不存在，1：存在）
      */
     private String courseStatus;
 

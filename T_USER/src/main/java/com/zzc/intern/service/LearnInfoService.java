@@ -1,14 +1,8 @@
 package com.zzc.intern.service;
 
 import com.zzc.intern.entity.LearnInfo;
-import com.zzc.intern.util.ResponseUtil;
-
-import io.swagger.annotations.ApiParam;
 
 import java.util.List;
-
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -21,13 +15,48 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface LearnInfoService extends IService<LearnInfo> {
 
-	ResponseUtil<List<LearnInfo>> findAllLearn();
-
-	ResponseUtil<LearnInfo> findById(int id);
-
-	ResponseUtil<Integer> updateLearn(Integer id, String lElementary, Integer lStage);
-
-	ResponseUtil<Integer> addLearn(Integer id,String lElementary, Integer lStage);
 	
-	ResponseUtil<Integer> delLearn(Integer id);
+		/**
+		 * 查询所有的学习内容
+		 * 
+		 * @return 所有学习内容
+		 */
+		List<LearnInfo> findAllLearn(Integer page,Integer size);
+
+		/**
+		 * 根据学习内容ID查询学习内容
+		 * 
+		 * @param id 学习内容id
+		 * @return 学习内容
+		 */
+		LearnInfo findByid(Integer learnId);
+
+		
+		List<LearnInfo> findByCourseId(Integer courseId);
+		/**
+		 * 修改学习内容
+		 * 
+		 * @param learnInfo 学习内容
+		 * @return
+		 */
+		int updateLearn(Integer learnId,String learnElementary,Integer learnStage,Integer courseId);
+
+		/**
+		 * 添加学习内容
+		 * 
+		 * @param learnInfo 学习内容
+		 * @return
+		 */
+		int addLearn(String learnElementary,Integer learnStage,Integer courseId);
+
+		/**
+		 * 删除学习内容
+		 * 
+		 * @param lId 学习内容id
+		 * @return
+		 */
+		int delLearn(Integer learnId);
+
+		
+	
 }

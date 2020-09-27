@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -23,7 +22,7 @@ public interface LearnInfoMapper extends BaseMapper<LearnInfo> {
 	 * 
 	 * @return 所有学习内容
 	 */
-	List<LearnInfo> findAllLearn();
+	List<LearnInfo> findAllLearn(Integer page,Integer size);
 
 	/**
 	 * 根据学习内容ID查询学习内容
@@ -31,8 +30,10 @@ public interface LearnInfoMapper extends BaseMapper<LearnInfo> {
 	 * @param id 学习内容id
 	 * @return 学习内容
 	 */
-	LearnInfo findByid(int id);
+	LearnInfo findByid(Integer learnId);
 
+	
+	List<LearnInfo> findByCourseId(Integer courseId);
 	/**
 	 * 修改学习内容
 	 * 
@@ -55,7 +56,7 @@ public interface LearnInfoMapper extends BaseMapper<LearnInfo> {
 	 * @param lId 学习内容id
 	 * @return
 	 */
-	int delLearn(Integer lId);
+	int delLearn(Integer learnId);
 
 	
 }
