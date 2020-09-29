@@ -80,7 +80,7 @@ public class AssessInfoServiceImpl extends ServiceImpl<AssessInfoMapper, AssessI
 			if (grade >= 60) {
 				assessInfo.setAState("1");
 				assessInfoMapper.addAssess(assessInfo);
-				traineeLearnRelMapper.updateState(tId);
+				//traineeLearnRelMapper.updateState(tId);
 			} else {
 				assessInfo.setAState("0");
 				assessInfoMapper.addAssess(assessInfo);
@@ -89,12 +89,12 @@ public class AssessInfoServiceImpl extends ServiceImpl<AssessInfoMapper, AssessI
 			if (grade >= 60) {
 				assessInfo.setAState("1");
 				assessInfoMapper.addAssess(assessInfo);
-				traineeLearnRelMapper.updateState(tId);
+				//traineeLearnRelMapper.updateState(tId);
 				TraineeLearnRel traineeLearnRel = new TraineeLearnRel();
 				int findLId = assessInfoMapper.findLId(tId, lStage);
-				traineeLearnRel.setLId(findLId);
-				traineeLearnRel.setTId(tId);
-				traineeLearnRelMapper.addLearn(traineeLearnRel);
+				traineeLearnRel.setLearnId(findLId);
+				traineeLearnRel.setTraineeId(tId);
+				traineeLearnRelMapper.insert(traineeLearnRel);
 			} else {
 				assessInfo.setAState("0");
 				assessInfoMapper.addAssess(assessInfo);

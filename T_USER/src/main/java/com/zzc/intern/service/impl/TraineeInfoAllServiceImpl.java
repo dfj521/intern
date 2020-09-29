@@ -360,13 +360,13 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         //删除实习生的学习内容信息
         Integer tlCount = traineeLearnRelMapper.selectCount(
                 new LambdaQueryWrapper<TraineeLearnRel>()
-                        .eq(TraineeLearnRel::getTId, tId));
+                        .eq(TraineeLearnRel::getTraineeId, tId));
         if (tlCount > 0) {
             TraineeLearnRel traineeLearnRel = new TraineeLearnRel();
-            traineeLearnRel.setTlStatus("0");
+            traineeLearnRel.setTraineeLearnStatus("0");
             traineeLearnRelMapper.update(traineeLearnRel,
                     new LambdaUpdateWrapper<TraineeLearnRel>()
-                            .eq(TraineeLearnRel::getTId, tId));
+                            .eq(TraineeLearnRel::getTraineeId, tId));
         }
 
         //删除实习生的补贴信息
@@ -423,11 +423,11 @@ public class TraineeInfoAllServiceImpl implements TraineeInfoAllService {
         //查询到学习状态
         List<TraineeLearnRel> traineeLearnRels = traineeLearnRelMapper.selectList(
                 new LambdaQueryWrapper<TraineeLearnRel>()
-                        .eq(TraineeLearnRel::getTId, tId));
+                        .eq(TraineeLearnRel::getTraineeId, tId));
 
         ArrayList<Integer> list = new ArrayList<>();
         for (TraineeLearnRel traineeLearnRel : traineeLearnRels) {
-            list.add(traineeLearnRel.getLId());
+            list.add(traineeLearnRel.getLearnId());
         }
         //查询到学习阶段和学习内容
         /*List<LearnInfo> learnInfos = learnInfoMapper.selectList(

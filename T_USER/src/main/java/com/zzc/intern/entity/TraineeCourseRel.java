@@ -8,13 +8,13 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-@TableName("trainee_learn_rel")
-public class TraineeLearnRel implements Serializable {
+@TableName("trainee_course_rel")
+public class TraineeCourseRel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实习生&学习内容id
+     * 实习生&课程id
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
@@ -25,19 +25,14 @@ public class TraineeLearnRel implements Serializable {
     private Integer traineeId;
 
     /**
-     * 学习内容编号
+     * 课程编号
      */
-    private Integer learnId;
+    private Integer courseId;
 
     /**
-     * 学习状态（0，进行中，1，已完成）
+     * 实习生&课程状态（0：不存在，1：存在）
      */
-    private Integer learnState;
-
-    /**
-     * 实习生&学习内容状态（0：不存在，1：存在）
-     */
-    private String traineeLearnStatus;
+    private String traineeCourseStatus;
 
 
 }
