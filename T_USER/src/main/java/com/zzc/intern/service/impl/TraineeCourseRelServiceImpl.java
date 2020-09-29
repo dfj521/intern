@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.entity.CourseInfo;
 import com.zzc.intern.entity.TraineeCourseRel;
 import com.zzc.intern.entity.TraineeInfo;
+import com.zzc.intern.entity.TraineeLearnRel;
 import com.zzc.intern.mapper.CourseInfoMapper;
 import com.zzc.intern.mapper.TraineeCourseRelMapper;
 import com.zzc.intern.mapper.TraineeInfoMapper;
+import com.zzc.intern.mapper.TraineeLearnRelMapper;
 import com.zzc.intern.service.TraineeCourseRelService;
 import com.zzc.intern.vo.TraineeCourseRelVO;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +33,9 @@ public class TraineeCourseRelServiceImpl extends ServiceImpl<TraineeCourseRelMap
 
     @Autowired
     private TraineeCourseRelMapper traineeCourseRelMapper;
+
+    @Autowired
+    private TraineeLearnRelMapper traineeLearnRelMapper;
 
     /**
      * 添加实习生的课程信息
@@ -122,5 +127,68 @@ public class TraineeCourseRelServiceImpl extends ServiceImpl<TraineeCourseRelMap
         traineeCourseRelVO.setCourseName(courseInfo.getCourseName());
 
         return traineeCourseRelVO;
+    }
+
+    /**
+     * 根据实习生id修改课程信息
+     *
+     * @param traineeId 实习生编号
+     * @param courseId  课程编号
+     * @return 是否修改成功
+     */
+    @Override
+    public boolean updateTraineeCourse(Integer traineeId, Integer courseId) {
+        //校验参数
+        if (traineeId == null || courseId == null) {
+            return false;
+        }
+        Integer tiCount = traineeInfoMapper.selectCount(
+                new LambdaQueryWrapper<TraineeInfo>()
+                        .eq(TraineeInfo::getTraineeId, traineeId)
+                        .eq(TraineeInfo::getTraineeStatus, "1"));
+        if (tiCount == 0) {
+            return false;
+        }
+        Integer ciCount = courseInfoMapper.selectCount(
+                new LambdaQueryWrapper<CourseInfo>()
+                        .eq(CourseInfo::getCourseId, courseId)
+                        .eq(CourseInfo::getCourseStatus, "1"));
+        if (ciCount == 0) {
+            return false;
+        }
+
+        Integer tcrCount = traineeCourseRelMapper.selectCount(
+                new LambdaQueryWrapper<TraineeCourseRel>()
+                        .eq(TraineeCourseRel::getTraineeId, traineeId));
+        if (tcrCount > 0) {
+            //修改实习生的课程信息
+            TraineeCourseRel traineeCourseRel = new TraineeCourseRel();
+            traineeCourseRel.setCourseId(courseId);
+            traineeCourseRel.setTraineeCourseStatus("1");
+            traineeCourseRelMapper.update(traineeCourseRel,
+                    new LambdaQueryWrapper<TraineeCourseRel>()
+                            .eq(TraineeCourseRel::getTraineeId, traineeId));
+        } else {
+            //添加实习生的课程信息
+            TraineeCourseRel traineeCourseRel = new TraineeCourseRel();
+            traineeCourseRel.setTraineeId(traineeId);
+            traineeCourseRel.setCourseId(courseId);
+            traineeCourseRel.setTraineeCourseStatus("1");
+            traineeCourseRelMapper.insert(traineeCourseRel);
+        }
+
+        Integer tlCount = traineeLearnRelMapper.selectCount(
+                new LambdaQueryWrapper<TraineeLearnRel>()
+                        .eq(TraineeLearnRel::getTraineeId, traineeId)
+                        .eq(TraineeLearnRel::getTraineeLearnStatus, "1"));
+        if (tlCount > 0) {
+            TraineeLearnRel traineeLearnRel = new TraineeLearnRel();
+            traineeLearnRel.setTraineeLearnStatus("0");
+            traineeLearnRelMapper.update(traineeLearnRel,
+                    new LambdaQueryWrapper<TraineeLearnRel>()
+                            .eq(TraineeLearnRel::getTraineeId, traineeId));
+        }
+
+        return true;
     }
 }

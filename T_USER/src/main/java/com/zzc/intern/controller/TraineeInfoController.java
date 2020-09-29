@@ -2,6 +2,7 @@ package com.zzc.intern.controller;
 
 import com.zzc.intern.DTO.TraineeInfoDTO;
 import com.zzc.intern.entity.TraineeInfo;
+import com.zzc.intern.exception.BusinessException;
 import com.zzc.intern.requestbody.ReqTraineeInfo;
 import com.zzc.intern.service.TraineeInfoService;
 import com.zzc.intern.vo.TraineeInfoVO;
@@ -35,28 +36,28 @@ public class TraineeInfoController {
             @ApiImplicitParam(name = "tId", value = "实习生工号", required = true, dataType = "int", paramType = "path")
     })
     @GetMapping("/queryById/{tId}")
-    public TraineeInfoDTO queryById(@PathVariable("tId") Integer tId) {
+    public TraineeInfoDTO queryById(@PathVariable("tId") Integer tId) throws BusinessException {
         return traineeInfoService.queryById(tId);
     }
 
     @ApiOperation("根据条件分页查询实习生信息")
     @PostMapping("/queryByCondition")
     public TraineeInfoVO queryByCondition(@ApiParam(name = "实习生对象", value = "传入json格式", required = true)
-                                              @RequestBody ReqTraineeInfo reqTraineeInfo) {
+                                              @RequestBody ReqTraineeInfo reqTraineeInfo)  throws BusinessException {
         return traineeInfoService.queryByCondition(reqTraineeInfo);
     }
 
     @ApiOperation("添加实习生信息")
     @PostMapping("/add")
     public boolean add(@ApiParam(name = "实习生对象", value = "传入json格式", required = true)
-                           @RequestBody TraineeInfoDTO traineeInfoDTO) {
+                           @RequestBody TraineeInfoDTO traineeInfoDTO)  throws BusinessException {
         return traineeInfoService.add(traineeInfoDTO);
     }
 
     @ApiOperation("根据id更新实习生基本信息")
     @PostMapping("/saveById")
     public boolean update(@ApiParam(name = "实习生对象", value = "传入json格式", required = true)
-                              @RequestBody TraineeInfoDTO traineeInfoDTO) {
+                              @RequestBody TraineeInfoDTO traineeInfoDTO) throws BusinessException {
         return traineeInfoService.saveById(traineeInfoDTO);
     }
 
@@ -65,7 +66,7 @@ public class TraineeInfoController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "tId", value = "实习生id", required = true, dataType = "int", paramType = "path")
     })
-    public boolean deleteById(@PathVariable("tId") Integer tId) {
+    public boolean deleteById(@PathVariable("tId") Integer tId) throws BusinessException {
         return traineeInfoService.deleteById(tId);
     }
 }

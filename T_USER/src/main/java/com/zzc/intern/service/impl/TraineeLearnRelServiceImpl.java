@@ -2,6 +2,7 @@ package com.zzc.intern.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.zzc.intern.DTO.LearnInfoDTO;
+import com.zzc.intern.DTO.TraineeLearnRelDTO;
 import com.zzc.intern.entity.CourseInfo;
 import com.zzc.intern.entity.LearnInfo;
 import com.zzc.intern.entity.TraineeInfo;
@@ -44,7 +45,7 @@ public class TraineeLearnRelServiceImpl extends ServiceImpl<TraineeLearnRelMappe
      * 添加实习生的学习内容信息
      *
      * @param traineeId 实习生编号
-     * @param learnIds 学习内容编号
+     * @param learnIds  学习内容编号
      * @return 是否添加成功
      */
     @Override
@@ -140,5 +141,62 @@ public class TraineeLearnRelServiceImpl extends ServiceImpl<TraineeLearnRelMappe
         traineeLearnRelVO.setLearnInfoDTOS(learnInfoDTOS);
 
         return traineeLearnRelVO;
+    }
+
+    /**
+     * 根据实习生id修改学习内容信息
+     *
+     * @param traineeLearnRelDTO 实习生的学习内容
+     * @return 是否修改成功
+     */
+    @Override
+    public boolean updateTraineeLearn(TraineeLearnRelDTO traineeLearnRelDTO) {
+        //参数校验
+        Integer traineeId = traineeLearnRelDTO.getTraineeId();
+        List<Integer> learnIds = traineeLearnRelDTO.getLearnIds();
+        if (traineeId == null || learnIds.size() == 0) {
+            return false;
+        }
+        Integer tiCount = traineeInfoMapper.selectCount(
+                new LambdaQueryWrapper<TraineeInfo>()
+                        .eq(TraineeInfo::getTraineeId, traineeId)
+                        .eq(TraineeInfo::getTraineeStatus, "1"));
+        if (tiCount == 0) {
+            return false;
+        }
+        Integer liCount = learnInfoMapper.selectCount(
+                new LambdaQueryWrapper<LearnInfo>()
+                        .in(LearnInfo::getLearnId, learnIds)
+                        .eq(LearnInfo::getLearnStatus, "1"));
+        if (liCount == 0) {
+            return false;
+        }
+
+        TraineeLearnRel traineeLearnRel = new TraineeLearnRel();
+        traineeLearnRel.setTraineeLearnStatus("0");
+        traineeLearnRelMapper.update(traineeLearnRel,
+                new LambdaQueryWrapper<TraineeLearnRel>()
+                        .eq(TraineeLearnRel::getTraineeId, traineeId)
+                        .eq(TraineeLearnRel::getTraineeLearnStatus, "1"));
+
+        for (Integer learnId : learnIds) {
+            TraineeLearnRel traineeLearnRel1 = traineeLearnRelMapper.selectOne(
+                    new LambdaQueryWrapper<TraineeLearnRel>()
+                            .eq(TraineeLearnRel::getTraineeId, traineeId)
+                            .eq(TraineeLearnRel::getLearnId, learnId));
+            if (traineeLearnRel1 != null) {
+                traineeLearnRel1.setTraineeLearnStatus("1");
+                traineeLearnRelMapper.updateById(traineeLearnRel1);
+            } else {
+                TraineeLearnRel traineeLearnRel2 = new TraineeLearnRel();
+                traineeLearnRel2.setTraineeId(traineeId);
+                traineeLearnRel2.setLearnId(learnId);
+                traineeLearnRel2.setLearnState(0);
+                traineeLearnRel2.setTraineeLearnStatus("1");
+                traineeLearnRelMapper.insert(traineeLearnRel2);
+            }
+        }
+
+        return false;
     }
 }

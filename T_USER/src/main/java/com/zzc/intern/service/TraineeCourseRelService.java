@@ -24,4 +24,13 @@ public interface TraineeCourseRelService extends IService<TraineeCourseRel> {
      * @return 实习生的课程信息
      */
     TraineeCourseRelVO queryTraineeCourse(Integer traineeId);
+
+    /**
+     * 根据实习生id修改课程信息
+     *
+     * @param traineeId 实习生编号
+     * @param courseId 课程编号
+     * @return 是否修改成功
+     */
+    boolean updateTraineeCourse(Integer traineeId, Integer courseId);
 }

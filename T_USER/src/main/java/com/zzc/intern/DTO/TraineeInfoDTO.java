@@ -169,4 +169,10 @@ public class TraineeInfoDTO {
     @ApiModelProperty(value = "实习生与紧急联系人电话2")
     private String traineeContactsPhone2;
 
+    /**
+     * 课程名称
+     */
+    @ApiModelProperty(value = "课程名称")
+    private String courseName;
+
 }

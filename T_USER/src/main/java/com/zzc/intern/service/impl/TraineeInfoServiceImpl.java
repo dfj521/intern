@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zzc.intern.Convert.TraineeInfoConvert;
 import com.zzc.intern.DTO.TraineeInfoDTO;
 import com.zzc.intern.entity.*;
+import com.zzc.intern.exception.BusinessException;
+import com.zzc.intern.exception.CommonErrorCode;
 import com.zzc.intern.mapper.*;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.requestbody.ReqTraineeInfo;
@@ -19,7 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
@@ -46,6 +47,12 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
     @Autowired
     private TraineeContactsMapper traineeContactsMapper;
 
+    @Autowired
+    private TraineeCourseRelMapper traineeCourseRelMapper;
+
+    @Autowired
+    private CourseInfoMapper courseInfoMapper;
+
     /**
      * 添加实习生信息
      *
@@ -53,9 +60,12 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
      * @return 是否添加成功
      */
     @Override
-    public boolean add(TraineeInfoDTO traineeInfoDTO) {
+    public boolean add(TraineeInfoDTO traineeInfoDTO) throws BusinessException {
 
         //校验参数
+        if (traineeInfoDTO == null) {
+            throw new BusinessException(CommonErrorCode.E_100108);
+        }
         String traineeName = traineeInfoDTO.getTraineeName();
         String traineePhoneNumber = traineeInfoDTO.getTraineePhoneNumber();
         String traineeBankName = traineeInfoDTO.getTraineeBankName();
@@ -72,7 +82,7 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
                         traineeContactsRelation == null || "".equals(traineeContactsRelation) ||
                         traineeContactsPhone == null || "".equals(traineeContactsPhone)
         ) {
-            return false;
+            throw new BusinessException(CommonErrorCode.E_100101);
         }
 
         //添加实习生信息
@@ -147,7 +157,7 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
      * @return 实习生的基本信息
      */
     @Override
-    public TraineeInfoVO queryByCondition(ReqTraineeInfo reqTraineeInfo) {
+    public TraineeInfoVO queryByCondition(ReqTraineeInfo reqTraineeInfo) throws BusinessException {
         TraineeInfoVO traineeInfoVO = new TraineeInfoVO();
 
         Integer current = reqTraineeInfo.getCurrent();
@@ -178,8 +188,8 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
 
         List<TraineeInfoDTO> traineeInfoDTOS = TraineeInfoConvert.INSTANCE.listTIEntity2listTIDto(traineeInfos);
 
-        for (TraineeInfoDTO TraineeInfoDTO : traineeInfoDTOS) {
-            Integer tId = TraineeInfoDTO.getTraineeId();
+        for (TraineeInfoDTO traineeInfoDTO : traineeInfoDTOS) {
+            Integer tId = traineeInfoDTO.getTraineeId();
             List<TraineePhone> traineePhones = traineePhoneMapper.selectList(
                     new LambdaQueryWrapper<TraineePhone>()
                             .eq(TraineePhone::getTraineeId, tId)
@@ -193,14 +203,25 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
                             .eq(TraineeContacts::getTraineeId, tId)
                             .eq(TraineeContacts::getTraineeContactsStatus, "1"));
 
-            TraineeInfoDTO.setTraineePhoneNumber(traineePhones.get(0).getTraineePhoneNumber());
-            TraineeInfoDTO.setTraineeBankName(traineeBanks.get(0).getTraineeBankName());
-            TraineeInfoDTO.setTraineeBankCard(traineeBanks.get(0).getTraineeBankCard());
-            TraineeInfoDTO.setTraineeContactsName(traineeContacts.get(0).getTraineeContactsName());
-            TraineeInfoDTO.setTraineeContactsRelation(traineeContacts.get(0).getTraineeContactsRelation());
-            TraineeInfoDTO.setTraineeContactsPhone(traineeContacts.get(0).getTraineeContactsPhone());
-        }
+            //实习生的课程信息
+            TraineeCourseRel traineeCourseRel = traineeCourseRelMapper.selectOne(
+                    new LambdaQueryWrapper<TraineeCourseRel>()
+                            .eq(TraineeCourseRel::getTraineeId, tId)
+                            .eq(TraineeCourseRel::getTraineeCourseStatus, "1"));
+            if (traineeCourseRel != null) {
+                CourseInfo courseInfo = courseInfoMapper.selectOne(
+                        new LambdaQueryWrapper<CourseInfo>()
+                                .eq(CourseInfo::getCourseId, traineeCourseRel.getCourseId()));
+                traineeInfoDTO.setCourseName(courseInfo.getCourseName());
+            }
 
+            traineeInfoDTO.setTraineePhoneNumber(traineePhones.get(0).getTraineePhoneNumber());
+            traineeInfoDTO.setTraineeBankName(traineeBanks.get(0).getTraineeBankName());
+            traineeInfoDTO.setTraineeBankCard(traineeBanks.get(0).getTraineeBankCard());
+            traineeInfoDTO.setTraineeContactsName(traineeContacts.get(0).getTraineeContactsName());
+            traineeInfoDTO.setTraineeContactsRelation(traineeContacts.get(0).getTraineeContactsRelation());
+            traineeInfoDTO.setTraineeContactsPhone(traineeContacts.get(0).getTraineeContactsPhone());
+        }
 
         traineeInfoVO.setCurrent(current);
         traineeInfoVO.setSize(size);
@@ -216,7 +237,7 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
      * @return 是否成功删除
      */
     @Override
-    public boolean deleteById(Integer tId) {
+    public boolean deleteById(Integer tId) throws BusinessException {
         int i = 0;
         //删除实习生基本信息
         Integer tiCount = traineeInfoMapper.selectCount(
@@ -280,7 +301,7 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
      * @return 实习生信息
      */
     @Override
-    public TraineeInfoDTO queryById(Integer tId) {
+    public TraineeInfoDTO queryById(Integer tId) throws BusinessException {
         TraineeInfo traineeInfo = traineeInfoMapper.selectOne(
                 new LambdaQueryWrapper<TraineeInfo>()
                         .eq(TraineeInfo::getTraineeId, tId)
@@ -332,7 +353,7 @@ public class TraineeInfoServiceImpl extends ServiceImpl<TraineeInfoMapper, Train
      * @return 是否保存成功
      */
     @Override
-    public boolean saveById(TraineeInfoDTO traineeInfoDTO) {
+    public boolean saveById(TraineeInfoDTO traineeInfoDTO) throws BusinessException {
 
         //校验参数
         Integer traineeId = traineeInfoDTO.getTraineeId();

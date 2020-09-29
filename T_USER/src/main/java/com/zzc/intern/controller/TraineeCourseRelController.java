@@ -34,4 +34,13 @@ public class TraineeCourseRelController {
                                                      @PathVariable("traineeId") Integer traineeId) {
         return traineeCourseRelService.queryTraineeCourse(traineeId);
     }
+
+    @ApiOperation("根据实习生id修改课程信息")
+    @PostMapping("/updateTraineeCourse")
+    public boolean updateTraineeCourse(@ApiParam(name = "traineeId", value = "实习生编号", required = true)
+                                           @RequestParam("traineeId") Integer traineeId,
+                                       @ApiParam(name = "courseId", value = "课程编号", required = true)
+                                           @RequestParam("courseId") Integer courseId) {
+        return traineeCourseRelService.updateTraineeCourse(traineeId, courseId);
+    }
 }
