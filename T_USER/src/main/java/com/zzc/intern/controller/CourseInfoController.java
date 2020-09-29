@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zzc.intern.entity.CourseInfo;
 import com.zzc.intern.service.CourseInfoService;
+import com.zzc.intern.util.ResponseUtil;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -62,7 +63,7 @@ public class CourseInfoController {
 	@ApiOperation("修改课程信息")
 	@PostMapping("/updateCourse")
 	@ResponseBody
-	public int updateCourse(
+	public ResponseUtil<Integer> updateCourse(
 			@ApiParam(name = "courseId", value = "课程id", required = true) @RequestParam("courseId") Integer courseId,
 			@ApiParam(name = "courseName", value = "课程名字", required = true) @RequestParam("courseName") String courseName) {
 		return courseInfoService.updateCourse(courseName,courseId);

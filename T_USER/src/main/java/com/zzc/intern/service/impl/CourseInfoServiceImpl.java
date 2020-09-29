@@ -6,11 +6,14 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zzc.intern.entity.CourseInfo;
 import com.zzc.intern.mapper.CourseInfoMapper;
+import com.zzc.intern.mapper.LearnInfoMapper;
 import com.zzc.intern.service.CourseInfoService;
+import com.zzc.intern.util.ResponseUtil;
 
 /**
  * <p>
@@ -26,6 +29,9 @@ public class CourseInfoServiceImpl extends ServiceImpl<CourseInfoMapper, CourseI
 
 	@Resource
 	private CourseInfoMapper courseInfoMapper;
+	
+	@Resource
+	private LearnInfoMapper learnInfoMapper;
 
 	@Override
 	public List<CourseInfo> findCourse(Integer page, Integer size) {
@@ -46,11 +52,19 @@ public class CourseInfoServiceImpl extends ServiceImpl<CourseInfoMapper, CourseI
 	}
 
 	@Override
-	public int updateCourse(String courseName,Integer courseId) {
-		CourseInfo courseInfo=new CourseInfo();
-		courseInfo.setCourseName(courseName);
-		courseInfo.setCourseId(courseId);
-		return courseInfoMapper.updateCourse(courseInfo);
+	public ResponseUtil<Integer> updateCourse(String courseName,Integer courseId) {
+		ResponseUtil<Integer> responseUtil=new ResponseUtil<Integer>();
+		if (StringUtils.isEmpty(learnInfoMapper.findByCourseId(courseId))) {
+			CourseInfo courseInfo=new CourseInfo();
+			courseInfo.setCourseName(courseName);
+			courseInfo.setCourseId(courseId);
+			courseInfoMapper.updateCourse(courseInfo);
+			responseUtil.setCode(1);
+			responseUtil.setMessage("修改成功");
+		}
+		responseUtil.setCode(2);
+		responseUtil.setMessage("该课程有对应的学习内容，不可以修改！");
+		return responseUtil;
 	}
 
 	@Override

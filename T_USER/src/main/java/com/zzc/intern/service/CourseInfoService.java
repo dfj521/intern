@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zzc.intern.entity.CourseInfo;
+import com.zzc.intern.util.ResponseUtil;
 
 /**
  * <p>
@@ -45,7 +46,7 @@ public interface CourseInfoService extends IService<CourseInfo> {
 	 * @param courseInfo 课程信息
 	 * @return
 	 */
-	int updateCourse(String courseName,Integer courseId);
+	ResponseUtil<Integer> updateCourse(String courseName,Integer courseId);
 
 	/**
 	 * 删除课程信息
